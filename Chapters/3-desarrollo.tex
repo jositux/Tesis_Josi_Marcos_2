@@ -1,0 +1,1292 @@
+%-----------------------------------------------------
+% Chapter 3: Descripción del prototipo
+%-----------------------------------------------------
+\chapter{Desarrollo}
+
+%Prueba de cita csquote \textquote{en línea}.
+
+%\begin{displayquote}
+%"Prueba de cita en bloque"
+%\end{displayquote}
+
+
+
+
+Implementando las prácticas de Lean UX se obtiene: un equipo que trabaja de forma colaborativa, iterativamente y en paralelo, que reduce al mínimo los documentos entregables y que se centra en el software funcional y en el feedback con el usuario. En el capítulo anterior se explican las ideas que subyacen en Lean UX. En esta capítulo se explica en detalle, y de forma práctica, el proceso de implementación de la metodología para el desarrollo del prototipo.
+\label{chap: cap3}
+
+
+\section{Visión, marco y resultados}
+Los proyectos de diseño de experiencia de usuario (UX) han estado enmarcados, tradicionalmente, por los requerimientos y las entregas. A los equipos se les suministraban requerimientos para que produjeran entregas. Lean UX cambia por completo este marco de trabajo. El objetivo no es generar un documento entregable, sino producir un resultado. \textbf{No se comienza con requerimientos, sino con suposiciones}. A partir de ellas, se crean y prueban hipótesis. Se mide entonces si, gracias a las hipótesis, se han conseguido alcanzar los resultados que buscábamos. En esta sección se ve la herramienta principal de este nuevo enfoque del trabajo: \textit{las declaraciones de hipótesis}. Estas declaraciones son el punto de inicio del proyecto.\vskip 
+Según \citep{Gothelf2013} \textquote{\textbf{una declaración de hipótesis es una manera de expresar las suposiciones que se tienen del proyecto de una forma comprobable}} y está compuesta de los siguientes elementos:
+
+\begin{itemize}
+    \item \textbf{Suposiciones}: una declaración de alto nivel que se considera cierta. 
+    \item \textbf{Hipótesis}: descripciones más detalladas de las suposiciones dirigidas a áreas específicas de del producto o workflows y con las que es posible experimentar. 
+    \item \textbf{Resultados}: el dato de entrada, proveniente del mercado o usuarios, que ayuda a validar o invalidar las hipótesis. A menudo son cuantitativos pero también pueden ser cualitativos. 
+    \item \textbf{Personajes}: modelos teóricos de personas para las que se considera estar resolviendo un problema. 
+    \item \textbf{Funciones}: los cambios en el producto o mejoras que se consideran que conseguirán los resultados que se buscan.
+
+\end{itemize}
+
+\subsection{Suposiciones}
+El primer paso en cualquier proyecto Lean UX es declarar las suposiciones como se puede apreciar en la Figura \ref{fig:leanux1}. Todos los proyectos, no solo los de esta metodología, comienzan de este modo pero, normalmente, no hacen explícitas sus suposiciones. En lugar de ello, se ignoran o, lo que es peor, se tratan como si fueran hechos probados.
+
+\begin{figure}[h]
+\includegraphics[width=10cm]{Img/Desarrollo/desarrollo1.png}
+\centering
+\caption{\textbf{ \footnotesize{Proceso LEAN UX, paso 1. }}}
+\end{figure}
+\label{fig:leanux1}
+
+\clearpage
+\subsubsection{Método: declaración de suposiciones}
+
+\textbf{Quién}\vskip
+La declaración de suposiciones es un ejercicio que se realiza grupo. Se debe reunir al equipo, asegurándose de que todas las disciplinas estén representadas, e incluir en él a todos los expertos que puedan aportar conocimiento importante para el proyecto. 
+
+\vspace{5mm}
+\textbf{Preparación}\vskip
+Antes de realizar cualquier declaración, se debe realizar una exploración previa recurriendo a técnicas de investigación para recolectar información sobre los usuarios y sus necesidades. El material a preparar antes de iniciar las reuniones puede ser: Informes Analíticos, Análisis de usabilidad, Investigación de casos similares, etc. 
+En la Figura \ref{fig:diagrama-desicion} se puede observar un diagrama de decisión para elegir la técnica de investigación y recolección de información. Se pueden analizar las siguientes preguntas:
+\begin{enumerate}
+    \item \textit{¿Para quiénes se diseña la solución?} La audiencia se define por las personas interesadas en los procesos de diseños de productos y no un público general.
+    \item \textit{¿Se conoce el perfil demográfico del usuario?} Sí: Se considera a las personas mayores de 18 años como potenciales usuarios, por las necesidades propias del ámbito de aplicación.
+    \item \textit{¿Es importante el ambiente o locación?} No: Para utilizar la solución no es necesario el ambiente de trabajo o locación del mismo.
+    \item \textit{¿Es importante  
+    el tiempo o el proceso?} No: El uso de la solución es independiente del tiempo empleado o de las características del proceso de diseño.
+    \item \textit{¿Se está organizando la información?} No: La organización de la información no es importante, por ejemplo no se organiza en términos de jerarquía o prioridad como se podría organizar un mapa de sitio u organigrama para una institución.
+\end{enumerate}
+Según las características de este trabajo, la técnica que mejor se adapta es la \textit{entrevista uno-a-uno}\footnote{\url{http://groupquality.com/in-depth-one-on-one-online-interview-techniques/}}. Una vez analizada la información recolectada es necesario declarar el problema de la investigación.
+
+\begin{figure}[H]
+\includegraphics[width=10cm]{Img/CPD/3-flow.png}
+\centering
+\caption{\textbf{ \footnotesize{Diagrama de desición de investigación del usuario. En los cuadros se especifican las técnicas a utilizar según las desiciones.}}}
+\label{fig:diagrama-desicion}
+\end{figure}
+
+\subsubsection{Método: declaración de problema}
+El equipo necesita un punto de partida para la declaración de suposiciones. Es útil hacerlo con una declaración de problema. La declaración de problema permite centrar correctamente el trabajo de todo el equipo. Además, permite definir las restricciones y límites necesarios para que el equipo trabaje sin perder de vista el objetivo.
+
+\textbf{Plantilla}\vskip
+\textquote{[El servicio/ producto] debe cumplir con [estos objetivos]. Sin embargo, se ha observado que no se están alcanzando [estos objetivos], lo que está causando [este efecto adverso] para los usuarios. ¿Cómo podríamos mejorar nuestro [servicio/ producto] de modo que los usuarios consigan mejorar sus resultado según [estos criterios cuantificables o cualificables]?}\vskip
+
+
+\textbf{Declaración}\vskip
+\textquote{\textbf{El medio de comunicación de los interesados en diseñar un producto debe ser eficiente. Gracias a él las personas involucradas pueden comunicar sus ideas y aprender del proceso, mejorando las prácticas para producir un producto interesante para el usuario final. Se ha observado que un factor crítico que está afectando a la satisfacción de los usuarios es la \textit{desorganización de los mensajes y la falta de seguimiento sobre los avances del proyecto}. Actualmente, se utiliza el email como medio de comunicación principal y se adjuntan archivos que ilustran la evolución. Los mensajes se responden con una frecuencia muy baja por parte de la persona que no tiene conocimientos de CAD debido al sesgo que produce la diferencia de capacidades técnicas entre el profesional y el cliente. ¿Cómo podríamos mejorar la eficacia de la comunicación y así conseguir que los que usuarios tengan más éxito en este proceso y estén más satisfechos con la solución?}}
+\vskip 
+Las declaraciones de problema están repletas de suposiciones. Para extraer estas suposiciones, se puede utilizar la \textit{hoja de suposiciones} que se presenta a continuación.
+
+\subsubsection{Hoja de Suposiciones}
+\label{section:usuarios}
+
+Las suposiciones son una declaración de alto nivel que se considera ciertas.
+
+Todos los proyectos comienzan de este modo pero, normalmente, no hacen explícitas sus suposiciones. En lugar de ello, se ignoran o, en el peor de los casos, se tratan como si fueran hechos probados. En este trabajo se hace hincapié en las \textit{suposiciones de usuarios}, ya que las \textit{suposiciones de negocio} o mercado no intervienen en el desarrollo. A continuación se establecen una serie de preguntas que conforman la \textit{hoja de suposiciones}, con sus respectivas respuestas.
+
+
+\begin{enumerate}
+
+\item\textbf{¿Quiénes son los usuarios?}
+\begin{enumerate}
+\item \textbf{Personas sin conocimientos específicos}.\vskip
+Desean participar del proceso de diseño pero sin tener conocimientos sobre diseño 3D. Interesados en encargar modelos 3D para la visualización o productos para la fabricación digital. Estas personas pueden ser emprendedores, artistas.
+
+\item \textbf{Profesionales encargados de crear diseños 3D}. \vskip
+Posee las capacidades técnicas y la experiencia sobre procesos y metodologías para llevar a cabo un proyecto de diseño en conjunto con el cliente/usuario.
+
+\item \textbf{Personas anónimas}.\vskip
+Pueden visualizar los modelos 3D pero no participan en los procesos de diseño.
+\end{enumerate}
+
+\item{\textbf{¿Cómo encajaría el producto en su trabajo?}}
+
+\begin{enumerate}
+
+\item Si permite visualizar el producto en la web ahorraría mucho tiempo.
+
+\item Es un poco arriesgado por el cambio de paradigma de un día para otro.
+
+\item Provocaría rechazo por personas con poco interés en la organización.
+
+\item De forma positiva, ya que es indispensable ver la organización de los diseños y el proceso.\vskip
+
+\item Sería muy positivo si permite no depender tanto del email.\vskip
+
+\end{enumerate}
+
+\item{\textbf{¿Qué problemas soluciona el producto?}}
+    \begin{enumerate}
+        \item La visualización de un modelo 3D en proceso. \vskip
+        \item El diseño completo para personas que no saben de modelado 3D. \vskip
+        \item La comunicación para discutir sobre un producto.\vskip
+        \item La organización de los modelos y el progreso.\vskip
+        \item El registro sobre los pagos y entregas.\vskip
+    \end{enumerate}
+    \item{\textbf{¿Cuándo y cómo se utilizaría el producto?}}
+    \begin{enumerate}
+        \item En cualquier momento y en cualquier lugar, desde cualquier dispositivo con internet. 
+        \item En el lugar de trabajo en una intranet, así nadie puede ver los diseños.
+        \item En cualquier momento y desde un dispositivo moderno.
+        \item Sólo se utilizaría cuando se esté de viaje.
+        \item Sólo desde la PC, sino sería muy incómodo ver los modelos.
+    \end{enumerate}
+
+
+    \item{\textbf{¿Cuáles serían las funciones más importantes?}}
+    \begin{enumerate}
+        \item Visualizar un modelo 3D con alto nivel de detalle, girarlo, hacer zoom, etc.
+        \item Capacidad para hacer cambios drásticos en los modelos sin necesidad de saber de 3D.
+        \item Registrar los pagos de los clientes para que haya transparencia.
+        \item Comunicarse con el Diseñador y hacer feedback en una especie de chat.
+        \item Hacer anotaciones en los modelos 3D para que la otra persona pueda comprender. 
+        \item Registrar los pedidos de cambio en los diseños con fecha y hora.
+        \item Agregar documentos como planos, contratos.
+        \item Ver como interactúa el producto con su entorno, por ejemplo en un paisaje o en un diseño de interiores.
+        \item Poder ver con realidad virtual y con efectos realistas.
+    \end{enumerate}
+
+    \item{\textbf{¿Qué aspectos debe tener y cómo debe comportarse?}}
+    \begin{enumerate}
+    \item Debe ser bonito y fácil de usar. 
+    \item Debe ser parecido a los programas de CAD con mucha opciones y muy rápido.
+    \item No importa si es bonito, lo importante es que funcione bien y rápido.
+    \item Debe ser agradable a la vista y fácil de usar como una red social.
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{Priorización de las suposiciones} 
+Las suposiciones se declaran al inicio del trabajo para poder identificar los riesgos del proyecto. Una vez que se dispone de la lista de suposiciones se necesita averiguar cuáles de ellas tienen más riesgo. Lean UX lleva a cabo un ejercicio de priorización, una vez que se comprende que no se pueden probar todas las suposiciones del proyecto, la cuestión que se presenta es: \textit{¿cuál de ellas se debe de probar primero?} \vskip
+Para decidir sobre esta cuestión, se puede crear un gráfico como el que aparece en la Figura \ref{fig:priori} y situar en él la lista de suposiciones. El objetivo del gráfico es decidir qué suposiciones se debe probar primero, en base a:
+\begin{enumerate}
+    \item \textbf{El nivel de riesgo} \vskip
+    Por ejemplo, si se hiciera esto mal, ¿hasta qué punto se vería perjudicado el proyecto?
+    \item \textbf{El conocimiento que se tenga de la suposición}.\vskip
+    Por ejemplo, un caso típico es la función para acceso de usuario o \textit{login}, esta suposición es bien conocida o por lo menos un mecanismo muy utilizado por la mayoría de los usuarios.
+\end{enumerate}
+ Cuánto más alto sea el riesgo que implica una suposición y menos se sepa de ella, mayor debe ser la prioridad. La asignación de la prioridad para la prueba no significa que aquellas que no sean prioritarias desaparezcan del proyecto. Es importante recordar que las suposiciones son de usuarios y no de sistema, por ende se pueden registrar suposiciones exageradas. Se recomienda mantener una lista de suposiciones que no se hayan priorizado para poder volver a ellas y probarlas si se demuestra que amerita hacerlo.
+
+
+\begin{figure}[h]
+\includegraphics[width=12cm]{Img/Desarrollo/desarrollo-matriz.jpg}
+\centering
+\caption{\textbf{ \footnotesize{ Matriz de priorización de suposiciones }}}
+\label{fig:priori}
+\end{figure}
+
+Para comprender las asignaciones de prioridad, a continuación se explican algunas suposiciones. 
+
+En la zona superior derecha de la matriz se pueden apreciar las suposiciones con mayor prioridad. Por ejemplo: 
+
+\begin{itemize}
+
+    \item \textbf{1.a Personas sin conocimientos específicos en 3D}\vskip
+    El riesgo de no probar esta suposición es alto, ya que la posibilidad de participación de este tipo de usuario es un valor fundamental para la aplicación. 
+    \item \textbf{2.a Si permite visualizar el producto en la web ahorraría mucho tiempo.}\vskip
+    Si no se prueba esta suposición el proyecto fracasa porque el uso de modelos en la web es un requisito indispensable para el funcionamiento de la aplicación.
+    \item \textbf{6.c No importa si es bonito, lo importante es que funcione bien y rápido}\vskip
+    En esta suposición se pueden percibir aspectos de experiencia de usuario, probarla ayudaría a conocer la aceptación del usuario. Por ende, esta suposición implica un riesgo enorme porque es prioritaria la aceptación del usuario en el uso de la aplicación.
+\end{itemize}
+
+Fuera de la zona indicada en la matriz se pueden apreciar las suposiciones con menor prioridad. Por ejemplo: 
+
+\begin{itemize}
+
+    \item \textbf{5.j Poder ver con realidad virtual y con efectos realistas.}\vskip
+    Si no se prueba esta suposición, el proyecto no corre riesgo de continuar ya que no es un requisito indispensable, por otro lado el grado de desconocimiento sobre el tema es elevado en el contexto de este trabajo.
+    \item \textbf{4.e Sólo desde la PC, sino es muy incómodo ver algo}\vskip
+    La prueba de esta suposición, limitando la aplicación a ese tipo de dispositivos no pone en riesgo el proyecto, ya que la mayoría de los usuarios también utilizan dispositivos móviles y para los objetivos del proyecto no tendría sentido el gasto para desarrollar la prueba.
+   
+\end{itemize}
+
+
+\subsubsection{Hipótesis}
+Cuando se obtiene la lista de suposiciones priorizada, se puede dar el siguiente paso: \textbf{probarlas}. Para hacerlo, es necesario transformar cada declaración de suposición a un formato más sencillo de probar: \textquote{\textbf{Una descripción general de lo que se debe hacer y que impacto se espera}}\citep{Gothelf2013}.\vskip
+
+
+Ejemplo: \vskip
+\textbf{Desarrollando una solución de comunicación de diseños de productos para un equipo multidisciplinario se logrará una mayor tasa de participación y un aumento en la satisfacción de los involucrados.}
+
+\subsubsection{Subhipótesis: división de las hipótesis en partes más pequeñas }
+La hipótesis planteada anteriormente es demasiado extensa para que, con una única prueba, pueda determinarse su validez. Esto se produce porque la hipótesis contiene demasiadas partes móviles, es decir, demasiadas subhipótesis. Cuando esto sucede, se recomienda dividir las hipótesis en partes más pequeñas y específicas. Para el trabajo de desarrollo de productos en particular se puede utilizar la siguiente plantilla: \vskip
+
+\textbf{Plantilla}\vskip
+\textquote{Se considera que [haciendo esto - desarrollando esta función - creando esta experiencia de usuario] para [estas - personas - personajes] se conseguirá [este resultado]. 
+Se sabrá si esto es correcto cuando se obtenga [este feedback del entorno o mercado, esta medida cuantitativa, o este conocimiento cualitativo]}.\vskip 
+
+El primer campo se completa con la función o mejora que está considerando para el producto. El segundo describirá exactamente qué usuarios objetivo se beneficiarán de la función. El último campo, por su parte, especifica los beneficios que esos usuarios obtendrán de ella. La frase final lo une todo. Esta frase determina si la hipótesis es cierta o no.
+
+\subsubsection{Resultados}
+En la creación de las hipótesis que se quieran probar, se debe ser específico respecto a los resultados que se pretendes obtener. Los equipos Lean UX están menos centrados en los documentos de salida (los documentos, esquemas e incluso los productos y funciones que se produzcan) y más concentrados en los resultados reales que esos documentos generan: \vskip
+Ej. ¿se puede conseguir que la gente se conecte de manera sencilla sin el uso del email? ¿Cómo convencerlos de que se den de alta en el servicio? ¿Se puede animar a los usuarios del sistema a que colaboren más entre ellos?. \vskip
+Junto con el equipo, se considera y prioriza el problema que se intenta resolver. Probablemente se obtendrán muchos resultados de alto nivel que se espera obtener (por ejemplo, un aumento en los usuarios registrados, un aumento del uso de los modelos 3D, etc.) A veces es útil realizar una sesión de brainstorming con el equipo para establecer qué resultados individuales, tomados en conjunto, pueden contribuir a conseguir el resultado total. En el contexto de este trabajo al no contar con una aplicación existente para considerar mediciones, los resultados esperados no tienen que ver con el mercado y son propios de las necesidades de los usuarios finales. En algunas organizaciones a nivel ejecutivo se indicadores como KPI (Key Performance Indicators, Indicadores Clave de rendimiento) que las compañías deben cumplir, en el contexto de este trabajo se puede prescindir de este tipo de tareas.
+
+\subsubsection{Personajes}
+Los diseñadores crean a menudo modelos, denominados personajes, para representar a los usuarios de sus sistemas. Si el equipo ya dispone de un conjunto de personajes bien definido, solo se debe que decidir cuáles de ellos se emplearán para confirmar las declaraciones de hipótesis. Si aún no se dispone de ellos, a continuación se explica cómo crearlos para el proceso Lean UX.
+
+\vspace{5mm}
+\textbf{Proto-Personajes}\vskip
+En lugar de emplear meses enteros realizando trabajo de campo y entrevistando a personas, se dedican unas horas a la creación de lo que se denominan \textquote{\textbf{\textit{protopersonajes}, modelos que detallan quién utilizará el producto y por qué lo hará}}\citep{Gothelf2013}. Se inicia con un modelo muy esquemático, en cuya creación participa todo el equipo. A medida que se avanza en la investigación y se aprende más sobre los usuarios del producto, se pueden ajustar tanto el publico objetivo como el diseño.\vskip
+
+
+\begin{figure}[h]
+\includegraphics[width=16cm]{Img/Desarrollo/persona0.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Esquema de protopersona y sketch del profesional}}}
+\label{fig:persona0}
+\end{figure}
+
+En la mitad inferior del esquema, se sitúa la parte más importante de la información. El cuadrante inferior izquierdo debe contener las necesidades de los usuarios y las frustraciones que hayan podido experimentar con la solución actual, los puntos de conflicto específicos que el producto está tratando de resolver y/o la oportunidad que se trata de capturar con él. El cuadrante inferior derecho contiene las soluciones potenciales para esas necesidades. En este cuadrante se incluye las soluciones y las funciones que se consideren.\vskip
+En la Figura \ref{fig:persona0} se puede apreciar el boceto de protopersona y en la Figura  \ref{fig:persona1} se pueden ver las Proto-personas de dos tipos de usuarios utilizados como fuentes de información para este trabajo.
+
+
+\begin{figure}[H]
+\includegraphics[width=16cm]{Img/Desarrollo/persona1.png}
+\centering
+\caption{\textbf{ \footnotesize{A la izquierda el usuario sin conocimientos de CAD (1.a), a la derecha el usuario profesional (1.b)}}}
+\label{fig:persona1}
+\end{figure}
+
+\subsubsection{Funciones}
+\label{section:subhipo}
+ Una vez que se obtiene una lista de resultados en mente y se enfoque en un grupo de usuarios concreto, se comienza a comenzar a pensar en las técnicas, las funciones, los productos y los servicios a desarrollar para conseguir esos resultados. Normalmente, en este punto todos los miembros del equipo tendrán su propia opinión sobre el tema, ya que, después de todo, las funciones son lo más concreto con lo que han trabajado, por lo que les resultará más sencillo expresar sus ideas en términos de funciones. Sin embargo, un error común es hacer que el proceso de diseño parta de ellas: alguien tiene una idea sobre una función a implementar y, al final, todo el equipo intenta cubrir las etapas iniciales en el orden incorrecto para justificar esa función. Se debe recordar que, \textquote{\textbf{en Lean UX\citep{Gothelf2013}, las funciones existen para satisfacer las necesidades del negocio, del cliente y de los usuarios}}.
+
+\vspace{5mm}
+\textbf{Organización de las subhipótesis}\vskip
+
+Con todo el material en bruto obtenido, se puede organizar en hipótesis que puedan probarse. Se puede organizar en una tabla como la siguiente. Se debe tener en cuenta, a medida que se escriban las hipótesis, a qué personajes sirven las soluciones propuestas. Es posible que algunas soluciones sirvan a más de un personaje. Si las hipótesis producen más de un resultado, se pueden dividir la hipótesis en varias partes, ya que cada declaración debe referirse a un único resultado. Es importante recordar que ideas deben ser lo suficientemente específicas, para crear pruebas significativas que las puedan validar.
+\vspace{5mm}
+
+
+\begin{longtable}{|p{1cm}|p{4cm}|p{4cm}|p{4cm}| }
+
+\hline
+    Núm. & Se desarrolla (función) & Para (personaje)  & Para (solución)\\
+\hline
+1 & Un visor de modelos 3D para la web & Para la persona sin conocimiento de experto (1.a) y para la persona con rol experto (1.b) & Solucionar la visualización online de los avances del diseño \\
+\hline
+\hline
+2 & Un sistema para realizar comentarios en forma de chat asociado a los modelos 3D & Para (1.a) y (1.b)  & Opinar y discutir sobre los avances y recibir notificaciones.  \\
+\hline
+\hline
+3 & Un sistema para realizar anotaciones sobre los modelos 3D & Para (1.a)  y (1.b) & Hacer anotaciones precisas sobre la geometría y así ser poder entenderse mejor a pesar de las diferencias de disciplinas.  \\
+\hline
+\hline
+4 & Un sistema para dar de Alta proyectos de diseño & Para (1.b) & Gestionar los proyectos e invitar a los participantes.  \\
+\hline
+\hline
+5 & Un mecanismo para poder escribir código de modelado booleano & Para (1.b) & Incorporar diseños y modificarlos mediante modelado especificado en algoritmos. \\
+\hline
+\hline
+6 & Un visor para poder ver todos los cambios a un diseño o ``versiones" de los modelos 3D & Para (1.a) y (1.b) & Visualizar los avances en los diseños y determinar el estado de un modelo3D en una fecha determinada del proceso.  \\
+\hline
+\hline
+7 & Componente visuales para poder modificar los parámetros del modelo 3D o ``versiones" de los modelos 3D & Para (1.a) y (1.b) & Modificar la geometría de los modelos de forma intuitiva y visual sin necesidad de tener conocimientos de programación ni modelado.  \\
+\hline
+\hline
+8 & Un sistema para inicio de sesión con usuario y contraseña o bien desde un servicio como facebook & Para (1.a) y (1.b) & El ingreso privado y que terceros no puedan usar la aplicación sin autorización.  \\
+\hline
+
+\end{longtable}
+
+\begin{center}
+ \caption{\textbf{ \footnotesize{Tabla de subhipótesis}}}   
+\end{center}
+
+
+Una vez obtenida la Tabla de subhipótesis, se puede avanzar al siguiente paso. Esta lista o tabla sirve como una guía para el próximo paso en el proceso Lean UX: el \textit{diseño colaborativo}.
+
+\clearpage
+\section{Diseño Colaborativo}
+Lean UX\citep{Gothelf2013} \textquote{\textbf{es un proceso colaborativo que reúne a diseñadores y no diseñadores (programadores, administradores de proyectos) en un trabajo de creación conjunta para crear los conceptos del producto. También les ayuda a construir un entendimiento común sobre el problema y sobre las soluciones de diseño. Asimismo, les permite decidir qué funcionalidad y elementos de la interfaz implementan mejor las funciones recogidas en las hipótesis}}. La documentación de salida de las sesiones de diseño constan normalmente de esquemas de baja fidelidad y \textit{wireframes}. Es esencial que la documentación inicial no sea muy elaborada para que el trabajo continúe siendo maleable. De esta manera, el equipo puede cambiar de dirección con facilidad una vez que sus pruebas les demuestren que el enfoque adoptado no funciona. A continuación se describen algunas herramientas utilizadas para el diseño del prototipo.
+
+\subsection{Estudio de diseño}
+\textquote{\textbf{Un equipo interdisciplinario se reúne en una sesión de trabajo o Estudio de Diseño (a veces también llamado Charrette de diseño)}\citep{Gothelf2013} \textbf{para conseguir que todos los miembros visualicen de forma conjunta las soluciones potenciales a un problema de diseño.}} Se usan técnicas específicas para llevar a cabo las sesiones de Estudio, dependiendo de la situación del proyecto y los plazos de entrega. Abarca los siguientes pasos:
+\begin{itemize}
+    \item Definición del problema y sus restricciones. 
+    \item Generación de ideas individuales (divergir). 
+    \item Presentación y críticas. 
+    \item Iteración y perfeccionamiento (emerger). 
+    \item Generación de ideas del equipo (converger).
+\end{itemize}
+
+
+\begin{figure}[H]
+\includegraphics[width=14cm]{Img/UX/edc.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Sketch de Interfaces como salida del estudio de diseño}}}
+\end{figure}
+
+
+\begin{figure}[H]
+\includegraphics[width=14cm]{Img/UX/ed2.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Posibles escenarios diseñados en el estudio de diseño}}}
+\end{figure}
+
+Los resultados del estudio de diseño se realizan comúnmente utilizando Lápices, Bolígrafos, Marcadores de Colores. Plantillas para esquemas, Pegatinas.
+
+\textquote{\textbf{El objetivo del estudio del diseño es preparar todo el material para el siguiente paso de Lean UX: \textit{crear un PMV (Punto Mínimo Viable) y probarlo con un experimento}}}\citep{Gothelf2013}.
+
+
+\clearpage
+\subsection{Definición de Componentes y Guía de estilo}
+\textquote{\textbf{Una herramienta que facilita el diseño es la \textbf{guía de estilo}, \textit{una biblioteca de patrones aceptada por todo  el equipo, que codifica los elementos gráficos e interactivos de una interfaz de usuario. También sirven para recopilar todos los componentes del producto a los que se enfrentará el usuario, todo lo que forme parte de la experiencia del usuario aparece en la guía de estilo.}}}\citep{Gothelf2013}. Algunas empresas utilizan \textit{wikis} para la guía de estilo, lo que permite que toda la colección permanezca actualizada y que esté disponible para el equipo. Otros prefieren crear guías de estilo ``dinámicas", es decir, repositorios de diseño y de código front-end\footnote{Front-end es la parte del software que interactúa con los usuarios.} que no solo definen el aspecto y el comportamiento del producto, sino que también proporcionan el lenguaje necesario y las hojas de estilo en inglés \textit{Cascading Style Sheet} (CSS)\footnote{\url{https://www.w3.org/Style/CSS/}} para la interfaz de cliente. De esta manera, al modificar la guía de estilo también se modifica el producto.
+Para la estética del prototipo COCADA se eligió el concepto de diseño \textit{Material Design}\footnote{\url{https://material.io/guidelines/}}, un diseño donde la profundidad, las superficies, los bordes, las sombras y los colores juegan un papel principal. A continuación se especifican algunos componentes gráficos y diseños a utilizar:
+
+
+\subsubsection{1. Tamaños de letras según dispositivos}
+    \begin{figure}[h]
+    \includegraphics[width=12cm]{Img/UX/guia1.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Tamaño de letras con sus respectivas clases CSS. Clase de CSS ej: xn}}}
+\end{figure} 
+    
+\subsubsection{2. Esquema de colores}
+\begin{figure}[h]
+    \includegraphics[width=12cm]{Img/UX/guia0.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Esquema de colores con sus respectivas clases de CSS. Clase de CSS ej: lighten-3}}}
+\end{figure}
+
+
+\subsubsection{3. Iconos mediante fuentes tipográficas}
+    Usando el prefijo fa- seguido del nombre del ícono como clase CSS. Las fuentes tipográficas son vectoriales, por lo que se puede cambiar el tamaño y color de los iconos sin perder calidad.
+    \begin{figure}[h]
+    \includegraphics[width=11cm]{Img/UX/guia3.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Iconos mediante fuentes tipográficas. Clase de CSS ej: fa-email}}}
+   
+    \end{figure}
+    
+ 
+\subsubsection{4. Botones de acción simples}
+    \begin{figure}[h]
+    \includegraphics[width=11cm]{Img/UX/guia2.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Estilos de botones. Clase de CSS ej: btn.primary}}}
+    \end{figure}
+    
+\clearpage
+\subsubsection{5. Botones de acción flotante}\vskip
+El Botón de Acción Flotante (FAB) es un botón circular con un ícono flotando en una página. El propósito de un FAB es parecido a un botón llamado-a-la-acción en ingles \textit{call-to-action}\footnote{\url{https://en.wikipedia.org/wiki/Call_to_action_(marketing)}}; enfatiza una acción que la mayoría de los usuarios presumiblemente realizaría. Generalmente se presenta con un color vívido que lo hace más prominente entre el resto de los elementos de la aplicación.
+    \begin{figure}[h]
+    \includegraphics[width=12cm]{Img/UX/guia4.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Botones de acción flotantes. Clase de CSS ej: .btn-floating.blue}}}
+    \end{figure}
+    
+
+\subsubsection{6. Controles de entrada}\vskip
+Estos elementos sirven para ser usados de múltiples formas. En el prototipo se utilizan sobre todo para la manipulación de parámetros de los modelos 3D y  también para la mayoría de los formularios.
+    \begin{figure}[h]
+    \includegraphics[width=14cm]{Img/UX/guia6.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Controles gráficos.}}}
+    \end{figure}
+
+
+
+\clearpage  
+\subsubsection{7. Cards o Tarjetas}\vskip
+Las Tarjetas se están convirtiendo rápidamente en un patrón de UI indispensable, particularmente para las webs móviles. Esto se debe en parte a las webs como Pinterest\footnote{\url{https://pinterest.com}} y Twitter que hacen uso exhaustivo de las mismas. En el prototipo se utilizan tarjetas para listados o grillas de modelos que son parte de un proyecto.
+    \begin{figure}[h]
+    \includegraphics[width=7cm]{Img/UX/guia5.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Tarjeta de un modelo 3D}}}
+    \end{figure}
+    
+\subsubsection{8. Comentarios}\vskip
+En el prototipo, los comentarios se pueden considerar tarjetas con un formato específico. Sirven para definir listados de comentarios o hilos de conversaciones, que hacen posible la comunicación entre los participantes de un proceso de diseño. Se pueden apreciar en la Figura \ref{fig:comment} el uso de hashtag (\#) y menciones (@), como en la mayoría de las redes sociales.
+    \begin{figure}[h]
+    \includegraphics[width=7cm]{Img/UX/guia7.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Tarjeta de comentario sobre un modelo.}}}
+     \label{fig:comment}
+    \end{figure}
+    
+    
+
+
+
+\clearpage
+\section{Producto Mínimo Viable y Experimentos}
+Con las diferentes partes de las hipótesis definidas, se pueden determinar qué ideas sobre el producto son válidas y cuáles deben descartarse. El Producto Minimo Viable (PMV), como se explica en la seccion \ref{section:pmv}, es muy importante porque si se prueban antes las funciones en las que merece la pena invertir, se pueden centrar los recursos de inmediato en las mejores soluciones. 
+
+
+Esta es una de las maneras que tiene Lean UX para minimizar el despilfarro.
+\begin{itemize}
+    \item Primero se inicia con la lista de hipótesis priorizada.
+    \item Luego, para determinar la validez de las declaraciones de hipótesis se crean los mínimos elementos posibles.
+\end{itemize}
+Esos elementos son los \textbf{PMV} que se utilizan luego para hacer experimentos. El resultado de esos experimentos indicará si la hipótesis fué correcta y si la dirección en la que se está trabajando es la indicada, debe perfeccionarse o debe abandonarse.
+
+\begin{figure}[h]
+\includegraphics[width=10cm]{Img/Desarrollo/desarrollo2.png}
+\centering
+\caption{\textbf{ \footnotesize{Proceso LEAN UX, paso 2. }}}
+\end{figure}
+\label{fig:leanux2}
+
+\subsection{Creación del PMV}
+Al comenzar la planificación del PMV, lo primero que hay que tener en cuenta es lo que se quiere aprender con él. Por ello, resulta útil pensar estas tres cuestiones básicas: 
+\begin{itemize}
+    \item ¿Existe una necesidad para la solución que se diseña? 
+    \item ¿Existe valor en la solución y las funciones que se ofrecen?
+    \item  ¿La solución es usable?
+\end{itemize}
+
+Independientemente del propósito del PMV, esta etapa permite lanzar un producto y observar cómo interaccionan los usuarios con él en contextos realistas. Si con el PMV lo que se pretende es maximizar el aprendizaje, se debe:
+\begin{itemize}
+    \item \textbf{Ser claro y conciso}: dedicar el tiempo a depurar la idea hasta llegar a su proposición central de valor y presentar esa proposición a los usuarios. 
+    \item \textbf{Priorizar sin compasión}: las ideas, como los artefactos, son pasajeras. Dejar que las mejores ideas prueben su valor en el proceso de priorización resultando las más importantes sobre las demás. 
+    \item \textbf{Ser ágil}: la información llega rápidamente, por lo que hay que asegurarse que durante el trabajo se pueda realizar actualizaciones con facilidad. 
+    \item \textbf{Medir el comportamiento}: construir un PMV que permitan observar y medir lo que la gente hace realmente, no lo que dicen que hacen. En el diseño de productos digitales, el comportamiento es mucho más importante que las opiniones. 
+    \item \textbf{Utilizar una llamada-a-la-acción}: se sabrá que el usuario valora la solución cuando demuestren que la usan.
+\end{itemize}
+
+\subsubsection{Creación del prototipo}
+Una de las maneras más efectivas de crear los PMV es mediante un prototipo de la experiencia. \textquote{\textbf{Un prototipo es una aproximación de la experiencia de usuario que permite simular cómo será el uso de un producto o servicio}}\citep{Gothelf2013}. Para que esa simulación sea efectiva deberá ser clickable (o tocarse con el dedo, dependiendo del dispositivo del usuario).
+Por otra parte, como hay que dedicar el mínimo esfuerzo posible a su desarrollo, será importante que se elija bien la herramienta para crearlo. La elección de una herramienta u otra para el prototipo depende de: 
+\begin{itemize}
+    \item \textbf{¿Quién interactuará con él?} \vskip El primer prototipo lo utilizará el \textbf{usuario 1.a} establecido en la suposición 1.a de la sección \ref{section:usuarios}: \textit{Personas que desean participar del proceso de diseño pero sin tener conocimientos sobre diseño 3D}.
+    \item \textbf{¿Qué se espera aprender de él?} Se espera aprender aspectos de funcionalidad y usabilidad de la UI al momento de interactuar con un modelo 3D.
+    \item \textbf{¿Cuánto tiempo se tiene para realizarlo?} Se cuenta con poco tiempo. Aproximandamente 4 días
+\end{itemize}
+
+Se puede apreciar que el primer prototipo planteado se utiliza para evaluar la \textbf{subhipótesis 1} de la tabla de subhipótesis establecida en la sección \ref{section:subhipo}.
+
+\vspace{5mm}
+\textbf{Desición del tipo de prototipo según la fidelidad}\vskip
+
+Segun Alex Gamble en su libro ``The Guide to Agile UX Design Sprints A Playbook for Product Teams"\citep{Gamble2016} \textquote{\textbf{La fidelidad se refiere al nivel de realismo en un prototipo}}. Por ejemplo, un prototipo de baja fidelidad puede ser un boceto, en inglés \textit{sketch} dibujado a mano alzada sobre un papel, utilizando instrumentos de dibujo básicos como lápiz y goma de borrar. Un prototipo de alta fidelidad puede ser una herramienta de software que permita imitar el aspecto y el comportamiento de la interfaz real, las interfaces basadas en la web se pueden prototipar directamente con HTML y CSS, siendo posible reutilizar algunos fragmentos de código del prototipo en la interfaz real.\vskip
+\textquote{\textbf{Mientras más alta sea la fidelidad del prototipo, más se aprende de él}}\citep{Gamble2016}. Por ejemplo, se aprenderá sobre qué colores funcionan mejor para atraer la atención y qué piensan los usuarios sobre el aspecto y la sensación del producto.
+Si se ha desarrollado la guía de estilo, entonces es más fácil usar alta fidelidad porque no hay que pensar en la mayoría de las decisiones estéticas y se pueden enfocar los esfuerzos hacia las desiciones de funcionalidad.\vskip
+A continuación, en la Figura \ref{fig:prototipo} se ilustra un gráfico de fidelidad en dos dimensiones con la elección de la herramienta para el prototipado. Sobre el eje de las abscisas (Y) se establecen los aspectos relacionados a la \textit{fidelidad visual} o bien qué tan parecido es estéticamente el prototipo respecto a la versión final, sobre el eje de las ordenadas (X) se establecen los aspectos de \textit{fidelidad funcional} o que tan parecido se comporta el prototipo respecto a la versión final.
+
+\vspace{5mm}
+ \begin{figure}[h]
+    \includegraphics[width=14cm]{Img/UX/prototipo.png}
+    \centering
+    \caption{\textbf{ \footnotesize{Elección del tipo de prototipo}}}
+    \label{fig:prototipo}
+\end{figure}
+
+Para este trabajo, se decide utilizar \textit{Prototipos de media y alta fidelidad} y \textit{Prototipos codificados}, como se puede observar en la parte superior derecha del gráfico. Las decisiones de funcionalidad se discuten en primera instancia mediante los bocetos en el \textit{estudio de diseño}. Los aspectos estéticos se establecen previamente en la guía de estilos.\vskip
+Una vez elegida la herramienta para crear el PMV se inicia la construcción del prototipo, no es necesario incluir la experiencia de usuario completa del producto. En lugar de eso, se simula la parte más importante de esa experiencia. Se hace foco en los flujos de trabajo principales que ilustran el PMV. De esta manera el equipo puede observar una parte específica de la experiencia de usuario (tal y como será) para que puedan valorar su validez y su eficacia.
+
+\subsection{Experimentos o Pruebas}
+
+Se recomienda probar el PMV en primera instancia con los miembros del equipo, y luego con personas de otros equipos. Cuánto más se exponga el PMV a las miradas ajenas, más conocimiento se tendrá para validarlo. El siguiente paso será llevarlo a usuarios finales. Dejar que investiguen el prototipo y que lo utilicen libremente, así se puede obtener todo el feedback\footnote{Feedback es una palabra del inglés que significa retroalimentación.} posible sobre la experiencia de usuario.
+
+\begin{figure}[h]
+\includegraphics[width=10cm]{Img/Desarrollo/desarrollo3.png}
+\centering
+\caption{\textbf{ \footnotesize{Proceso LEAN UX, paso 3. }}}
+\end{figure}
+\label{fig:leanux3}
+
+A continuación se establece quien es el primer usuario del prototipo y que se espera aprender con el experimento que se realiza en compañía de la persona evaluadora. \vskip
+\begin{itemize}
+    \item \textbf{Usuario del experimento}. \textit{Personas que desean participar del proceso de diseño pero sin tener conocimientos sobre diseño 3D.
+Se espera aprender aspectos de funcionalidad}
+    \item \textbf{Qué se espera aprender con el experimento}. \textit{
+    Se espera aprender aspectos de funcionalidad y usabilidad de la UI al momento de interactuar con un modelo 3D.}
+\end{itemize}
+
+    
+Para realizar el primer experimento o prueba con el usuario final se utiliza una interfaz con un modelo 3D de ejemplo y sus respectivos parámetros para modificar la geometría y el color. Por convención, este experimento puede ser nombrado \textit{Demo \#1}, con el fin de establecer un orden en los experimentos. En la figura \ref{fig:feedback0} se ilustra la pantalla inicial del Demo \#1 que se muestra al usuario.
+
+Algunas características del experimento inicial son:
+\begin{itemize}
+    \item Se utiliza una computadora con navegador web y conexión a internet.
+    \item Para acceder al prototipo se utiliza un navegador web.
+    \item El usuario no tiene que escribir ninguna URL, el prototipo aparece por defecto en la pantalla.
+    \item El usuario no recibe instrucciones o capacitación de cómo utilizar el prototipo.
+    \item No hay limites de tiempo para realizar el experimento.
+    \item El evaluador se limita a observar y registrar los inconvenientes que pueda percibir en el uso.
+\end{itemize}
+Al finalizar la prueba el evaluador pregunta al usuario sobre su experiencia con el prototipo a fin de registrar aspectos que no se puedan percibir en la observación.
+
+\begin{figure}[h]
+    \includegraphics[width=14cm]{Img/Desarrollo/feedback0.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Pantalla Inicial de Demo \#1}}}
+     \label{fig:feedback0}
+\end{figure}
+
+El prototipo para la Demo \#1 se desarrolla en base al código de OpenJSCAD, adaptando algunas funcionalidades al usuario final. El desarrollo de este prototipo codificado es rápido, aproximadamente 36 horas. A continuación se señalan algunas ventajas y desventajas de el enfoque elegido para desarrollar este prototipo.\vskip
+\vspace{5mm}
+\textbf{Ventajas:}
+\begin{itemize}
+    \item Es posible reutilizar reutilizar su código en producción.
+    \item Ofrecen la simulación más realista posible.
+    \item Pueden generarse a partir de recursos existentes de código.
+\end{itemize}
+
+
+\textbf{Desventajas:}
+\begin{itemize}
+    \item Se puede perder mucho tiempo debatiendo sobre los detalles del prototipo.
+    \item En muchos casos es necesario dedicar mucho tiempo a crear código funcional que muestre la experiencia deseada.
+    \item Existe la tentación de perder tiempo perfeccionando el código antes de entregarlo a los clientes.
+    \item En algunos casos, la actualización y la iteración pueden llevar mucho tiempo.
+\end{itemize}
+
+\section{Feedback e Investigación}
+En esta instancia se debe probar el PMV desarrollado. Hasta ahora, todo el trabajo esta basado en las suposiciones; a partir de este punto se comienza con el proceso de validación. Se Utilizan técnicas de investigación ligeras, continuas y colaborativas para hacerlo. La investigación con usuarios, se encuentra en el centro de la mayoría de las estrategias de la experiencia de usuario. Un error común es realizar esta investigación solo a veces, normalmente al principio del proyecto o al final. Lean UX resuelve estos problemas convirtiendo la investigación en algo continuo y colaborativo.
+
+Lean UX toma las técnicas de investigación de mercado de UX, uniendo dos ideas importantes. En primer lugar, la investigación con esta metodología es continua, lo que significa que estas actividades se realizan en cada \textit{sprint del producto}. En lugar de poner en marcha un proceso costoso y largo, que interrumpe el proceso de diseño, la investigación se realiza en pequeñas partes, de manera que encaje bien con el proceso de diseño en marcha. En segundo lugar, la investigación de Lean UX es colaborativa: no es necesario utilizar el trabajo empresas externas especializadas para que el equipo pueda aprender sobre el comportamiento de sus clientes. Las responsabilidades de esta labor son responsabilidad de todo el equipo y se comparten entre todos. El objetivo de todo este proceso es crear un conocimiento compartido entre todos los miembros del equipo. 
+
+\begin{figure}[h]
+\includegraphics[width=10cm]{Img/Desarrollo/desarrollo4.png}
+\centering
+\caption{\textbf{ \footnotesize{Proceso LEAN UX, paso 4. }}}
+\end{figure}
+\label{fig:leanux4}
+
+\clearpage
+El descubrimiento colaborativo es una manera de conseguir que todo el equipo haga trabajo de campo. Una buena práctica que resulta crítica para Lean UX es la implicación regular de los usuarios con el producto. Las conversaciones con los usuarios, según un calendario especificado previamente, minimizan el tiempo que transcurre entre la creación de las hipótesis, el diseño de los experimentos y el feedback de los usuarios, con lo que resulta posible validar rápidamente las hipótesis. En general, saber que el feedback de los usuarios se realiza regularmente tiene un poderoso efecto sobre los equipos, ya que les quita presión a la hora de tomar decisiones. A fin de cuentas, saben que en pocos días dispondrán de datos significativos obtenidos directamente del contexto real en el que se utilizará el producto.
+
+\subsection{Feedback con el usuario}
+Una vez que se enseña el PMV y se deja que el cliente interactué con él. Es recomendable tomar notas a medida que el cliente vaya dando su opinión. Al final de la entrevista o sesión de prueba, se pide referencias al cliente de otras personas que podrían encontrar útil el producto.
+
+A continuación se realizan una serie de preguntas sobre la experiencia de usuario en el uso de la interfaz gráfica UI. 
+Para obtener un aprendizaje más específico, las preguntas se dividen en tópicos relacionados a diferentes aspectos de funcionalidad. A continuación se enumeran los tópicos a evaluar en el Demo \#1:
+\begin{enumerate}
+    \item Visualización del modelo 3D
+    \item Zoom (Aumentar, reducir)
+    \item Rotación (Girar)
+    \item Translación (Mover)
+    \item Modificación de parámetros
+\end{enumerate}
+Las respuestas posibles son Buena, Regular o Mala. En caso de responder Regular o Mala se realiza otras 2 preguntas: ¿Cual es el inconveniente inconveniente? y ¿Qué sugiere para resolver ese inconveniente?
+
+En la tabla siguiente se especifican los resultados del feedback para Demo \#1:
+
+\begin{tabular}{ |p{0.8cm}|p{2.3cm}|p{2.2cm}|p{3.6cm}|p{3.6cm}| }
+\hline
+     Ítem & Tópico & Experiencia  & Inconveniente & Cómo mejorar\\
+\hline
+1 & Visualización & Buena & - & -\\
+\hline
+2 & Zoom & Regular & Al hacer demasiado zoom sobre el modelo ocurre que no hay un limite, lo que produce que se vea rota la geometría. & Limitar el zoom o ver la posibilidad de volver la visualización a su estado original, como se muestra al inicio de la sesión.\\
+\hline
+2 & Rotación & Buena & - & -\\
+\hline
+3 & Translación & Mala & Al mover demasiado la pieza y haciendo zoom sobre el modelo ocurre que se pierde la visualización y parece que la escena esta vacía. & Limitar la opción de mover o ver la posibilidad de volver la visualización a su estado original, como se muestra al inicio de la sesión.\\
+\hline
+4 & Modificación de parámetros & Regular & No es cómodo cargar números en los campos por medio del teclado & Agregar un elemento parecido a los que tienen las apps.\\
+\hline
+\end{tabular}
+\begin{center}
+    \caption{\textbf{ \footnotesize{Resultados del feedback para Demo \#1}}}
+\end{center}
+
+\subsection{Resultados del feedback}
+Efectivamente el feedback con el usuario se traduce en la obtención de inconvenientes en la funcionalidad (desde su punto de vista) que no pudieron ser detectados en las pruebas con el equipo. La incapacidad de detectar errores por parte del equipo se debe muchas veces a que el equipo ya conoce el funcionamiento del producto y por ende se limita a utilizarlo en condiciones acotadas por ese conocimiento. A continuación se pueden apreciar visualmente los errores encontrados por el usuario y un breve análisis sobre el feedback en cada tópico.
+
+\begin{enumerate}
+    \item Visualización del modelo 3D. Ningún inconveniente, el usuario tiene una experiencia de uso positiva.
+    \item Zoom (Aumentar, reducir). En la Figura \ref{fig:feedback1} se puede apreciar este inconveniente, sobre todo en la parte donde se ``rompe" la geometría al aumentar el zoom muy cerca de la modelo. Si bien, se puede resolver reduciendo el zoom o alejándose de la escena, no se visualiza en la interfaz mecanismo inmediato para salir de esta situación. Como resultado el usuario tiene una experiencia de uso negativa.
+    \item Rotación (Girar). Ningún Inconveniente, el usuario tiene una experiencia de uso positiva.
+    \item Translación (Mover). En la Figura \ref{fig:feedback2} se puede apreciar que el modelo prácticamente desaparece de la pantalla al moverlo y hacer zoom sobre otra área de la escena. No se visualiza en la interfaz un mecanismo inmediato para salir de esta situación. Como resultado el usuario tiene una experiencia de uso negativa.
+    \item Modificación de parámetros. La mayoría de los usuarios en la actualidad están acostumbrados a las interfaces con componente gráficos como deslizadores en los que no es necesario escribir los valores numéricos. En la Figura \ref{fig:feedback3} se puede apreciar la ausencia de este tipo de elementos. Como resultado el usuario tiene una experiencia de uso negativa.
+\end{enumerate}
+
+
+\begin{figure}[h]
+    \includegraphics[width=14cm]{Img/Desarrollo/feedback2.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Inconvenientes con el zoom en Demo \#1}}}
+     \label{fig:feedback1}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=14cm]{Img/Desarrollo/feedback3.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Inconvenientes con la translación en Demo \#1}}}
+     \label{fig:feedback2}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=14cm]{Img/Desarrollo/feedback1.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Inconvenientes con la modificación de parámetros en Demo \#1}}}
+     \label{fig:feedback3}
+\end{figure}
+
+
+\subsubsection{Segunda iteración Demo \#2}
+Cabe recordar que uno de los métodos fundamentales a la hora de hacer feedback utilizando Lean UX es el ciclo \textit{crear-medir-aprender}. Siguiendo este método se puede aprovechar el prototipado rápido para realizar otros experimentos en un período de tiempo muy corto. El prototipo \textit{Demo \#2} se construye en base al feedback y las recomendaciones del usuario en el experimento \textit{Demo \#1}. En la Figura \ref{fig:feedback4} se pueden apreciar las funcionalidades de Demo \#2 que pretenden solucionar los inconvenientes detectados en el primer experimento Demo \#1.\vskip
+\begin{itemize}
+    \item \textbf{Inconvenientes con el zoom}. Solución: Se agrega un botón de \textit{Resetear Vista} para re-estabecer la vista original con el objeto centrado en la pantalla.
+    \item \textbf{Inconvenientes con la translación}. Solución: La misma funcionalidad de el punto anterior.
+    \item \textbf{Inconvenientes con la modificación de parámetros}. Solución: Se agrega un componente \textit{slider} (ver en parámetro ``Texto profundidad") para evitar la carga del valor por teclado. El resto de los campos de texto no han sido modificado de forma adrede, para que el usuario pueda evaluar las diferencias en el uso.
+\end{itemize}
+
+\begin{figure}[h]
+    \includegraphics[width=14cm]{Img/Desarrollo/feedback4.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Demo \#2. Corrección de inconvenientes hallados en Demo \#1}}}
+    \label{fig:feedback4}
+\end{figure}
+
+Luego de realizar el experimento se debe volver al ciclo \textit{crear-medir-aprender} hasta obtener un prototipo que cumpla con todos los requisitos del usuario final. Durante estos procesos se pueden obtener recomendaciones interesantes para ser implementadas en el futuro, por ejemplo: en el experimento con Demo \#2, el usuario sugirió utilizar la funcionalidad de \textit{Resetear} pero en los parámetros y de forma individual, un requerimiento de la vista general adaptado a los componentes.
+
+
+\clearpage
+\section{Sistema CoCADa}
+
+En esta sección se explica la arquitectura propuesta para el prototipo o \textit{sistema CoCADa} (Colaborative CAD application). El prototipo cuenta con una arquitectura que permite desplegar un aplicación multiplataforma accesible a través de un navegador web. El sistema debe satisfacer los siguientes requerimientos en terminos generales:
+
+\begin{itemize}
+    \item Ser multiplataforma.
+    \item Poder ejecutarse en un navegador web.
+    \item Brindar una experiencia de usuario UX satisfactoria.
+    \item Brindar soporte para múltiples usuarios.
+    \item Contar con herramientas que permitan el diseño colaborativo.
+    \item Gestionar datos de productos, basados en características (PDM) con BFDE.
+    \item Gestionar archivos en varios formatos.
+\end{itemize}
+
+Con esta arquitectura, los usuarios situados en diferentes puntos geográficos pueden intercambiar información sobre los diseños, realizar modificaciones, gestionar cambios y ver la evolución de los proyectos de diseño.
+
+Como se puede apreciar en la Figura \ref{fig:sistema0}, La arquitectura se divide en dos áreas fundamentales: Front-end y Back-end.
+\vspace{5mm}
+\begin{figure}[h]
+    \includegraphics[width=16cm]{Img/Desarrollo/sistema0.png}
+    \centering
+    \caption{\textbf{ \footnotesize{Arquitectura del sistema CoCADa}}}
+     \label{fig:sistema0}
+\end{figure}
+
+
+
+\clearpage
+A continuación se explica la función de cada una de estas áreas del sistema CoCADa y las tecnologías de software que las componen.
+\subsection{Front-End}
+En el contexto del desarrollo de aplicaciones web, el front-end o capa de presentación implica el uso de las tecnologías con las que interactúa directamente el usuario. Normalmente estas tecnologías son desarrolladas en los lenguajes de HTML, CSS, Javacript y otros recursos como imágenes y gráficos vectoriales. El Front-End es la interfaz construida con tecnologías web que se ejecuta en un navegador web y que permite al usuario de CoCADa:
+\begin{itemize}
+  \item Ingresar al sistema de forma privada mediante un nombre de usuario y contraseña.
+  \item Visualizar un modelo 3D con funciones de zoom (in-out)\footnote{ Zoom in significa enfocar o acercar la imagen y zoom out significa ampliar o alejar la imagen.}
+  \item Compartir el entorno de colaboración de un proyecto de diseño o ``marco de trabajo" mediante un hiperenlace web.
+  \item Gestionar archivos relacionados a los proyectos.
+  \item Visualizar y Manipular parámetros relacionados al modelo 3D de manera sencilla e intuitiva.
+  \item Agregar información extra (anotaciones, imágenes, etc) relacionados al modelo.
+  \item Generar nuevas versiones de los modelos en un mismo espacio de trabajo.
+  \item Explorar todas las versiones de los modelos (árbol de historias) y los cambios correspondientes.
+  \item Comunicarse con otros usuarios a través de comentarios.
+  \item Recibir notificaciones referente a las acciones de otros usuarios sobre el entorno.
+\end{itemize}
+
+\subsubsection{Vue.js}
+Como explica en su guía oficial\citep{Vue.js}, \textquote{\textbf{ Vue es una framework progresivo \footnote{Progresivo significa que se pueden incorporar herramientas incrementalmente para llegar a la solución, a medida que aumenta la complejidad del problema.} para construir interfaces de usuario. A diferencia de otros frameworks, Vue está diseñado desde el inicio para ser adoptado incrementalmente. La librería principal se enfoca solo en la capa de la vista, y es muy simple de utilizar e integrar con otros proyectos o librerías existentes}}. 
+La sintáxis de componentes de Vue está modelada basándose en ideas de la especificación de Componentes Web  de la W3C\footnote{\url{https://www.w3.org/wiki/WebComponents/}}, en inglés \textit{Web Components}. Vue se hizo muy popular debido a su gran impacto en la industria china en empresas como Alibaba\footnote{\url{http://www.alibaba.com}}
+
+\vspace{5mm}
+\textbf{Conceptos que adopta Vue}
+\begin{itemize}
+
+    \item \textbf{Componentes}. El sistema de componentes es un concepto importante en Vue.js, porque es una abstracción que permite construir aplicaciones de gran escala compuestas por componentes pequeños, autocontenidos y, normalmente, reutilizables. Casi cualquier tipo de interfaz gráfica de una aplicación puede ser representada de manera abstracta como un árbol de componentes. 
+    
+    \item \textbf{DOM Virtual}. Es una representación virtual del árbol DOM. Actualizar el \textit{DOM real} frecuentemente es una tarea muy costosa. Sin embargo, actualizar objetos en JavaScript es relativamente ligero en comparación. Con un DOM virtual, se crea un objeto en JavaScript que \textit{representa} el árbol DOM real. Las actualizaciones de cualquier elemento se realizan en el DOM virtual en lugar del DOM real. Cuando se cambia algo en la vista, se crea un nuevo objeto del DOM virtual y se determinan los cambios \cfbox{gray}{\mintinline{HTML}{diff}} entre lo antiguo y lo nuevo. Estos cambios se aplican entonces al DOM real \cfbox{gray}{\mintinline{HTML}{patch}}. En la Figura \ref{fig:sistema1} se puede ver este proceso.
+    \begin{figure}[h]
+    \includegraphics[width=9cm]{Img/Desarrollo/sistema1.png}
+    \centering
+    \caption{\textbf{ \footnotesize{Esquema de DOM virtual}}}
+     \label{fig:sistema1}
+    \end{figure}
+    
+    \item \textbf{Sistema Reactivo}. Los sistemas reactivos son aquellos que mantienen una interacción constante con su entorno. Son sistemas que permiten el cambio de estado interno por medio de eventos (externos o internos).
+    Los sistemas reactivos se suelen caracterizar por trabajar bien de forma desacoplada y asíncrona y ayudan a generar aplicaciones que trabajan mejor con datos en tiempo real. Vue se sustenta en el patrón Observer\footnote{\url{https://sourcemaking.com/design_patterns/observer}} para transformar estados por medios de eventos que puedan producirse en tiempo real a una acción determinada, en este caso renderizar vistas.
+    El comportamiento interno de un componente de Vue está muy asentado en el patrón MVVM\footnote{\url{https://msdn.microsoft.com/en-in/library/hh848246.aspx}} y en el patrón Observer. Para conseguirlo, Vue presenta el siguiente sistema interno:
+    
+    \begin{figure}[h]
+    \includegraphics[width=10cm]{Img/Desarrollo/sistema3.png}
+    \centering
+    \caption{\textbf{ \footnotesize{Sistema  interno de Vue}}}
+     \label{fig:sistema1}
+    \end{figure}
+    
+    Cada vez que se instancia un componente en la aplicación, Vue se encarga de hacer tres cosas:
+    \begin{enumerate}
+        \item Encapsula los atributos de su objeto de datos \textit{data()} con los métodos getters y setters que son usados para la obtención y modificación del datos.
+        \item Incluye un manejador para observar los antes posible cambios de estado interno y se encarga de volver a renderizar las vistas.
+        \item Cuando tiene esto preparado, renderiza el template con dichos datos en el DOM.
+    \end{enumerate}
+    
+    \item \textbf{Directivas}. 
+    En Vue.js, una directiva es el término usado para referirse a algunos atributos especiales, identificados con \cfbox{gray}{\mintinline{HTML}{v-}}, por ejemplo el atributo \cfbox{gray}{\mintinline{HTML}{v-model}} es una directiva Vue. El trabajo de una directiva es aplicar de manera reactiva un comportamiento especial al DOM cuando cambia el valor de su expresión. En el caso de \cfbox{gray}{\mintinline{HTML}{v-model}}, vincula el elemento a una de las propiedades de datos que Vue está viendo. Existen otras directivas, por ej. \cfbox{gray}{\mintinline{HTML}{v-on}} que vincula un elemento a un evento, ej. \cfbox{gray}{\mintinline{HTML}{v-on:click}}.
+    
+    \item \textbf{Renderizado declarativo}. 
+    Cuenta con un sistema que permite renderizar declarativamente datos en el DOM utilizando una sintaxis de plantillas directa. A Continuación se puede ver un ejemplo de uso.
+    \begin{minted}[baselinestretch=1, bgcolor=LightGray]{HTML}
+    <div id="app">
+        {{ message }}
+    </div>
+    
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hola en Vue!'
+        }
+    })
+    \end{minted}
+    \begin{center}
+    \caption{Uso de Vue en un renderizado declarativo}
+    \end{center}
+    
+    \item \textbf{Vinculación bidireccional}. 
+    \textquote{\textbf{La vinculación bidireccional en inglés \textit{Two-way data binding} se presenta cuando los datos están vinculados desde el DOM a JavaScript y viceversa.}}\citep{Gore2016} Por ejemplo, ¿qué pasaría si pudiéramos cambiar el valor de un mensaje en el DOM a través de un campo de texto? No hay problema. Simplemente se agrega una entrada al documento con un atributo \textit{v-model} y se asigna la propiedad del mensaje, es decir:
+    \begin{minted}[baselinestretch=1, bgcolor=LightGray]{HTML}
+    <div id="app">
+        <span>{{message}}</span><br/>
+    <input v-model="message">
+    </div>
+    
+    <script type="text/javascript">
+        var message = 'Vue bidireccional';
+        new Vue({ el: '#app', data: { message } });
+    </script>
+    \end{minted}
+    \begin{center}
+    \caption{Uso de Vue en una vinculación bidireccional}
+    \end{center}
+\end{itemize}
+\subsubsection{Vuetify}
+Vuetify\footnote{\url{https://vuetifyjs.com/en/}} es un framework progresivo de componentes semánticos que se integra con Vue.js. Su objetivo es proporcionar componentes limpios, semánticos y reutilizables que faciliten la construcción de las aplicaciones. Actualmente está soportado por la mayoría de los navegadores web.
+Los componentes de Vuetify, son creados de acuerdo a la especificación de Google Material Design\footnote{\url{https://material.io/}}, cuentan con un diseño fácil de recordar que reduce la complejidad en la declaración de clases y etiquetas HTML, utilizando propiedades con nombres simples y claras. Con vuetify se pueden establecer Layouts, Estilos, Tipografías, Iconos, Movimientos, Transiciones, Componentes de UI y directivas propias de interfaces de usuario. A continuación se puede ver un ejemplo de un componente Card especificado con código de Vuetify y su resultado en la Figura \ref{fig:sistema4}.
+
+    \begin{minted}[baselinestretch=1, bgcolor=LightGray]{HTML}
+    <template>
+        <v-layout>
+        <v-flex xs12 sm6 offset-sm3>
+            <v-card>
+            <v-card-media src="/img/part.jpg" height="200px">
+            </v-card-media>
+                <v-card-title primary-title>
+                <div>
+                <h3 class="headline mb-0">Modelo mecánico</h3>
+                <div>Descripción del modelo<br>
+                Esta pieza se utiliza para...</div>
+                 </div>
+                </v-card-title>
+                <v-card-actions>
+                  <v-btn flat color="orange">Compartir</v-btn>
+                  <v-btn flat color="orange">Explorar</v-btn>
+                </v-card-actions>
+             </v-card>
+        </v-flex>
+        </v-layout>
+    </template>
+
+
+    \end{minted}
+    \begin{center}
+    \caption{Web component Card utilizando vuetify}
+    \end{center}
+    
+    \begin{figure}[h]
+    \includegraphics[width=10cm]{Img/Desarrollo/sistema4.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Vista del Card}}}
+    \label{fig:sistema4}
+    \end{figure}
+    
+\subsubsection{OpenJSCAD}
+OpenJSCAD\footnote{\url{https://openjscad.org/}} brinda todo lo necesario (HTML, CSS y Javascript) para la correcta visualización de modelos 3D sólidos, permite el modelado booleano y la manipulación de parámetros de los modelos. También cuenta con los componentes web para editar los modelos mediante algoritmos y la importación/exportación de modelos en su formato propio (.jscad), en el formato de OpenSCAD (.scad)\footnote{\url{https://fileinfo.com/extension/scad}}, STL\footnote{\url{https://fileinfo.com/extension/stl}} y otros.\vskip
+A continuación se puede ver un fragmento de la descripción de parámetros editables en un modelo y su resultado en la Figura \ref{fig:sistema11}.
+\begin{minted}[baselinestretch=1, bgcolor=LightGray]{HTML}
+  function getParameterDefinitions() {
+  return [ { name: 'outerwidth', caption: 'Outer width of grille:', 
+    type: 'float', default: 190 },
+    { name: 'outerheight', caption: 'Outer height of grille:', 
+    type: 'float', default: 120 },
+    { name: 'outerdepth', caption: 'Outer depth of grille:', 
+    type: 'float', default: 12 },
+    { name: 'thickness', caption: 'Wall thickness:', type: 'float', 
+    default: 2.5 },
+    { name: 'innerdistance', caption: 'Inner standoff distance:', 
+    type: 'float', default: 2 },
+    { name: 'bladescale', caption: 'Relative size of blades 
+    (1.0 is default):', type: 'float', default: 1 },
+    { name: 'numdividers', caption: 'Number of vertical dividers:', 
+    type: 'int', default: 2 },
+    {
+      name: 'addlooseners', 
+      type: 'choice',
+      caption: 'Add loops (for easy removal):',
+      values: [0, 1],
+      captions: ["No", "Yes"], 
+      default: 1,
+    }, ...
+\end{minted}
+    
+ \begin{figure}[H]
+    \includegraphics[width=14cm]{Img/Desarrollo/sistema11.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Modelo y sus componentes gráficos para la edición.}}}
+    \label{fig:sistema11}
+ \end{figure}
+
+\clearpage    
+\subsection{Back-End}
+Una aplicación de \textit{Back-end} o \textit{Capa de Servicios} sirve indirectamente para el apoyo a los servicios de front-end, generalmente se sitúa mas cerca del recurso requerido o posee la capacidad de comunicarse con el recurso requerido. En este contexto, el Back-end no sirve de mucho si no interacciona con el Front-End para que los usuarios puedan visualizar la aplicación. El área de back-end cuenta con tecnologías para tareas que no pueden ser resueltas en el front-end. Estas tecnologías pueden ser Frameworks y Librerías para vincularse a Bases de datos y/o REST APIs, que le permitan exponer correctamente las aplicaciones, ya que es el encargado de que gestionar todos los datos que llegan desde y hacia el Front-end. En CoCADa, el Back-end se encarga de:
+\begin{itemize}
+  \item Iniciar y parar los servicios de la aplicación. 
+  \item Conocer el estado de los servicios.
+  \item Guardar registros de bitácora (LOGS).
+  \item Gestionar peticiones de los clientes.
+  \item Exponer la interfaz de usuario (Front-end).
+  \item Gestionar los archivos en el servidor.
+\end{itemize}
+
+
+\subsubsection{Node.js}
+Node.js\footnote{\url{https://nodejs.org/es/}} es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8\footnote{\url{https://developers.google.com/v8/?hl=es}} de Google Chrome. Node.js usa un modelo de operaciones E/S sin bloqueo y orientado a eventos, que lo hace liviano y eficiente. El ecosistema de paquetes de Node.js, npm, es el ecosistema mas grande de librerías FLOSS en el mundo. \vskip
+Javascript es una tecnologías extensamente utilizada en el desarrollo web de front-end y es el lenguaje de programación estándar en todos los navegadores web actuales. Además, gracias a Node.js, ahora se puede ejecutar Javascript del lado del servidor lo que facilita la reutilización del código.\vskip
+La mayor parte del tiempo de vida del lenguaje Javascript se ha utilizado dentro de los navegadores, empezó como un lenguaje de scripting simple para modificar pequeños detalles de páginas web pero ha medida que fueron pasando los años se ha convertido en un lenguaje complejo y completo para construir todo tipo de aplicaciones, al mismo nivel de otros lenguajes de programación que han estado allí por décadas como Java o Python.\vskip
+
+\vspace{5mm}
+\textbf{Ventajas de utilizar Node.js}
+\begin{itemize}
+    \item Es muy veloz debido a que utiliza el Motor V8. y un código de estilo asíncrono, evitando el multihilo o \textit{multithreading}\footnote{Las unidades centrales de procesamiento con capacidad para multihilo (multithreading en inglés) tienen soporte en hardware para ejecutar eficientemente múltiples hilos de ejecución}.
+    \item Se nutre de la enorme cantidad de código escrito en Javascript, debido a que es el lenguaje más popular.
+    \item Permite compartir código entre en el front-end y el servidor, debido a que ambos utilizan Javascript, unificando el lenguaje, compartiendo paradigmas y herramientas comunes.
+\end{itemize}
+
+\textcolor{red}{EXPLICAR UN POQUITO EL EVENT LOOP DE NODE}
+
+\begin{figure}[h]
+    \includegraphics[width=16cm]{Img/Desarrollo/node.jpg}
+     \caption{\textbf{ \footnotesize{Comparación de threding en Java y Node.js}}}
+     \label{fig:sistemanode}
+\end{figure}
+
+
+\subsubsection{NUXT}
+\textquote{\textbf{Nuxt.js\footnote{\url{https://nuxtjs.org/}} es un framework para crear aplicaciones isomórficas o universales con Vue.js}}\citep{}. Una aplicación  universal  es  aquella  que su código puede ser ejecutado tanto en el cliente (navegador web) como en el servidor. Nuxt proporciona una capa de abstracción por encima de Vue Server Renderer\footnote{\url{https://ssr.vuejs.org/en/}}, haciendo más fácil y rápido el proceso de configuración y el desarrollo de aplicaciones universales. En definitiva NUXT provee un marco amigable para incorporar el concepto de Server Side Rendering (SSR) que se explica a continuacion.\vskip
+\vspace{5mm}
+\textbf{Server Side Rendering}\vskip
+La mayoria de los framework de JavaScript como Vue, React o Angular, generan componentes que por defecto producen y manipulan DOM en el navegador como salida. El Server Side Rendering o SSR, brinda la posibilidad de convertir los mismos componentes en cadenas de HTML pero en el servidor, para luego enviarlos directamente al navegador y generar una aplicación en el lado del cliente.\vskip
+\textquote{\textbf{La principal ventaja de NUXT es el renderizado UI (interfaces de usuario) abstrayendo al usuario la complejidad de saber si el código se está ejecutando en el cliente o en el servidor}}.\vskip
+El SSR ayuda a incrementar la velocidad de carga de los contenidos, especialmente en internet con ancho de banda escaso. La generación de HTML en el servidor no necesita esperar hasta que se descargue y ejecute todo el JavaScript en el navegador, de modo que el usuario visualiza una página completamente renderizada de antemano por el servidor. En general, esto se traduce en una mejora en la experiencia de usuario. Por otro lado, el SSR colabora con el SEO, ya que los rastreadores de los motores de búsqueda pueden acceder directamente a las páginas completamente renderizadas. Por ende, los motores de búsqueda como Google o Bing pueden indexar aplicaciones de JavaScript síncronas sin problemas. \vskip
+
+\vspace{5mm}
+\textbf{Características de NUXT}\vskip
+Nuxt.js también simplifica toda la configuración necesaria para el desarrollo de un servidor de aplicaciones Vue.js. Nuxt se nutre de las tecnologías del ecosistema Vue: Vue 2, Vuex, Vue Router, Vue Server Renderer y vue-meta . Además en el proceso de desarrollo utiliza Webpack\footnote{\url{https://webpack.js.org/}} y Babel\footnote{\url{https://babeljs.io/}} para diferentes tareas automatizadas.\vskip
+
+\begin{figure}[h]
+    \includegraphics[width=14cm]{Img/Desarrollo/sistema5.png}
+    \centering
+    \caption{\textbf{ \footnotesize{Nuxt = Ecosistema Vue.js + Webpack + Babel}}}
+     \label{fig:sistema5}
+\end{figure}
+    
+\vspace{5mm}
+A continuación se detallan algunas características de NUXT:
+\begin{itemize}
+    \item \textbf{Escritura de código en ficheros VUE} \cfbox{gray}{\mintinline{HTML}{*.vue}}.
+    \item \textbf{Separación automática de código} (Code Splitting). Consiste en dividir el código en varios paquetes, que luego pueden cargarse bajo demanda o en paralelo mediante webpack.
+    \item \textbf{Renderizado en el servidor}. Las vistas de la aplicación serán renderizadas en el servidor. Todos los cambios dinámicos son interceptados por Vue en el cliente. Nuxt hace que el SSR sea transparente.
+    \item \textbf{Sistema de routing con sincronismo de datos}. Nuxt configura el routing de la aplicación dependiendo de la estructura de carpetas que se haya creado, además proporciona herramientas para la carga síncrona de datos y vistas en el servidor.
+    \item \textbf{Servicio de ficheros estáticos} desde el servidor.
+    \item \textbf{Transpilación de ES6/ES7/TypeScript} mediante Babel.
+    \item \textbf{Unión y minificación de JavaScript y CSS}.
+    \item \textbf{Pre-procesador} para \cfbox{gray}{\mintinline{HTML}{Sass}}, \cfbox{gray}{\mintinline{HTML}{Less}},
+    \cfbox{gray}{\mintinline{HTML}{Stylus}}
+    \cfbox{gray}{\mintinline{HTML}{PostCSS}}, etc.
+    \item \textbf{Manejo de propiedades y etiquetas de HTML: head, title, meta, etc.}
+    \item \textbf{Reemplazo de módulos de desarrollo en caliente.}
+    \item \textbf{HTTP/2 push headers ready}. Con esta funcionalidad, el servidor puede enviar los recursos antes de que el cliente pregunte por ellos.
+    \item \textbf{Extensión de Nuxt con otras arquitecturas modulares}.
+\end{itemize}
+
+Aparte de SSR, Nuxt.js puede configurarse de otras formas diferentes para generar aplicaciones:\vskip
+\vspace{5mm}
+\textbf{Tipos de renderizado de NUXT}\vskip
+\begin{enumerate}
+    \item \textbf{Server Rendered (Universal SSR)}. Se puede utilizar Nuxt.js como framework para manejar todo el renderizado UI del proyecto.
+
+    \item \textbf{Single Page Applications (SPA)}. Si por alguna razón no se necesita el renderizado en servidor, se puede habilitar la opción de SPA y usar Nuxt como si se trabajara con Vue.
+
+    \item \textbf{Static Generated (Pre Rendering)}.Una de las grandes innovaciones de Nuxt es esta funcionalidad, lo que permite generar HTML estáticos del proyecto y poder alojarlos en algún CDN (content delivery network) con toda la mejora para SEO que proporciona Nuxt.
+\end{enumerate}
+
+\subsection{API Rest}
+
+REST cambió por completo la ingeniería de software a partir del año 2000. Este nuevo enfoque de desarrollo de proyectos y web services fué definido por Roy Fielding\footnote{\url{http://roy.gbiv.com/}}, el creador de la especificación HTTP y uno de los referentes internacionales en todo lo relacionado con la Arquitectura de Redes, en su disertación \textit{Architectural Styles and the Design of Network-based Software Architectures}\footnote{\url{http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm}}. En el campo de las APIs, la Transferencia de Estado Representacional en inglés \textit{Representational State Transfer} (REST) , es la herramienta principal para desarrollo de web services.\vskip
+En la actualidad todas los proyectos masivos disponen de una API REST para la creación de sus servicios. Twitter, YouTube, los sistemas de identificación con Facebook y cientos de empresas que generan su negocio gracias a REST y las APIs REST. Sin ellas, todo el crecimiento en horizontal\footnote{El crecimiento horizontal consiste en potenciar el rendimiento de un sistema desde un aspecto de mejora global, normalmente en un crecimiento horizontal se añaden equipos para dar mas potencia a una red de trabajo.} sería prácticamente imposible. Esto es así porque REST es el estándar más lógico, eficiente y habitual en la creación de APIs para servicios de Internet.\vskip
+Open4U\citep{BBVAOPEN4U2016}, el blog especializado en APis del banco BBVA define que 
+\textquote{\textbf{REST es cualquier interfaz entre sistemas que use HTTP para obtener datos o generar operaciones sobre esos datos en todos los formatos posibles, como XML y JSON. Es una alternativa a otros protocolos estándar de intercambio de datos como Simple Object Access Protocol (SOAP), que disponen de una gran capacidad pero también mucha complejidad}}. 
+\vspace{5mm}
+\textbf{Características de REST}
+\begin{itemize}
+    \item \textbf{Protocolo cliente/servidor sin estado}: cada petición HTTP contiene toda la información necesaria para ejecutarla, lo que permite que ni cliente ni servidor necesiten recordar ningún estado previo para satisfacerla. Aunque esto es así, algunas aplicaciones HTTP incorporan memoria caché. Se configura lo que se conoce como \textit{protocolo cliente-caché-servidor sin estado}: existe la posibilidad de definir algunas respuestas a peticiones HTTP concretas como cacheables, con el objetivo de que el cliente pueda ejecutar en un futuro la misma respuesta para peticiones idénticas. De todas formas, que exista la posibilidad no significa que sea lo más recomendable.
+    
+    \item \textbf{Las operaciones más importantes relacionadas con los datos en cualquier sistema REST y la especificación HTTP son cuatro}: POST (crear), GET (leer y consultar), PUT (editar) y DELETE (eliminar).
+    
+    \item  \textbf{Los objetos en REST siempre se manipulan a partir de la URL}. Es la URL y ningún otro elemento el identificador único de cada recurso de ese sistema REST. La URL facilita acceder a la información para su modificación, borrado, o para compartir su ubicación con terceros. 
+    
+    \item  \textbf{Interfaz uniforme}: para la transferencia de datos en un sistema REST, este aplica acciones concretas (POST, GET, PUT y DELETE) sobre los recursos, siempre y cuando estén identificados con una URL. Esto facilita la existencia de una interfaz uniforme que sistematiza el proceso con la información.
+    
+    \item  \textbf{Sistema de capas}: Posee una arquitectura jerárquica entre los componentes. Cada una de estas capas lleva a cabo una funcionalidad dentro del sistema REST.
+
+    \item  \textbf{Uso de hipermedios}: 
+    En el caso de una API REST, el concepto de hipermedia explica la capacidad de una interfaz de desarrollo de aplicaciones de proporcionar los enlaces adecuados para ejecutar acciones concretas sobre los datos.
+\end{itemize}
+
+
+\vspace{5mm}
+\textbf{Ventajas que ofrece REST para el desarrollo}
+\begin{itemize}
+    \item \textbf{Separación entre el front-end y el back-end}: el protocolo REST separa totalmente el front-end, del servidor y del almacenamiento de datos. Eso tiene algunas ventajas cuando se hacen desarrollos. Por ejemplo, mejora la portabilidad de front-end a otro tipo de plataformas, aumenta la escalabilidad de los proyectos y permite que las distintos partes de los desarrollos puedan evolucionar de forma independiente.
+
+    \item  \textbf{Visibilidad, fiabilidad y escalabilidad}. La separación entre front-end y backend tiene una ventaja evidente y es que cualquier equipo de desarrollo puede escalar el producto sin excesivos problemas. Se puede migrar a otros servidores o realizar todo tipo de cambios en la base de datos, siempre y cuando los datos de cada una de las peticiones se envíen de forma correcta. Esta separación facilita tener en servidores distintos el front generado por ejemplo con SSR y el back y eso convierte a las aplicaciones en productos más flexibles a la hora de trabajar.
+
+    \item  \textbf{La API REST siempre es independiente del tipo de plataformas o lenguajes}: la API REST siempre se adapta al tipo de sintaxis o plataformas con las que se estén trabajando, lo que ofrece una gran libertad a la hora de cambiar o probar nuevos entornos dentro del desarrollo. Con una API REST se pueden tener servidores PHP, Java, Python o Node.js. Lo único que es indispensable es que las respuestas a las peticiones se hagan siempre en el mismo lenguaje de intercambio de información usado (Data Exchange), normalmente en JSON.
+\end{itemize}
+
+
+\subsubsection{Reglas de Diseño API Rest}
+Con la finalidad de tener determinados parámetros para la construcción de la REST API, Mark Massé\citep{Fallis2013} define una lista de reglas recomendadas.
+
+
+\textquote{\textbf{Las reglas están aquí para ayudarlo a diseñar una API REST con coherencia [...]. Estas reglas se pueden seguir como un conjunto completo o a la carta. Puede impugnar las reglas, pero creo que cada una de ellas merece una consideración cuidadosa}}.
+Para implementar la API REST de CoCADa se consideran las siguientes reglas:
+
+\begin{itemize}
+    \item Las barras separadoras (/) de la URI\footnote{Un Identificador Uniforme de Recursos (URI) es una secuencia compacta de caracteres que identifica un recurso abstracto o físico.
+(\url{http://www.rfc-editor.org/rfc/rfc3986.txt}).} deben utilizarse para indicar relaciones de jerarquía. Por Ejemplo\vskip \cfbox{gray}{\mintinline{HTML}{http://api.dominio.com/proyectos/comentarios/respuestas}}
+    \item La barra separadora (/) final de la URI no debe incluirse en la url. Por Ejemplo \cfbox{gray}{\mintinline{HTML}{http://api.dominio.com/proyectos/comentarios/respuestas/}} no sería correcta.
+    \item Los guiones medios (-) en la URI deben ser utilizados para mejorar la lectura de las URI. Por Ejemplo: \cfbox{gray}{\mintinline{HTML}{http://api.dominio.com/proyectos/mesa-nordica}}
+    \item Los guiones bajos (\_) no deben ser utilizados en las URI
+    \item En la URI se prefiere los caracteres en minúsculas.
+    \item No deben incluirse en la URI las extensiones de archivo. Por Ejemplo http://api.dominio.com/proyectos/archivos/parametro.json estaría mal empleado. Para solicitar los datos en el formato específico json se utilizan las cabeceras de respuesta http \cfbox{gray}{\mintinline{HTML}{"Accept"}}.
+    \item El dominio de la API debe ser consistente. Por ejemplo\vskip \cfbox{gray}{\mintinline{HTML}{http://api.gerencia.dominio.com/}}.
+    \item Las URI son modelos de recursos y se deben poder descomponer usando las barras separadoras (/). Por ejemplo:\vskip 
+    \begin{minted}[baselinestretch=1, bgcolor=LightGray]{HTML}http://api.dominio.com/proyecto/comentarios/respuestas
+    http://api.dominio.com/proyecto/comentarios
+    http://api.dominio.com/proyecto
+    http://api.dominio.com/}}
+    \end{minted}
+    \item Arquetipo de Recurso\footnote{Son similares a los patrones de diseño, ayudan a definir estructuras comunes consistentes. Documento, Colección, Almacén, Controlador} Documento: Por ejemplo\vskip
+    \cfbox{gray}{\mintinline{HTML}{http://api.dominio.com/proyectos/mesa-nordica}} ,``mesa nórdica`` es un hijo único de proyectos y por esa razón se especifica en singular.
+    \item Arquetipo de Recurso Colección. Representa una agrupación de recursos y por eso se especifica en plural. Por ejemplo: \cfbox{gray}{\mintinline{HTML}{http://api.dominio.com/proyectos}} 
+    \item Arquetipo de Recurso Controlador: Representa un proceso se define mediante un verbo (o frase verbal) y suelen aparecer al final de la URI:\vskip \cfbox{gray}{\mintinline{HTML}{http://api.dominio.com/usuario/login/recuperar}}. Con las excepciones de las operaciones CRUD\footnote{Los métodos estándar asociados a Crear, Recuperar, Actualizar y Borrar (por sus siglas en inglés)}.
+    \item Las funciones CRUD no se utilizan en las URI. Es preferible utilizar el Método de Solicitud\footnotes{Cada método http tiene un uso específico y bien definido dentro del contexto REST API. GET para recuperar información, PUT para actualizar datos, etc.} propios de la REST API: Ejemplo:\vskip \cfbox{gray}{\mintinline{HTML}{DELETE /projects/15321}}
+    \item Las componentes de consulta \footnotes{Más conocida como querys del inglés} pueden utilizarse para filtrar las colecciones. Por ejemplo:\vskip \cfbox{gray}{\mintinline{HTML}{http://api.dominio.com/users?rol=Diseñador}} retornaría la lista filtrando solo los diseñadores.
+    \item Las componentes de consulta pueden utilizarse para paginar la información. Por ejemplo: \cfbox{gray}{\mintinline{text}{http://api.dominio.com/users?limite=25&iniciarEn:50}}
+\end{itemize}
+
+(((( Falta los métodos y falta los códigos de respuesta... también una explicación de la información de la cabecera))))
+
+\subsubsection{Loopback como framework de API Rest}
+\label{section:loop}
+
+\textquote{\textbf{LoopBack es un framework FLOSS basado en Node.js altamente extensible que permite crear APIs REST}}\citep{Strongloop2018}. El proyecto es patrocinado por la compañía StrongLoop\footnotes{https://strongloop.com/} (adquirida por IBM), fundada en 2013 por dos de los principales influenciadores de Node.js, Bert Belder\footnotes{\url{https://github.com/piscisaureus}} y Ben Noordhius\footnotes{\url{https://github.com/bnoordhuis}}. Loopback es un conjunto de modulos de Node que permiten la implementación de APIs altamente flexibles y proporciona funcionalidades para:
+https://github.com/strongloop/loopback
+\begin{itemize}
+    \item Crear API REST dinámicas end-to-end\footnote{End-to-end es un enfoque que involucra la visión global del encadenamiento de procesos y/o actividades, desde que surge una necesidad a satisfacer, hasta que esta es satisfecha}. con poca codificación.
+    \item Acceso a datos para las principales bases de datos como Oracle, MySQL, PostgreSQL, MS SQL Server, MongoDB, servicios SOAP y otras APIs REST.
+    \item Incorporar modelos relacionales y controles de acceso (ACLs) para APIs complejas.
+    \item Utilizar componentes para almacenamiento de archivos (file storage).
+    \item Inicio de sesión de terceros y protocolos de autorización OAuth 2.0\footnote{\url{https://oauth.net/2/}}.
+    \item Usar servicios integrados de servicios push\footnote{Push se denominan a los sistemas que utilizan servicios para enviar notificaciones instantáneas a los usuarios.}, geolocalización y gestión de archivos para aplicaciones móviles.
+    \item Crear aplicaciones de cliente con Android, iOS y JavaScript.
+    \item Ejecutar aplicaciones web en servidores propios o en la nube.
+\end{itemize}
+
+Loopback también provee una interfaz por lineas de comandos CLI \cfbox{gray}{\mintinline{HTML}{loopback-cli}} para crear aplicaciones, modelos, fuentes de datos o \textit{data sources} y otras tareas mediante Node.js. Para la etapa de desarrollo cuenta con una herramienta muy útil: Un explorador de Api (API Explorer)\footnote{\url{https://loopback.io/doc/en/lb3/Use-API-Explorer.html}} que permite probar todo tipo de operaciones en la REST API como ser filtros, cambios en los modelos, cambios en las fuentes de datos, operaciones CRUD, etc. API Explorer se utiliza mediante una interfaz intuitiva en el navegador web, es muy útil para estudiar el comportamiento de la API.
+
+\vspace{5mm}
+
+\begin{itemize}
+    \item \textbf{Modelos}. \vskip
+    Los modelos están son el corazón de LoopBack y representan las fuentes de datos back-end que pueden ser bases de datos u otros servicios como REST o SOAP. Los modelos de LoopBack son objetos JavaScript que trabajan en conjunto con Node.js y las APIs REST.\vskip
+    Una característica poderosa y fundamental de LoopBack es que cuando se define un modelo, éste viene automáticamente con una API REST predefinida con un conjunto completo de operaciones CRUD\footnote{ CRUD es el acrónimo de Crear, Leer, Actualizar y Borrar. En inglés: (Create, Read, Update and Delete).}.
+
+    El objeto de modelo básico (Basic Model Object) de Loopback tiene métodos para agregar \textit{hooks}\footnote{Los hooks en programación se usan para interceptar las llamadas a una función. De esta manera se puede cambiar el comportamiento o ampliar la funcionalidad de la misma.}, que se activan cada vez que se realiza una operación CRUD y métodos para validar datos. Los demás objetos de modelos \textit{heredan} de él. Los modelos tienen una jerarquía de herencia, como se muestra a en la Figura \ref{fig:sistema12} cuando se agrega un modelo a una fuente de datos o \textit{data source} persistente, se convierte en un modelo conectado (Connected model) con operaciones CRUD. Los denominados modelos predefinidos (Built-in Models) heredan de él. 
+    \begin{figure}[h]
+    \includegraphics[width=10cm]{Img/Desarrollo/sistema12.png}
+    \centering
+    \caption{\textbf{ \footnotesize{Esquema de Modelos en Loopback}}}
+    \label{fig:sistema12}
+    \end{figure}
+    
+    \textbf{Modelos Predefinidos}. Cada aplicación LoopBack tiene un conjunto de modelos integrados o Built-in Models predefinidos, como Usuario, Rol y Aplicación, por lo que no se deben crear estos modelos comunes desde cero.\vskip
+    
+    \textbf{Modelos Personalizados}. Por supuesto, se pueden implementar modelos propios personalizados y específicos para la aplicación. Se puede heredar de los Built-in Models para aprovechar la funcionalidad predefinida de Usuario, Aplicación y otros modelos incorporados. Se pueden generar modelos personalizados de varias maneras:
+    \begin{itemize}
+        \item Mediante el generador de modelos de LoopBack utilizando una herramienta propia de Loopback o bien mediante IBM API Connect developer toolkit\footnote{\url{https://developer.ibm.com/apiconnect/getting-started/}}.
+        \item A partir de una base de datos relacional existente que utiliza el descubrimiento de modelos (model discovery). Luego se puede mantener el modelo sincronizado con la base de datos usando la API de \textit{sincronización de esquema/modelo} (schema/model synchronization) de LoopBack.
+        \item Mediante introspección de instancia (instance introspection) para datos de forma libre con bases de datos NoSQL o API REST.
+    \end{itemize}
+    
+    Estos tres métodos generan un archivo JSON de definición del modelo que define el modelo en LoopBack, por convención en el directorio \cfbox{gray}{\mintinline{HTML}{common/models}} de un proyecto LoopBack; por ejemplo \cfbox{gray}{\mintinline{HTML}{common/models/proyecto.json}}\vskip
+    También se puede crear y personalizar modelos mediante programación usando la API de LoopBack, o editando manualmente el archivo JSON de definición del modelo.\vskip
+    
+    \textbf{Modelos Relacionales}. Se pueden expresar relaciones entre modelos, como ``Pertenece a" \cfbox{gray}{\mintinline{HTML}{BelongsTo}}, ``Tiene muchos" \cfbox{gray}{\mintinline{HTML}{HasMany}} y ``Tiene y pertenece a muchos" \cfbox{gray}{\mintinline{HTML}{HasAndBelongsToMany}}.\vskip
+    
+    \textbf{Modelos para crear, recuperar, actualizar y eliminar}. Cuando se conecta un modelo a una fuente de datos persistente (data source) como una base de datos, se convierte en un modelo conectado con un conjunto completo de operaciones CRUD a través de la clase \cfbox{gray}{\mintinline{HTML}{PersistedModel}}. También se pueden usar otros métodos como: \cfbox{gray}{\mintinline{HTML}{findById()}}, \cfbox{gray}{\mintinline{HTML}{findOne()}} y \cfbox{gray}{\mintinline{HTML}{findOrCreate()}}.
+
+    \item \textbf{Lógica de Aplicación con Loopback}
+    
+    Se puede agregar lógica de aplicación personalizada de varias maneras:
+    \begin{itemize}
+        \item Agregando lógica de aplicación a los modelos a través de hooks remotos (endpoints\footnote{Un endpoint es la interface a través de la cual los sistemas externos pueden enviar y recibir mensajes, permitiendo así la integración de sistemas.} REST personalizados), enlaces remotos que se desencadenan mediante métodos remotos y hooks de operación que se desencadenan al realizar operaciones CRUD de modelos.
+        \item Agregando scripts de arranque que se ejecutan cuando se inicia la aplicación.
+        \item Definiendo un middleware\footnote{Middleware es un software orientado a proporcionar conectividad, interoperabilidad o integración entre diferentes aplicaciones.} personalizado, similar al middleware del framework Express\footnote{\url{http://expressjs.com/es/guide/using-middleware.html}}.\vskip
+        
+        \textbf{Fases de middleware}. 
+        El Middleware hace referencia a las funciones ejecutadas cuando las solicitudes HTTP se realizan en los endpoints REST. Loopback está basado en Express, por lo que el middleware es muy parecido al de Express. Sin embargo, LoopBack agrega el concepto de fases para definir claramente el orden en que se invoca al middleware. El uso de fases ayuda a evitar los problemas de ordenamiento que pueden ocurrir con el middleware estándar de Express.
+        \end{itemize}
+    
+    \item \textbf{Fuentes de datos y conectores}. \vskip
+    LoopBack generaliza a todos los servicios de backend con el nombre de fuentes de datos (Data sources), pueden ser bases de datos, API REST, servicios web SOAP, servicios de almacenamiento en memoria.\vskip
+    Los Data sources están respaldadas por conectores (Connectors) que se comunican directamente con las bases de datos u otro servicio de back-end. Las aplicaciones no usan conectores directamente, sino que pasan por el Data source utilizando las APIs  \cfbox{gray}{\mintinline{HTML}{DataSources}} y \cfbox{gray}{\mintinline{HTML}{PersistedModel}}. En la Figura  \ref{fig:sistema13} se puede ver el esquema.
+    
+    \begin{figure}[h]
+    \includegraphics[width=12cm]{Img/Desarrollo/sistema13.png}
+    \centering
+    \caption{\textbf{ \footnotesize{Data sources y Conectores}}}
+    \label{fig:sistema13}
+    \end{figure}
+    
+    \item \textbf{Componentes de Loopback}.\vskip
+    Los componentes de LoopBack proporcionan una funcionalidad adicional como complementos o plugins para:
+    \begin{itemize}
+        \item \textbf{Push notifications}. Permite enviar información a aplicaciones de cliente para su visualización inmediata para usar en mensajes emergentes, es ideal para aplicaciones móviles.
+        \item \textbf{Componente de almacenamiento (Storage)}. Permite cargar y descargar archivos desde y hacia proveedores de almacenamiento en la nube como Amazon, Rackspace, Openstack y Azure, como tambien en el sistema de archivos del servidor.
+        \item \textbf{Inicio de sesión de terceros}. Integra Passport y permite el inicio de sesión del usuario (y el enlace de la cuenta) usando credenciales de terceros de Facebook, Google, Twitter, Github o cualquier sistema que admita OAuth, OAuth 2 u OpenID.
+        \item \textbf{Sincronización}. permite que las aplicaciones móviles y las PWA\footnote{\url{https://developers.google.com/web/progressive-web-apps/}} funcionen fuera de línea y luego sincronicen datos con la aplicación del servidor en el momento que se vuelven a conectar.
+        \item \textbf{OAuth 2.0}. Permite que las aplicaciones LoopBack funcionen como proveedores de OAuth 2.0 para autenticar y autorizar a las aplicaciones cliente y a los usuarios para acceder a endpoints protegidos.
+    \end{itemize}
+    Un componente LoopBack es básicamente un módulo de Node.js que acepta una instancia de aplicación LoopBack y un objeto de configuración. Se puede programar la funcionalidad de componentes personalizados para que se adapten a los requisitos propios de cualquier proyecto.
+    
+    \item \textbf{OpenAPI}\vskip
+    Swagger\footnote{\url{https://swagger.io/}} es una forma de describir una API. Al igual que WSDL describe los servicios web, Swagger es una representación textual de lo que ofrece una API. Un cliente puede importar esta definición y descubrir dinámicamente cómo consumir la API. Los archivos Swagger se pueden escribir utilizando YAML\footnote{\url{http://yaml.org/}} o JSON.
+    La Open API Initiative (OAI)\footnote{\url{https://www.openapis.org/}} es una iniciativa fuertemente inspirada en Swagger creada por un consorcio de expertos de la industria con visión de futuro que reconocen el inmenso valor de estandarizar la forma de cómo describir las API REST. Como una organización abierta bajo la Fundación Linux, la OAI se enfoca en crear, desarrollar y promover un formato de descripción neutral para los proveedores de API REST. En la actualidad se está utilizando la especificación de Swagger en la OAI como base de esta Especificación Abierta.  Recientemente se anunció la especificación OpenAPI 3.0.0.
+    
+    \begin{figure}[h]
+    \includegraphics[width=8cm]{Img/Desarrollo/sistema14.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Logotipos de OAI y Swagger}}}
+    \label{fig:sistema14}
+    \end{figure}
+    
+    LoopBack admite la creación de archivos Swagger a partir de los modelos y la creación de modelos a partir de archivos Swagger. 
+    Loopback en base a las recomendaciones de la OpenAPI y con el soporte de archivos Swagger asegura que las descripciones sean neutrales y las aplicaciones puedan interactuar de forma estandarizada con otros sistemas. 
+\end{itemize}
+
+\section{Programación del sistema}
+En la secciones anteriores se establecen los requerimientos de sistema, las funciones a implementar y las tecnologías necesarias para la construcción de CoCADa. A continuación se explica de forma práctica los pasos y estrategias de programación e implementación del prototipo final, listo para producción.
+
+
+\subsection{Esquema de datos y Modelos}
+En esta sección se hace foco en desarrollar un modelo lógico que se conoce como ``esquema de datos" (data schema) a partir del cual se podrá realizar el modelado completo del FBDE (Data Exchange Basado en Características) que utiliza CoCADa, es importante mencionar que el modelo de datos representado en la Figura \ref{fig:schema} es reducido a fines de comprender su estructura. Las relaciones son ilustrativas a nivel de entidades y no a nivel de relaciones de bases de datos. Los únicos atributos que se muestran en la figura son los de la \cfbox{gray}{\mintinline{HTML}{Historia}} o versión de un modelo.
+
+\begin{figure}[h]
+    \includegraphics[width=16cm]{Img/Desarrollo/schema.png}
+    \centering
+    \caption{\textbf{ \footnotesize{Schema FBDE para CoCADa. Modelo reducido.}}}
+    \label{fig:schema}
+\end{figure}
+
+\subsubsection{Explicación del esquema}
+\begin{itemize}
+    \item \textbf{Historia}: Es la representación de un diseño (producto) individual y su información relacionada. La \cfbox{gray}{\mintinline{HTML}{Historia}} también se puede entender como la \textit{versión} de un modelo 3D luego de haber sido  modificado. \vskip
+    Una historia se genera de dos maneras: 1. Al inicio de un proyecto. 2. Al guardar los parámetros modificados de un modelo.
+    
+    \item \textbf{Usuario}. La entidad representa a los usuarios del sistema. Los usuarios se relacionan formando un \cfbox{gray}{\mintinline{HTML}{Equipo}} para interactuar entre sí. Los usuarios cuentan con diferentes roles para tener acceso restringido o no a las diferentes partes del sistema.
+    
+    \item \textbf{Proyectos}: Es la entidad que gestiona los proyectos o evolución de los diseños en el marco de trabajo. Un \cfbox{gray}{\mintinline{HTML}{Proyecto}} puede contener uno o más \textit{arboles de historias} o evoluciones de los diseños (productos). En cada proyecto individual aparte del árbol de historias se pueden guardar \textit{Archivos} relacionados al producto, por ejemplo: planos, contratos, referencias generales. Los archivos se representan con la entidad \cfbox{gray}{\mintinline{HTML}{Archivo}}. En cada proyecto interviene un \textit{Equipo de Usuarios} que se crea al realizar las invitaciones a los usuarios para participar del proyecto. \vskip
+    En la Figura \ref{fig:schema2} se pueden apreciar dos proyectos con su respectivos \textit{árboles de historias} y la evolución de los diseños con sus descripciones.
+    \begin{figure}[h]
+    \includegraphics[width=16cm]{Img/Desarrollo/schema2.png}
+    \centering
+    \caption{\textbf{ \footnotesize{Dos proyectos diferentes con su respectivos árboles de historias.}}}
+    \label{fig:schema2}
+    \end{figure}
+    
+    \item \textbf{Comentario}. Cada historia cuenta con comentarios de los usuarios que participan en ella. Los usuarios utilizan los comentarios para:
+    \begin{itemize}
+        \item Desarrollar conversaciones respondiendo comentarios de otros usuarios.
+        \item Especificar los usuarios a los que se dirige su comentario haciendo mención mediante \cfbox{gray}{\mintinline{HTML}{@mention}}.
+        \item Crear tópicos de conversacion mediante \cfbox{gray}{\mintinline{text}{hashtag}}.
+        \item \textit{Adjuntar archivos} en diferentes formatos (fotos de pruebas, referencias, etc.).
+    \end{itemize}
+
+    \item \textbf{Anotación en el Modelo}. Esta es una entidad especial que se representa de manera similar a un \cfbox{gray}{\mintinline{HTML}{Archivo Adjunto}} en un \cfbox{gray}{\mintinline{HTML}{Comentario}}. Su función práctica es la de realizar anotaciones sobre la imagen de los modelos 3D mediante dibujos o sketchs para especificar aspectos del diseño de manera directa.
+\end{itemize}
+
+\subsubsection{Data Sources y Conector}
+En Loopback las fuentes de datos se especifican mediante el archivo JSON\vskip \cfbox{gray}{\mintinline{HTML}{server/datasources.json}}, de ser necesario se pueden asignar varios Data sources en un mismo archivo JSON. En el siguiente código se puede ver la fuente de datos con su conector correspondiente. Es importante aclarar que la fuente de datos es agnóstica\footnote{Las tecnologías agnósticas, son aquellas en las que las herramientas no son dependientes de la tecnología, lo que permite que sean universales y trabajan con cualquier plataforma} a la base de datos o sistema Rest API relacionado. La elección del motor de bases de datos esta fuera del alcance de este trabajo y por lo tanto se especifica mysql a modo de ejemplo.
+
+\begin{minted}[baselinestretch=1, bgcolor=LightGray]{json}
+{
+  "db": {
+    "host": "restAPI",
+    "port": 3306,
+    "url": "mysql://restAPI:restAPI@mysql/restAPI",
+    "database": "restAPI",
+    "password": "restAPI",
+    "name": "db",
+    "user": "restAPI",
+    "connector": "mysql"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage"
+  }
+}
+\end{minted}
+
+
+\subsubsection{Modelos Persistentes}
+Los Modelos de Loopback, como se explica en la sección \ref{section:loop}, se especifican mediante archivos JSON. A continuación se especifica el Modelo correspondiente a la entidad \cfbox{gray}{\mintinline{HTML}{Historia}} escrito en \cfbox{gray}{\mintinline{HTML}{common/models/historia.json}}.
+
+\begin{minted}[baselinestretch=1, bgcolor=LightGray]{json}
+{
+  "name": "historia",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "historia_id": { 
+      "type": "number", "required": true
+    },
+    "titulo": {
+      "type": "string", "required": true, "index": true
+    },
+    "imagen": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "geometria": {
+      "type": "string"
+    },
+    "parametros": {
+      "type": "array"
+    },
+    "fecha_creacion": {
+      "type": "date", "required": true
+    },
+    "padre_id": {
+      "type": "number"
+    },
+      "autor_id": { "type": "number", "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
+\end{minted}
+
+\clearpage
+A continuación en la Figura \ref{fig:explorer} se puede ver el API Explorer con la Rest API del modelo \cfbox{gray}{\mintinline{HTML}{Historia}} generada con Loopback. Se exhibe un listado con con los metodos HTTP y los endpoints respectivos para cada operacion.
+
+\begin{figure}[h]
+    \includegraphics[width=12cm]{Img/Desarrollo/cocada1.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{API del Modelo Historia}}}
+    \label{fig:explorer}
+\end{figure}
+
+
+
+\subsubsection{Construcción de componentes}
+Los componentes se escriben en código Vue.js y Vuetify para el componente de ejemplo.
+El componente es un listado (árbol) de historias de un proyecto en particular o \textit{teaser de historias} en el archivo \cfbox{gray}{\mintinline{HTML}{HistoriaTeaser.vue}}. 
+
+\begin{minted}[baselinestretch=1, bgcolor=LightGray]{HTML}
+<template>
+  <v-flex xs12>
+    <v-card>
+      <v-card-title class="headline">{{titulo}}</v-card-title>
+      <v-card-text>
+        <div class="thumbnail">
+          <img :src="imagen" :title="titulo" />
+        </div>
+        {{description}}
+      </v-card-text>
+      <v-card-actions>
+        <nuxt-link :to="'/historia/' + id">Enlace</nuxt-link>
+      </v-card-actions>
+    </v-card>
+  </v-flex>
+</template>
+<script>
+export default {
+  props: ['imagen', 'titulo', 'descripcion', 'id']
+}
+</script>
+
+<style scoped>
+
+</style>
+\end{minted}
+
+\begin{figure}[h]
+    \includegraphics[width=16cm]{Img/Desarrollo/cocada0.jpg}
+    \centering
+    \caption{\textbf{ \footnotesize{Componente del árbol de Historias}}}
+    \label{fig:cocada0}
+\end{figure}
+
+\textcolor{red}{AQUI SE EXPLICA COMO SE ENGANCHAN LOS PARÁMETROS ENTRE LA API Y LA VISTA Y COMO SE PRODUCE EL SSR. VER COMO ORGANIZAR PIOLA PARA EL RESTO DEL SISTEMA}
+
+\subsection{Front-end y Back-end en Contenedores}
+
+\begin{displayquote}
+Varias herramientas que se han desarrolladas en la década pasada permiten a los desarrolladores de software compartir el código fuente (ejemplo: SourceForge y GitHub).\citep{Chamberlain2014}\end{displayquote}
+
+El código fuente de CoCADa estará disponible en línea, permitiendo así compartir el código. Sin embargo se requiere cierto conocimiento avanzado en sistemas parar ponerlo en marcha.
+
+\begin{displayquote}
+La herramienta ideal para la investigación reproducible debe ser fácil de usar, alojar todas los lenguajes y librerías, ser compatible hacia-atrás por décadas y permitir compartir fácilmente. La herramienta que da un gran paso para cumplir con esta descripción es Docker  \footnote{http://www.docker.com}. \citep{Chamberlain2014}
+\end{displayquote}
+
+\begin{displayquote}
+Los Linux Containers \footnote{https://linuxcontainers.org} (LXC) es un método de virtualización para ejecutar múltiples sistemas Linux aislados sobre un mismo sistema operativo. Los containers desacoplan las aplicaciones de los sistemas operativos, empaquetando las piezas de software en un sistema de ficheros que contiene todo lo que necesita para ejecutarse.[...] Docker es una derivación de LXC desarrollada por Docker Inc, que proporciona aún más flexibilidad, convirtiéndose en la solución más popular para sistemas de virtualización sobre containers\citep{Alonso2017}.
+\end{displayquote}
+
+En el desarrollo de CoCADa usaremos docker para encapsular tanto el front-end como el back-end en contenedores. Además utilizaremos docker-composer  \footnote{https://docs.docker.com/compose/} para unificar estos multiples contenedores en una única aplicación.
+
+
+
+\subsection{Pruebas}
+
+
+\section{Conclusiones}
+
+\textcolor{red}{ACA VAN LAS CONCLUSIONES}
+
+
+\subsection{Conclusiones sobre el uso de LEAN UX}
+
+\subsection{Conclusiones sobre el stack de desarrollo}
+
+\subsubsection{Front-end}
+
+
+
+\subsection{Back-end}
+
+
+\subsection{Conclusiones sobre los resultados del trabajo}
+
+\section{Trabajos futuros}
+
+
+

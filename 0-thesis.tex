@@ -1,0 +1,312 @@
+\documentclass[a4paper,12pt]{report}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Universidad Gastón Dachary
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modification History
+%
+% Based on usthesis.cls by Jonathon Read
+% http://www.cogs.susx.ac.uk/users/jlr24/latex.html
+% Modified by Anthony Smith, Feb 2007
+% Incorporated into single thesis.tex file, Anthony Smith, 30 June 2008
+% Minor alterations to page numbering, AJS, 25 July 2008
+% New alternative hyperref options for print version, AJS, 11 Sep 2008
+% "DRAFT" on header, AJS, 12 Sep 2008
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LINE SPACING
+\newcommand{\linespacing}{1.5}
+\renewcommand{\baselinestretch}{\linespacing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OTHER FORMATTING/LAYOUT DECLARATIONS
+% Graphics
+\usepackage{graphicx,color}
+\usepackage{epstopdf}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{dirtytalk} % Permite el uso de say
+\usepackage{csquotes}  % Permite el uso de \begin{displayquote}
+\usepackage{amsmath}
+\addtolength{\footnotesep}{4mm}
+
+
+% The left-hand-side should be 40mm.  The top and bottom margins should be
+% 25mm deep.  The right hand margin should be 20mm.
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=4cm,right=2cm,headsep=10pt]{geometry}
+\flushbottom
+% Pages should be numbered consecutively thorugh the main text.  Page numbers
+% should be located centrally at the top of the page.
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhf{}
+	% Add "DRAFT: <today's date>" to header (comment out the following to remove)
+	%\lhead{\textit{DRAFT: \today}}
+	%
+	%\chead{\thepage}
+	\rhead{Tesis Josi Marcos}
+    \cfoot{Página \thepage}
+	\renewcommand{\headrulewidth}{0pt}
+}
+\pagestyle{plain}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ANY OTHER DECLARATIONS HERE:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HYPERREF
+\usepackage[colorlinks,pagebackref,pdfusetitle,urlcolor=blue,citecolor=blue,linkcolor=blue,bookmarksnumbered,plainpages=false]{hyperref}
+% For print version, use this instead:
+%\usepackage[pdfusetitle,bookmarksnumbered,plainpages=false]{hyperref}
+%\usepackage{backref}
+%\renewcommand{\backrefpagesname}{Cited on}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%Import the natbib package and sets a bibliography  and citation styles
+\usepackage{natbib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY STYLE
+\bibliographystyle{abbrvnat}
+%\bibliographystyle{plain} for [1], [2] etc.
+%\bibliographystyle{apalike}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcitestyle{authoryear,open={(},close={)}} %Citation-related commands
+
+
+\renewcommand{\theequation}{Ec.\arabic{equation}} % Agrega "Ec." en la numeración de las ecuaciones.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CODE
+
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{LightGray}{gray}{0.95}
+%\definecolor{DarkGray}{gray}{0.1}
+
+%\pagecolor{DarkGray}
+
+
+\usemintedstyle{tango}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\definecolor{light-gray}{gray}{0.95}
+
+\lstset{aboveskip=60pt,belowskip=20pt}
+
+
+\newcommand{\cfbox}[2]{%
+    \colorlet{currentcolor}{.}%
+    {\color{#1}%
+    \fbox{\color{currentcolor}#2}}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN DOCUMENT
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE: roman page numbering i, ii, iii, ...
+%\pagenumbering{roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TITLE PAGE: The title page should give the following information:
+%%	(i) the full title of the thesis and the sub-title if any;
+%%	(ii) the full name of the author;
+%%	(iii) the qualification aimed for;
+%%	(iv) the name of the University of Sussex;
+%%	(v) the month and year of submission.
+\thispagestyle{empty}
+\begin{flushright}
+\includegraphics[width=7cm]{Img/ugdlogo.jpg}
+\end{flushright}	
+\vskip40mm
+\begin{center}
+% TITLE
+\huge\textbf{Collaborative Computer Aided Design Application (CoCADA)}
+\vskip2mm
+% SUBTITLE (optional)
+\large\textit{Desarrollo de una aplicación web colaborativa para revisiones de modelos sólidos paramétricos mediante el enfoque Lean UX}
+\vskip5mm
+% AUTHOR
+\Large\textbf{José María Guaimas, Marcos Daniel Henning}
+\vskip5mm
+% Director
+\Large\textbf{Director: Ing. Juan B. Cabral}\\
+\Large\textbf{Co-Director: Ing. Héctor Ruidiaz}
+\normalsize
+\end{center}
+\vfill
+\begin{flushright}
+\large
+% QUALIFICATION
+Departamento de Informática \\
+Universidad Gastón Dachary 2018\\
+% DATE OF SUBMISSION
+
+\end{flushright}		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DECLARATIONS
+%\chapter*{Declaration}
+%I hereby declare that this thesis has not been and will not be submitted in whole or in part to another University for the award of any other degree.
+	
+% ADDITIONAL DECLARATIONS HERE (IF ANY)
+
+%\vskip5mm
+%Signature:
+%\vskip20mm
+% AUTHOR
+%José María Guaimas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SUMMARY PAGE
+\thispagestyle{empty}
+\newpage
+\null\vskip10mm
+\begin{center}
+\large
+\underline{Universidad Gastón Dachary}
+\vskip20mm
+% AUTHOR, QUALIFICATION
+\textsc{José María Guaimas, Marcos Daniel Henning}\\
+\textsc{Ingeniería en Informática}
+\vskip20mm
+% TITLE
+\underline{\textsc{Título de la Tesis}}
+\vskip0mm
+% SUBTITLE (optional)
+\underline{\textsc{Subtítulo}}
+\vskip20mm
+%\underline{\textsc{Sumario}}%
+\vskip2mm
+\end{center}
+% Change line spacing
+\renewcommand{\baselinestretch}{1.0}
+\small\normalsize
+% SUMMARY HERE (300 word limit for most subjects):
+
+\thispagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACKNOWLEDGEMENTS
+\chapter*{Agradecimientos}
+\renewcommand{\baselinestretch}{\linespacing}
+\small\normalsize
+% ACKNOWLEDGEMENTS HERE:
+
+\thispagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLE OF CONTENTS, LISTS OF TABLES & FIGURES
+\newpage
+\pdfbookmark[0]{Contents}{contents_bookmark}
+\tableofcontents
+%\listoftables
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Tables}
+%\listoffigures
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Figures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN THESIS TEXT: arabic page numbering 1, 2, 3, ...
+\newpage
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RESUMEN
+%\input{resumen.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CAPÍTULOS
+% Mantenemos los capítulos separados.
+% Dentro de la carpeta archivo nuevo el nombre correspondiente X.tex"
+% Agregamos de la siguiente manera y para no mostrar usamos el porcentual %:
+
+\input{Chapters/1-intro}
+\input{Chapters/2-marco-teorico}
+\input{Chapters/2-antecedentes}
+%\input{Chapters/3-desarrollo}
+%\input{Chapters/4-pruebas}
+%\input{Chapters/5-conclusiones}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referencias
+\input{Referencias/referencias}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% START ANEXOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{Anexos/encuestas}	% Appendix Title
+
+%\input{Appendices/AppendixB} % Appendix Title
+
+%\input{Appendices/AppendixC} % Appendix Title
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% START APPENDICES
+\appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{Appendices/A}	% Appendix Title
+
+%\input{Appendices/AppendixB} % Appendix Title
+
+%\input{Appendices/AppendixC} % Appendix Title
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END DOCUMENT
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%

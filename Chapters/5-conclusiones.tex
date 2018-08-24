@@ -1,0 +1,31 @@
+%-----------------------------------------------------
+% Chapter 5: Conclusiones
+%-----------------------------------------------------
+\chapter{Conclusiones}
+\label{chap: cap5}
+
+
+\section{Conclusiones}
+
+
+\section{Trabajos Futuros}
+
+FRONT
+
+La eleccion de Vue.js y Vuetify como \textit{}web stack\footnote{Un web stack, también denominado web application stack o conjunto de soluciones (solution stack), define a un paquete de software necesario para el desarrollo de aplicaciones web.} en el lado del cliente se basa en gran medida a la ventaja de poder indicar progresivamente qué partes de esas tecnologías se quiere incluir. Permiten ir añadiendo funcionalidades en el momento que se vayan necesitando, esto es muy útil sobre todo a la hora de construir prototipos rápidos, ya que no hay que preocuparse por el funcionamiento del resto del stack. Con Vuetify se pueden generar componentes y sitios web responsivos con mucha rapidez para interactuar con los usuarios y realizar experimentos, incluso sin utilizar Vue. Lo mismo con OpenJSCAD, se pueden desarrollar prototipos de manera muy sencilla para rápidamente hacer experimentos con el usuario en componentes como el visor de modelos. \vskip
+
+Al margen del desarrollo rápido, la experiencia de usuario que se puede lograr con estas herramientas y las ventajas técnicas son muy superiores respecto a tecnologías que se utilizaron durante años para este tipo de aplicaciones como Flash o los Applets de Java, que en realidad eran simplemente un entorno de Sandbox\footnote{La tecnología sandbox consiste básicamente en crear un entorno virtual aislado donde correr programas o procesos sin que se relacionen directamente con el resto del sistema}, usando la web como un protocolo de transporte para ser entregado al cliente.
+Otra gran ventaja es el gran soporte para la integración con otras tecnologías, tanto de front-end como de back-end. Y por supuesto la amplia documentación y recursos disponibles por parte de la comunidad de desarrolladores, lo que se traduce en una \textit{curva de aprendizaje}\footnote{Una curva de aprendizaje describe el grado de éxito obtenido durante el aprendizaje en el transcurso del tiempo.} muy rápida.
+
+
+BACK
+
+Respecto a las tecnologías elegidas para desarrollar el back-end podemos destacar los beneficios de utilizar JavaScript y poder unificar el lenguaje con el fron-end y las practicas de programación basadas en ECMAScript. De esa manera se unifica el tratamiento de los datos mediante el formato JSON, lo que permite reutilizar de manera óptima los recursos para desarrollar. 
+El prototipo CoCADa necesita de funcionalidades que no son eficientes utilizando el paradigma de petición-respuesta tradicional, en muchos casos requiere conexiones en tiempo real y bidireccionales, donde tanto el cliente como el servidor pueden iniciar la comunicación. Esto está en contraste con el paradigma de respuesta web típica, donde el cliente siempre inicia la comunicación. 
+Por otro lado Node.js, al tener la capacidad de de ejecutar JavaScript en el servidor, provee librerías para acceder al filesystem y a todo tipo de funcionalidades que dentro del navegador son imposibles y antes podían lograrse utilizando otros lenguajes de programación.
+
+ventajas de la rest api
+
+En general si piensas que tu sistema en el futuro podría ser accedido no solo desde una página web, sino también desde una App para móvil o desde una aplicación de otro tipo, las ventajas de REST serán especialmente útiles. En resumen, si sospechas que los datos o servicios que estás ofreciendo en un futuro puedan llegar a ser consultados desde otros sistemas, te interesa usar REST. Incluso hay profesionales que piensan que, aunque de momento no estés pensando en que esos datos o servicios puedan llegar a ser consultados desde otros sistemas ajenos a tu web, merece la pena usar REST porque es la solución que mayor escalabilidad te va a aportar.
+Puedes desarrollar en cualquier tipo de tecnología o lenguaje con la que te sientas a gusto o con la que puedas acortar tus tiempos de desarrollo, o encaje con la filosofía o necesidades de tu proyecto. Es indiferente que en el futuro cambies totalmente las tecnologías con las que está implementado tu API REST, siempre y cuando respetes "el contrato", osea, que sigas teniendo las mismas operaciones en el API y hagan las mismas cosas que se supone que deben hacer.
+https://desarrolloweb.com/articulos/ventajas-inconvenientes-apirest-desarrollo.html

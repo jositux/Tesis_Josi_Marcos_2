@@ -1,0 +1,50 @@
+
+
+Pasos a considerar y metodología para UX UI
+
+- Idea Mapping
+Proceso en el que el encargado o la persona asignada a la tarea que se ha de realizar, o la persona a la cabeza de la idea de ese producto novedoso, se sienta junto a los diseñadores UX y las personas que esa tarea o ese producto toca, alrededor de una mesa, con papel y lápiz e intentan aclarar el entramado de ideas y soluciones que se tienen en mente.
+
+- Personas
+Muestras de usuarios en las que nos basaremos para acometer la tarea. Normalmente, se trabaja con tres perfiles diferentes que cubran cualquier caso límite de nuestro producto. Estos perfiles pueden ser reales (si se trabaja con datos y se realiza un research) o ficticios para una hipótesis, creando una plantilla con datos que rellenaremos construyendo una maqueta de posibles usuarios.
+
+- User Journey
+User Journey es aquel recorrido que las Personas definidas o usuarios identificados creemos que hacen o sabemos hacen al usar según qué elementos de nuestro producto. Analizando y previendo cómo el usuario actuará o interaccionará con la interfaz, podremos encontrar aquellos puntos débiles o confusos dónde usuarios podrían abandonar o abandonan, y reforzarlos o arreglarlos. Del mismo modo, saber qué puntos fuertes queremos destacar y, cómo y cuándo hacerlo.
+
+- Ideación y ‘workshops’
+Recopilando: tenemos el problema y posibles soluciones; tenemos identificados a usuarios o Personas; y hemos identificado los puntos flacos y fuertes de nuestro producto, los cuales han desencadenado el problema. A partir de aquí comienza un proceso de ideación y workshops que consistirán en corroborar o crear nuevas soluciones basadas en todos los aspectos anteriores. Este proceso debe siempre incluir como mínimo al diseñador UX encargado de la tarea, el jefe de producto, jefe del departamento al que afecta el problema y un desarrollador para validar que las ideas son realizables.
+
+- Wireframes
+Tras el proceso de ideación y workshops es hora de proseguir de manera interna en el equipo de diseño. Se ordenarán todas aquellas ideas e información que se han ido recolectando y se traducirán a modo de Wireframes. Estos Wireframes podrán ser realizados a lápiz y papel y/o digitalmente. En mi opinión, empezar bocetando a mano y luego pasar al ordenador es la mejor manera de aclarar el proceso y las ideas. Según mi experiencia, de este proceso deberían salir dos o tres posibles soluciones al problema.
+
+- Visual
+Tenemos la version o las versiones que han conseguido el OK. Es decir, solucionan la tarea completamente. El paso a seguir es aplicar el diseño visual a los wireframes finales. Lo óptimo sería poder testear de nuevo esta interfaz final con miembros del equipo e incluir, esta vez, a usuarios reales, coleccionar de nuevo feedback de ellos e iterar sobre nuestro diseño. Una vez nuestro trabajo no obtiene ninguna objeción, se producen todos aquellos assets y specs que el desarrollador va a necesitar para poder programar nuestro trabajo.
+
+
+DIFERENCIAS
+
+- DISEÑO DE INTERFACES, O UI
+
+Hace foco en el artefacto, o, dicho de otra manera, en lo que está dentro de la pantalla. Cuando uno diseña interfaces el problema que está resolviendo está en el diseño: selección y distribución de los elementos de la interfaz (ej. textos y campos del formulario), consistencia del diseño (con la plataforma, con otras pantallas), etc. Es importante aclarar que Diseño de Interfaces no equivale a Diseño Gráfico: el diseño de la interfaz puede incluir o no diseño gráfico. Por ejemplo, cuando uno hace un wireframe está diseñando una interfaz pero no está aplicando diseño gráfico, y cuando uno aplica reglas de estilo a una interfaz está aplicando diseño gráfico pero no está diseñando una interfaz.
+
+- EXPERIENCIA DE USUARIO, O UX
+
+Hace foco en el usuario y en la experiencia que se quiere lograr. UX se refiere a lo que experimenta el usuario antes, durante y después de interactuar con el artefacto. Sin incorporar al usuario, no se puede hacer UX. Por eso, resulta fundamental en el diseño de la experiencia, comprender en primer lugar a los usuarios y sus verdaderas motivaciones y necesidades, considerar desde ese lugar qué interfaz, qué contenidos y qué interacciones lograrán el resultado buscado, y finalmente, validar con usuarios los resultados que produce la interfaz propuesta.
+
+La validación se puede hacer de forma directa (pruebas con usuarios, entrevistas cualitativas, relevamiento de modelos mentales), o de forma indirecta (heat maps, A/B testing, click maps).
+
+La diferencia entre validación directa e indirecta, no es solamente metodológica. La validación directa suele ser cualitativa, es decir, nos permite saber por qué los usuarios hacen lo que hacen, mientras que la validación indirecta nos muestra que es lo que hacen, pero no nos dice por qué. Por eso, es bueno validar en primer lugar la experiencia de forma cualitativa como “ajuste grueso”, y luego en forma cuantitativa para buscar el “ajuste fino”.
+
+- DISEÑO DE INTERACCIÓN, O IXD
+
+Se trata de definir las formas de operar la interfaz (por ejemplo, si el ingreso de información o selección se produce mediante teclado, mouse, touch, o una combinación de ellos), los flujos de operación y las respuestas del sistema. En definitiva, pone el foco en el contacto entre el usuario y el artefacto.
+
+- ¿POR QUÉ ES IMPORTANTE CONOCER LA DIFERENCIA ENTRE 
+UI /UX / IXD?
+
+Volviendo a la pregunta inicial,  hay dos respuestas:
+
+Por un lado, para que podamos comunicar con claridad lo que estamos haciendo, y qué alcance estamos tomando.
+Y por otro, para poder generar un lenguaje común con quien nos realiza el pedido. Si todas las partes entienden que Diseño de Interfaces (UI) no necesariamente implica Experiencia de Usuario (UX), tal vez tengamos la suerte de que ya no nos pidan que “le agreguemos UX a la pantalla”; y, si no somos tan afortunados, por lo menos sabremos hacer las preguntas necesarias para entender qué nos están pidiendo exactamente, y ayudar a reformular ese pedido en función de la verdadera necesidad.
+
+https://medium.com/pixel-perfect/c%C3%B3mo-desarrollar-un-buen-ux-297f714fd606
