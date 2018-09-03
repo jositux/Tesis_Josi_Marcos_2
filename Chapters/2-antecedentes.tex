@@ -146,7 +146,7 @@ Lean UX, por su parte, es una implementación directa de esta filosofía aplicad
 
 Lean UX funciona como una práctica para entender rápidamente la función de un producto. Para ello elije un camino colaborativo y multidisciplinario; reduce el énfasis por la documentación exhaustiva y aumenta el enfoque en la construcción de un entendimiento compartido del producto que está siendo diseñado. Como consecuencia de usar este enfoque se obtiene: un equipo que trabaja de forma colaborativa, iterativamente, reduciendo al mínimo los documentos entregables, enfocándose en el software funcional y en la retroalimentación con el usuario final.
 
-\subsection{Principios de LEAN UX}
+\subsubsection{Principios de LEAN UX}
 \textit{Lean UX} contiene en su núcleo un juego de principios clave, que abarcan el proceso de diseño, la colaboración, la gestión, etc., para que los equipos puedan sacarle el máximo provecho al enfoque propio de la metodología. Se consigue con ellos que los equipos se encaminen en la dirección correcta y sean especialmente útiles para implementar los procesos de Lean UX. Los procesos, sin duda se deben ajustar a cada proyecto, por ende los principios de utilizan como guía y no de forma obligatoria. Algunos de ellos serán más difíciles de implementar y su impacto será mayor. Los equipos adoptarán sin problema otros, pero, independientemente de las dificultades, todos ellos ayudan a crear una organización más colaborativa, multifuncional y adaptada a la realidad actual de los proyectos.\vskip
 
 A continuación se detallan los principios:
@@ -289,11 +289,30 @@ Cork\footnote{\url{https://github.com/dfelinto/cork-on-blender}} es un complemen
 
 
 \clearpage
-\subsection{Modelado booleano especificado en algoritmos}
+
+\subsection{Programas para diseño especificado en algoritmos}
+Las interfaces de scripting explicadas en la secciónXX, utilizadas para definir diseños paramétricos se puede encontrar en programas como OpenSCAD\footnote{\url{http://www.openscad.org/}}, una aplicación FLOSS para crear objetos sólidos de CAD utilizando geometría constructiva de sólidos (CSG). No es un editor interactivo sino un compilador 3D basado en un lenguaje de descripción textual. Un documento de OpenSCAD especifica primitivas geométricas y define como son modificadas y manipuladas para reproducir un modelo 3D.
+
+En la última década se ha visto la aparición de un nuevo tipo de interfaz de secuencias de comandos, la interfaz visual. La programación visual implica representar programas no como texto, sino como diagramas. Un ejemplo es Grasshopper \footnote{ \url{http://www.grasshopper3d.com/}} que se basa en gráficos que mapean el flujo de relaciones desde parámetros, a través de funciones definidas por el usuario, concluyendo normalmente con la generación de geometría. Los cambios en los parámetros o las relaciones del modelo hacen que los cambios se propaguen a través de las funciones explícitas para volver a dibujar automáticamente la geometría. Como tal, son otra forma de crear un modelo paramétrico.
+
+
+\begin{figure}[h]
+\includegraphics[width=14cm]{Img/CPD/openscadc.jpg}
+\centering
+\caption{\textbf{\footnotesize{Interfaz de OpenSCAD con el código que genera el modelo 3D}}}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=14cm]{Img/CPD/rhinoc.jpg}
+\centering
+\caption{\textbf{\footnotesize{Rhinoceros con Graphopper, a la derecha se puede ver el diagrama que genera el modelo 3D}}}
+\end{figure}
+
+\subsection{Modelado booleano especificado en algoritmos, DEJAR PARA DESARROLLO}
 
 El lenguaje de descripción debe proveer los mecanismos para crear y manipular sólidos en 3D, así también formas en 2D para poder producir modelos de barrido (extrusión) o bien nuevas primitivas a través de la intersección. El  modelado  booleano  es  un proceso  descriptivo,  es  decir,  sólo  se limita  a  especificar que primitivas se utilizan y cómo se combinan, para una mejor comprensión se utiliza un pseudocódigo\footnote{Un pseudocódigo (o falso lenguaje) es una descripción de alto nivel compacta e informal del principio operativo de un algoritmo} similar al lenguaje descriptivo de OpenSCAD.
 
-\textbf{Objetos}. Los Objetos representan la construcción de los modelos, creados a partir  de las primitivas. Los objetos pueden utilizar uno o mas parámetros por lo tanto se pueden especificar utilizando paréntesis \textbf{( )}
+\textbf{Objetos}. Los Objetos representan la construcción de los modelos, creados a partir  de las primitivas. Los objetos pueden utilizar uno o más parámetros por lo tanto se pueden especificar utilizando paréntesis \textbf{( )}
 
 \begin{minted}[baselinestretch=1]{python}
    objeto()
@@ -1359,3 +1378,70 @@ El PDM Schema tentativo para COCADA incluye entre otras, las siguientes unidades
     \item Conversaciones de usuarios
     \item Relación de conversaciones con la historia
 \end{itemize}
+
+
+\clearpage
+\section{Trabajos relacionados}
+A continuación se detallan algunas herramientas existentes que poseen características similares al prototipo COCADA. 
+En la explicación de estas tecnologías se pueden apreciar algunas diferencias respecto al prototipo planteado en este trabajo, tanto en la representación de los modelos como en la gestión de la información. De todas maneras, estas herramientas son antecedentes de gran valor porque aportan ideas de gran utilidad para posibles soluciones, sobre todo en las áreas de experiencia de usuario UX y diseño UI\footnote{UI o interfaz de usuario es el espacio donde se producen las interacciones entre seres humanos y máquinas.}.
+
+\subsection{Customizer}
+Customizer\citep{MakerBot2018} es una aplicación web desarrollada por la empresa Makerbot\footnote{\url{https://www.makerbot.com/}} y disponible en Thingiverse\footnote{\url{https://www.thingiverse.com/}}, una plataforma para publicación de diseños  especializada en impresión 3D.
+
+Customizer permite adjuntar o subir a la aplicación archivos de código OpenSCAD. En éstos se especifican modelos 3D paramétricos con la definición de sus variables.
+
+Luego procesa el código OpenSCAD, analiza las variables y agrega los elementos o controles UI correspondientes, como barras deslizantes, botones de opciones, etc.\vskip 
+
+Mediante la modificación de los parámetros por medio de los controles UI se pueden generar objetos sólidos personalizados. En la Figura \ref{fig:customizer} se puede ver la interfaz.
+
+Customizer es una manera sencilla de generar diseños colaborativos mediante la personalización de modelos 3D por parte de la comunidad de usuarios de la plataforma Thingverse.
+
+\begin{figure}[h]
+\includegraphics[width=14cm]{Img/WEB/web-maker.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Interfaz de Customizer con un objeto y sus parametros}}}
+\label{fig:customizer}
+\end{figure}
+
+\subsection{Beta.Spekle}
+
+Spekle\citep{UCL2018} es un proyecto desarrollado por \textit{The Bartlett School of Architecture UCL}\footnote{\url{https://www.ucl.ac.uk/bartlett/architecture/}} pensado para que los usuarios de Grasshopper puedan compartir diseños paramétricos en la web. 
+El proyecto consta de:
+\begin{itemize}
+    \item Un plugin Spekle, que en combinación con Grasshopper permite establecer los parametros de los modelos y exportarlos a archivos SPK para luego visualizarlos en la web. En la Figura \ref{fig:plugin} se puede ver un ejemplo de uso.
+    \item Una aplicación web que permite subir archivos SPK para visualizar los modelos paramétricos con sus respectivas variables, crear versiones modificadas y registrar un historial de los cambios en los modelos. Ver \ref{fig:spekle}
+\end{itemize}
+
+\textbf{Beta.Spekle}\footnote{\url{http://beta.speckle.xyz/}} es la versión de desarrollo de la plataforma web y se publica como un proyecto FLOSS que acepta contribuciones de la comunidad.
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{Img/WEB/web-plugin.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Uso de Spekle junto a Grasshopper.}}}
+\label{fig:plugin}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=14cm]{Img/WEB/web-spekle.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Interfaz de beta.spekle, a la izquierda se pueden apreciar los parámetros del modelo.}}}
+\label{fig:spekle}
+\end{figure}
+
+
+\subsection{Modelo.io}
+
+Modelo.io\citep{Modelo.io2018} es una plataforma web creada por Qi Su y Tian Deng, orientada a profesionales que trabajan con software CAD como Rhino\footnote{\url{https://www.rhino3d.com/es}} y SketchUp\footnote{\url{https://www.sketchup.com/es}}. Permite una colaboración intuitiva entre los miembros de un equipo para perfeccionar los diseños y presentarlos de forma interactiva.
+
+Mediante modelo, los usuarios visualizan y exploran diseños en 3D, proporcionan comentarios, almacenan archivos de proyectos, se comunican entre los miembros del equipo y puedan crear presentaciones 3D interactivas para los clientes. En la Figura \ref{fig:modelo.io} se puede ver la interacción de usuarios.
+
+La características más llamativas que incluyen son los recorridos virtuales para arquitectura y la visualización de escenas en realidad virtual.
+
+El servicio ofrece una versión reducida, gratuita para estudiantes registrados. Para acceder a todas las funcionalidades de modelo.io las cuentas son de servicio pago.
+
+\begin{figure}[h]
+\includegraphics[width=14cm]{Img/WEB/web-modelo.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Interfaz de Modelo.io, a la derecha se puede apreciar la interacción entre usuarios.}}}
+\label{fig:modelo.io}
+\end{figure}

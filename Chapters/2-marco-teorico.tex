@@ -38,7 +38,7 @@ En el diseño colaborativo estos perfiles tienden a mezclarse: El usuario pasa a
 \item \textbf{Objetivo en común}\vskip
 La idea del objetivo compartido se plantea como una de las principales diferencias con respecto a los métodos tradicionales del diseño de productos o artefactos. Los métodos de diseño generalmente se planteaban para ser llevados a cabo por expertos que realizaban tareas individuales. Con el trabajo individual no era necesario compartir la visión del objetivo general del proceso de diseño. En cambio, el diseño colaborativo plantea que este punto es fundamental: Para que el equipo funcione correctamente necesita tener la visión del objetivo en común.
 
-Lógicamente, después de apuntar las características principales del diseño colaborativo, se infiere que el rol del diseñador en el proceso debe cambiar necesariamente al incluir este nuevos socios creativos en un entorno que tradicionalmente le pertenecía. En la Figura \ref{fig: co} se puede apreciar la diferencia de un esquema de co-diseño respecto al diseño clásico o tradicional.
+Lógicamente, después de apuntar las características principales del diseño colaborativo, se infiere que el rol del diseñador en el proceso debe cambiar necesariamente al incluir este nuevos socios creativos en un entorno que tradicionalmente le pertenecía. En la Figura \ref{fig: co} se puede apreciar la diferencia de un esquema de diseño clásico o tradicional respecto al co-diseño . En el diseño clásico los roles trabajan por separado, si consideramos que el diseñador e investigador puede ser la misma persona, la interacción con el usuario es a través de un reporte o lista de requerimientos con las ideas sobre el diseño. De esa manera el diseñador trabaja en base a la lista y una vez finalizado el trabajo se efectúa la entrega o devolución. Por otra parte, en el co-diseño se permite al usuario participar durante todo el proceso de desarrollo de un proyecto de diseño a través de una interacción directa con el equipo de diseño/investigación. Esta interacción se realiza mediante las herramientas inherentes a cada proyecto, que pueden ser diagramas, referencias, métodos y/o técnicas. El co-diseño se considera como una perspectiva de trabajo o un enfoque más que una metodología concreta con fases o etapas específicas.
 
 \end{enumerate}
 
@@ -46,14 +46,22 @@ Lógicamente, después de apuntar las características principales del diseño c
 \begin{figure}
 \centering
 \includegraphics[width=14cm]{Img/CPD/1-co.png}
-\caption{\textbf{\footnotesize{Diseño clásico vs co-diseño}}}
+\caption{\textbf{\footnotesize{Diseño clásico vs co-diseño. A la izquierda, en el diseño clásico la interacción se realiza mediante reportes o informes. A la derecha se aprecia la interacción de los participantes mediante la compartición de herramientas durante todo el proceso.}}}
 \label{fig: co}
 \end{figure}
 
 
+\subsection{Diseño Iterativo}
+
+El diseño iterativo en inglés \textit{Iterative Design} es una metodología de diseño basada en un proceso cíclico de creación de prototipos y pruebas, para analizar y refinar un trabajo que se encuentra en progreso. En el diseño iterativo, la interacción con el sistema diseñado se utiliza como una herramienta de investigación para recolectar información y desarrollar el proyecto, implementando versiones sucesivas del diseño o iteraciones.
+La prueba, el análisis, el refinamiento y la repetición son necesarios porque la experiencia del usuario no se puede predecir por completo, en el proceso iterativo las decisiones de diseño se basan en la experimentación  con el prototipo en progreso. De esta manera, el proyecto se desarrolla a través de un continuo diálogo entre los diseñadores, el diseño y el usuario. \citep{Zimmerman2003}
+
+En un nivel superficial, el diseño iterativo solamente difiere de la metodología de cascada\footnote{la metodología en cascada, también llamado modelo en cascada, es el enfoque metodológico que ordena rigurosamente las etapas del ciclo de vida de un proyecto, de tal forma que el inicio de cada etapa debe esperar a la finalización de la inmediatamente anterior.} de una manera: En lugar de especificar toda la aplicación antes de compilarla, se diseña y construye completamente una parte de la aplicación, y luego se utiliza esa parte y las unidades completadas previamente como base para el diseño y la producción futuros. En otras palabras, iterar es diseñar y, más específicamente, comprender el diseño en el momento que se construye el diseño. Alistair Cockburn lo describe como \textit{``aprender al completar"} y lo distingue del diseño incremental\footnote{El modelo incremental tiene como objetivo un crecimiento progresivo de la funcionalidad. Es decir, el producto va evolucionando con cada una de las entregas hasta que se amolda a lo requerido por el cliente o destinatario.
+} en el sentido que éste consiste en agregar nuevos elementos, incluso de forma iterativa, mientras que iterar trata sobre volver a trabajar y refinar. Lo más destacado del método iterativo es el siguiente principio subyacente: Hasta que se no se haya construido realmente lo que se está diseñando, no se podrá comprender en su totalidad.\citep{Chronicles2009}
+
 \subsection{Fuzzy Front End en el proceso de diseño}
 La Figura \ref{fig:fuzzy1} muestra una representación simple del proceso de diseño. Se puede apreciar un creciente énfasis en la parte delantera o de la izquierda, proceso llamado \textit{pre-diseño} o \textit{front end}.
-El Front End Difuso en inglés  \textit{Fuzzy Front End} (FFE) suele denominarse de esa manera debido a la ambigüedad y la naturaleza caótica que lo caracteriza. El FFE se puede definir en el diseño como: \textquote{ \textit{el período comprendido entre el momento en que se examina por primera vez una idea y el momento en que se considera que esa idea está lista}} \citep{schreiner}.
+El Front End Difuso en inglés  \textit{Fuzzy Front End} (FFE) suele denominarse de esa manera debido a la ambigüedad y la naturaleza caótica que lo caracteriza. El FFE se puede definir en el diseño como: \textquote{\textit{el período comprendido entre el momento en que se examina por primera vez una idea y el momento en que se considera que esa idea está lista}} \citep{schreiner}.
 
 \begin{figure}
 \centering
@@ -62,17 +70,13 @@ El Front End Difuso en inglés  \textit{Fuzzy Front End} (FFE) suele denominarse
 \label{fig:fuzzy1}
 \end{figure}
 
-\textcolor{red}{Agregar Tabla y citar }http://www.stevens-tech.edu/cce/NEW/PDFs/FuzzyFrontEnd_Old.pdf
-
-\citep{Koen1996}
-
 Durante el FFE, en muchos casos no se sabe si el resultado del proceso de diseño será un producto, un servicio, una interfaz de usuario, etc. Los puntos de vista de muchas fuentes se unen en esta fase para ayudar a comprender los usuarios y contextos de uso, la selección de oportunidades tecnológicas tales las tecnologías de la información involucradas, etc. El objetivo de las investigaciones es determinar qué se diseñará y también qué no se debe diseñar. Luego del FFE continúan los procesos del diseño clásico donde las ideas resultantes para el producto, servicio, interfaz, etc., se desarrollan primero en conceptos, y luego en prototipos que se perfeccionan en base a los comentarios o feedback\footnote{Feedback es una palabra del inglés que significa retroalimentación; se utiliza como sinónimo de respuesta o reacción.} de los futuros usuarios.
 
 El FFE generalmente presenta oportunidades de mejora para los proyectos que pueden analizarse cuantitativamente y transformarse en beneficios. Las ideas difusas contienen elementos que pueden tener éxito o fallar y por lo tanto, esta fase necesita ser gestionada cuidadosamente.\vskip
 Desde la perspectiva del desarrollo de un producto el FFE se puede representar como:
 \textquote{ \textit{el período comprendido entre el momento en que se aprueba el proyecto y el momento en que se inicia el desarrollo}}. Como se puede apreciar en la Figura \ref{fig:fuzzy2}, en primera instancia se inicia con un nivel de incertidumbre alto que decrece a medida que pasa el tiempo. La reducción del tiempo que insume el FFE se puede traducir en un aprovechamiento eficiente del tiempo del proyecto gracias a una anticipación del punto de inicio del desarrollo.\vskip
 
-\textcolor{red}{VE COMO MEJORAR FUZZY THESIS http://base12.es/disenoiterativo/}
+
 
 
 \begin{figure}
@@ -82,14 +86,13 @@ Desde la perspectiva del desarrollo de un producto el FFE se puede representar c
 \label{fig:fuzzy3}
 \end{figure}
 
-El prototipo de este trabajo de investigación pretende reducir el tiempo que insume el FFE mediante el co-diseño, brindando soporte a los participantes mediante herramientas tecnológicas. 
+El prototipo de este trabajo de investigación pretende reducir el tiempo que insume el FFE mediante el co-diseño, brindando soporte a los participantes mediante herramientas tecnológicas. En la imagen \ref{fig:fuzzy2} se puede apreciar la reducción de la etapa del FFE para aumentar la fase de desarrollo y reducir la incertidumbre. 
 
-En la sección \ref{chap: cap3} de desarrollo se pueden ver las estrategias para lograrlo.
 
 \begin{figure}
 \centering
 \includegraphics[width=10cm]{Img/CPD/fuzzy1.png}
-\caption{\textbf{\footnotesize{Fuzzy Front End desde la perspectiva del desarrollo}}}
+\caption{\textbf{\footnotesize{Fuzzy Front End desde la perspectiva del trabajo de investigación. La flecha indica la reducción del FFE, aumentando el tiempo para la fase de desarrollo y reduciendo la incertidumbre.}}}
 \label{fig:fuzzy2}
 \end{figure}
 
@@ -104,7 +107,7 @@ Para lograr la colaboración en el proceso de diseño es indispensable tener con
 insertan valores numéricos o algoritmos en un software especializado, al modificar las
 variables se generan una serie de alternativas de soluciones, y según el criterio del diseñador, la solución final es creada. Davis y Hudson \citep{Kaled2016} coinciden en que \textit{el diseño paramétrico en su definición contemporánea es únicamente posible creando un \textbf{modelo paramétrico}}. Esto lo definen como un \textit{conjunto de ecuaciones que expresan una geometría explícitamente por medio de funciones definidas por parámetros}. Esta representación se basa en las relaciones entre estas variables. Todo sistema de esta índole está compuesto por unos parámetros iniciales y las relaciones entre ellos, de manera que si se ajusta uno de los parámetros, el resultado se verá afectado de manera acorde, al igual que si se altera alguna de las relaciones. Esto brinda una característica de fuerte y sencilla maleabilidad, que permite verificar resultados fácilmente. El diseñador que emplea estas herramientas en vez de diseñar un objeto resultante, se enfoca en crear lógicas que pongan en relación estos parámetros y resulten en un sistema vivo y ampliamente modificable de acuerdo a su criterio pero asistido por la computadora. El uso de este método por medio de la manipulación de los sistemas fomenta la exploración y la experimentación de las formas del producto, que se generan automáticamente por la modificación de los parámetros o las relaciones. Woodbury \citep{Kaled2016} afirma que \textit{el diseño es cambio y que el modelado paramétrico representa el cambio}. Esto lo menciona como una característica esencial del diseño paramétrico, como aquello que lo distingue de los métodos de diseño tradicionales. Es marcar e identificar las partes y como se relacionan y cambian de manera coordinada. La demostración explicita de las partes es lo que contribuye a la intervención y modificación interactiva en tiempo real, debido a la operatividad visible del cambio en el sistema. La lógica sistemática del diseño paramétrico permite evaluar las relaciones de manera visible, en lugar de hacerlo de manera intuitiva por medio de un proceso mental interno.
 El diseñador puede explorar y descubrir nuevas posibilidades en lugar de explorar sus conocimientos previos para llegar con una solución que ya conocía.
-El autor Nigel Cross \citep{Kaled2016} también afirma que es necesaria una representación visual ya que diseñar es difícil de conducir puramente por procesos mentales internos. En la Figura \ref{fig:procesopar} se puede analizar el proceso del diseño paramétrico.
+El autor Nigel Cross \citep{Kaled2016} también afirma que es necesaria una representación visual ya que diseñar es difícil de conducir puramente por procesos mentales internos. En la Figura \ref{fig:procesopar} se puede analizar el proceso del diseño paramétrico: A partir de la abstracción de ideas y conceptos del diseño se establecen las condiciones geométricas y matemáticas, de estas derivan los parámetros y variables que sirven para programar el proceso, de la programación se obtiene como resultado la representación visual. En todo momento el diseñador puede modificar las condiciones geométricas y matemáticas, modificar los parámetros de la programación y explorar los resultados. Mediante el diseño iterativo se analizan los resultados, se vuelve a trabajar y refinar el diseño hasta lograr una versión o solución aceptable para el problema de diseño. 
 
 \begin{figure}[h]
 \includegraphics[width=10cm]{Img/CPD/diseno.png}
@@ -143,16 +146,18 @@ La maqueta fue realizada al revés, y Gaudí le sacó una fotografía para poder
 \label{fig:gaudi}
 \end{figure}
 
-
-
-
-
-\subsection{CAD Paramétrico}
-\label{cadparam}
 Lo innovador del modelo de Gaudí, explicado la sección \ref{disenoparam} radica en que éste calcula automáticamente los resultados, porque que al mover un parámetro se afecta todo el modelo, que a pesar de ser análogo, marcó el inicio de la actualización en tiempo real de geometrías con bases matemáticas, lo cuál le da el énfasis utilitario de explorar las posibilidades que el modelo ofrece (ver Figura \ref{fig:gaudi}).
 Esto marcó la \textit{necesidad de facilitar la interacción entre el diseñador y el modelo}, que implicaba muchas representaciones manuales y modificaciones completas con cada cambio. \vskip 
 No fue hasta la aparición de las computadoras y el primer programa CAD, \textit{Sketchpad} de Ivan Sutherland en 1963 que se facilitó la interacción en tiempo real del diseñador y la computadora. Yüksel \citep{Kaled2016} lo describe como un sistema que tenía un puerto de entrada con un modelo de límites que promovía la interacción, porque al manipular una parte del modelo afectaría los cambios geométricos en otro. En el contexto de aparición de este programa, el proceso de diseño era enteramente manual y análogo, donde un cambio mínimo significaría comenzar de nuevo. Al representar las geometrías en dos dimensiones en la computadora se facilitaba el proceso de diseño. A partir de esto se fueron desarrollando un amplio número de software cuyas capacidades y posibilidades se extendían con aquellas del procesamiento de datos de las computadoras.\vskip
-El recorrido histórico del desarrollo de software excede los objetivos de este trabajo final, pero la bifurcación entre la \textit{computarización del diseño} y el \textit{diseño computacional} es esencial para la compresión de los capítulos a seguir. Ambos términos suelen ser tomados como iguales, definidos como el uso de tecnologías CAD para realizar un proyecto de diseño. La diferencia radica en su empleo: la computarización del diseño apunta a el uso de la computadora como herramienta de dibujo o representación formal de un proyecto concebido en la mente del diseñador, mientras que \textit{el \textbf{diseño computacional} aborda el diseño con bases en el pensamiento algorítmico, lo que engloba al diseño paramétrico y generativo}. Esta diferenciación puede apreciarse claramente en el programa Sketchpad y el modelo de Gaudí. El programa de Sutherland representa geometrías modificables, mientras que la maqueta de Gaudí encarna un sistema complejo de parámetros y relaciones. \citep{Kaled2016}.
+
+
+
+
+
+\subsection{Diseño paramétrico mediante CAD}
+\label{cadparam}
+
+La diferenciación entre los conceptos \textit{computarización del diseño} y \textit{diseño computacional} es esencial para la compresión de este trabajo. Ambos términos suelen ser tomados como iguales, definidos como el uso de tecnologías CAD para realizar un proyecto de diseño. La diferencia radica en su empleo: la computarización del diseño apunta a el uso de la computadora como herramienta de dibujo o representación formal de un proyecto concebido en la mente del diseñador, mientras que \textit{el \textbf{diseño computacional} aborda el diseño con bases en el pensamiento algorítmico, lo que engloba al diseño paramétrico y generativo}. Esta diferenciación puede apreciarse claramente en el programa Sketchpad y el modelo de Gaudí. El programa de Sutherland representa geometrías modificables, mientras que la maqueta de Gaudí encarna un sistema complejo de parámetros y relaciones. \citep{Kaled2016}.
 
 \begin{figure}[h]
 \includegraphics[width=8cm]{Img/GEO/geo-sketchpadc.jpg}
@@ -160,8 +165,12 @@ El recorrido histórico del desarrollo de software excede los objetivos de este 
 \caption{\textbf{\footnotesize{Ivan Sutherland utilizando sketchpad en 1962}}}
 \end{figure}
 
+Los modelos CAD paramétricos se pueden desarrollar mediante aplicaciones CAD modernas y permiten a los ingenieros alterar y modificar la geometría de manera eficiente sin tener que volver a crear el modelo.
+La parametrización de los modelos CAD se puede realizar en diferentes niveles, pudiendo elevar la calidad y la reutilización de un modelo CAD.
+Además, la reutilización de modelos CAD puede disminuir el tiempo de entrega del desarrollo del producto, si el proceso está definido y usado apropiadamente\citep{Alfaiate2017}.
 
-Un ejemplo de software paramétrico masivamente utilizado es FreeCAD\footnote{\url{https://www.freecadweb.org/}}, una aplicación FLOSS de CAD 3D e ingeniería asistida por computadora muy utilizada en el diseño de elementos mecánicos. Utiliza técnicas de modelado paramétrico y está provisto de una arquitectura de software modular, permitiendo añadir funcionalidades mediante el lenguaje python\footnote{\url{https://www.python.org/}} sin tener que cambiar el núcleo del sistema.
+
+Un ejemplo de software CAD paramétrico masivamente utilizado es FreeCAD\footnote{\url{https://www.freecadweb.org/}}, una aplicación FLOSS de CAD 3D e ingeniería asistida por computadora muy utilizada en el diseño de elementos mecánicos. Utiliza técnicas de modelado paramétrico y está provisto de una arquitectura de software modular, permitiendo añadir funcionalidades mediante el lenguaje python\footnote{\url{https://www.python.org/}} sin tener que cambiar el núcleo del sistema.
 
 \begin{figure}[h]
 \includegraphics[width=14cm]{Img/CPD/freecad.jpg}
@@ -171,49 +180,26 @@ Un ejemplo de software paramétrico masivamente utilizado es FreeCAD\footnote{\u
 
 
 
-\subsection{CAD Paramétrico especificado en algoritmos} 
+\subsection{Diseño paramétrico especificado en algoritmos} 
 El diseño paramétrico también es posible a través de las interfaces de secuencias de comandos del inglés \textit{scripting}\footnote{Un script es un programa informático usualmente simple, que por lo general se almacena en un archivo de texto plano. }. Las interfaces de scripting permiten a los diseñadores escribir código para automatizar partes del software. Los desarrolladores de software como AutoCAD\footnote{AutoCAD es un software de CAD utilizado para dibujo 2D y modelado 3D, Desarrollado y comercializado por la empresa Autodesk.}, incluso en 1982, se dieron cuenta de que la inclusión de estas interfaces les permitía ``Evitar muchas cosas personalizadas de codificación y aplicación que de lo contrario se les pediría". Diez años más tarde, en 1992, cuando Mark Burry\footnote{Mark Cameron Burry es un arquitecto neozelandés y profesor de Arquitectura del Royal Melbourne Institute of Technology en Melbourne.} quería modelar las hipérbolas paramétricamente para la Sagrada Familia, en lugar de pedirle a la empresa Autodesk que incluyera una función de hipérbola en AutoCAD, utilizó la interfaz de scripting para desarrollar una propia. El script de Burry tenía tres parámetros de entrada: un punto de origen, un punto mínimo y un punto de asíntota. Estos parámetros se alimentan a través de una serie de ecuaciones explícitas escritas en código AutoLISP\footnote{AutoLISP es un lenguaje de programación derivado del lenguaje Lisp. Es utilizado para generar rutinas en AutoCAD y sus derivados.} para emitir una hipérbola. 
 
 El script, con sus parámetros de entrada, funciones explícitas y salidas es una realización arquetípica de la definición matemática de paramétrico. Ipek Dino ha argumentado que los scripts son inherentemente paramétricos, señalando que \textit{``los sistemas paramétricos se basan principalmente en principios algorítmicos ya que un algoritmo toma un valor o un conjunto de valores como entrada, ejecuta una serie de pasos computacionales que transforman la entrada y finalmente produce un valor o un conjunto de valores como salida".}
-\vskip Por lo tanto, las interfaces de scripting accesibles en la mayoría de los paquetes de software están naturalmente predispuestas a crear modelos paramétricos. (\citeauthor{Dino2012}, \citeyear{Dino2012}) 
-
-Estas interfaces se puede encontrar en programas como OpenSCAD\footnote{\url{http://www.openscad.org/}}, una aplicación FLOSS para crear objetos sólidos de CAD utilizando geometría constructiva de sólidos (CSG). No es un editor interactivo sino un compilador 3D basado en un lenguaje de descripción textual. Un documento de OpenSCAD especifica primitivas geométricas y define como son modificadas y manipuladas para reproducir un modelo 3D.
-
-
-
-En la última década se ha visto la aparición de un nuevo tipo de interfaz de secuencias de comandos, la interfaz visual. La programación visual implica representar programas no como texto, sino como diagramas. Un ejemplo es Grasshopper \footnote{ \url{http://www.grasshopper3d.com/}} que se basa en gráficos que mapean el flujo de relaciones desde parámetros, a través de funciones definidas por el usuario, concluyendo normalmente con la generación de geometría. Los cambios en los parámetros o las relaciones del modelo hacen que los cambios se propaguen a través de las funciones explícitas para volver a dibujar automáticamente la geometría. Como tal, son otra forma de crear un modelo paramétrico.
+\vskip Por lo tanto, las interfaces de scripting accesibles en la mayoría de los paquetes de software están naturalmente predispuestas para generar modelos paramétricos. (\citeauthor{Dino2012}, \citeyear{Dino2012}) 
 
 
 \begin{figure}[h]
-\includegraphics[width=14cm]{Img/CPD/openscadc.jpg}
+\includegraphics[width=14cm]{Img/CPD/cad-autolisp.png}
 \centering
-\caption{\textbf{\footnotesize{Interfaz de OpenSCAD con el código que genera el modelo 3D}}}
+\caption{\textbf{\footnotesize{Programa AutoLisp para generar una espiral 3D con bloques simples, como
+ejemplo de expresiones anidadas en el libro ``Coates's course book Generative Modelling1''. \citep{Celani2008}}}}
 \end{figure}
 
-\begin{figure}[h]
-\includegraphics[width=14cm]{Img/CPD/rhinoc.jpg}
-\centering
-\caption{\textbf{\footnotesize{Rhinoceros con Graphopper, a la derecha se puede ver el diagrama que genera el modelo 3D}}}
-\end{figure}
 
 
 \clearpage
-\subsection{CAD colaborativo y distribuido}
-Para una efectiva colaboración no basta con una comunicación iterativa en la que se intercambian pocos datos del producto y siempre de arriba hacia abajo (“top-down”), sino que es necesario disponer de un repositorio\footnote{Un repositorio, depósito o archivo es un sitio centralizado donde se almacena y mantiene información digital, habitualmente bases de datos o archivos informáticos.} común de datos que vayan más allá de la geometría representada en planos, incluyendo documentos de especificaciones, instrucciones de montaje, etc. y todos ellos en cualquier formato digital: texto, CAD/CAM/CAE, PDM, audio, vídeo y combinaciones de ellos.
-Saber trabajar en colaboración se convierte en un valor agregado, sobre todo si ésta es suministradora de componentes o sistemas para ser integrados en el producto final y para lograr esto es indispensable aprovechar el contexto actual de las nuevas tecnologías web y sus posibilidades. \citep{Ruiz}
 
-
-En función de la naturaleza del diseño como trabajo colaborativo, el \textit{CAD distribuído} y el \textit{CAD integrado} se han convertido en un tema importante.\vskip
-\textquote{\textit{El \textbf{CAD distribuído} implica que los datos CAD están disponibles a través de una red distribuída}}\citep{Synco1993}. El CAD integrado implica que los datos CAD se pueden leer por más
-que un programa de computadora, por ejemplo, sistemas CAD de una variedad de empresas y otros tipos de programas de computadora, como herramientas de análisis.\vskip
-Tanto el hardware como las tecnologías de software evolucionaron para admitir la comunicación y el acceso multiusuario a los datos de diseño, la forma de acceso varía desde archivos compartidos hasta accesos compartidos mediante Sistemas de Gestión de Bases de Datos en inglés \textit{Data Base Management System} (DBMS)\footnote{\url{https://en.wikipedia.org/wiki/Database}}. El modelado de los datos de diseño proporciona la base para establecer el semántica de los datos compartidos. Se supone que en \textit{el CAD distribuido permite el acceso a los datos de diseño a través de un sistema de CAD predeterminado o bien un DBMS}.\vskip
-Los esfuerzos hacia la integración del CAD generaron como resultado el desarrollo de varios formatos  estándares para el intercambio de datos en ingles \textit{Data Exchange}, así como muchos "no estándares". Los formatos estándares de intercambio han variado desde formatos para datos de dibujo técnico hasta formatos para modelos de productos. 
-DXF\footnote{\url{https://es.wikipedia.org/wiki/DXF}} e IGES{\url{https://wiki.eclipse.org/IGES_file_Specification}} son algunos formatos que resultaron de los esfuerzos en el intercambio de bases de datos de gráficos entre sistemas CAD.\vskip
-
-La falta de características de diseño en los estándares de intercambio de datos, como topología, relación entre objetos, etc., obligó un cambio en el enfoque hacia los estándares de \textit{intercambio de datos de productos}. El enfoque en el modelado de productos (por ejemplo, PDES- STEP\footnote{\url{https://pdesinc.org/}}, etc.) han puesto énfasis en el modelado sólido 3D, en la geometría, las características esenciales de los modelos, los datos no geométricos y el modelando del producto como un conjunto de conceptos u objetos.
-
-\subsubsection{Identificación de sistemas CAD según su uso}
-Los sistemas CAD distribuidos y colaborativos se pueden identificar en una matriz distinguiendo entre tiempo y espacio, como se puede ver en la Figura \ref{fig:tablacad}:
+\subsection{Identificación de sistemas CAD según su uso}
+Los sistemas CAD se pueden identificar mediante una matriz distinguiendo entre tiempo y espacio\citep{Maher1997}, como se puede ver en la Figura \ref{fig:tablacad}:
 
 \begin{enumerate}
 \item El uso de CAD en el mismo lugar al mismo tiempo es posible con un Interfaz CAD de usuario único, donde uno o más los diseñadores pueden sentarse en una estación de trabajo para diseñar los modelos.
@@ -231,14 +217,28 @@ Los sistemas CAD distribuidos y colaborativos se pueden identificar en una matri
 \label{fig:tablacad}
 \end{figure}
 
+\subsubsection{CAD distribuído e integrado}
+Para una efectiva colaboración no basta con una comunicación iterativa en la que se intercambian pocos datos del producto y siempre de arriba hacia abajo (“top-down”), sino que es necesario disponer de un repositorio\footnote{Un repositorio, depósito o archivo es un sitio centralizado donde se almacena y mantiene información digital, habitualmente bases de datos o archivos informáticos.} común de datos que vayan más allá de la geometría representada en planos, incluyendo documentos de especificaciones, instrucciones de montaje, etc. y todos ellos en cualquier formato digital: texto, CAD/CAM/CAE, PDM, audio, vídeo y combinaciones de ellos.
+Saber trabajar en colaboración se convierte en un valor agregado, sobre todo si ésta es suministradora de componentes o sistemas para ser integrados en el producto final y para lograr esto es indispensable aprovechar el contexto actual de las nuevas tecnologías web y sus posibilidades. \citep{Ruiz}
 
-\subsubsection{ Esquema distribuido para la colaboración }
 
-La \textit{colaboración sincrónica} indica que la colaboración se produce cuando todos los miembros del equipo de diseño trabajan en los mismos documentos, información o problema al mismo tiempo. La naturaleza amplia de la colaboración en el diseño implica que el soporte informático para dicha actividad debe proporcionar flexibilidad en la comunicación de datos e ideas de diseño. \vskip
-El diseño colaborativo involucra muchos tipos de conocimiento de diferentes dominios.
-Los diseñadores requieren diferentes vistas del diseño y tienen intereses sustancialmente diferentes con respecto al desarrollo de la solución de diseño y su representación asociada. Se necesitan múltiples niveles de abstracción para tratar con la diversidad del conocimiento. En términos de soporte informático, se necesitan diferentes formas de interactuar con otros diseñadores y herramientas para respaldar la diversidad del diseño.\vskip
+En función de la naturaleza del diseño como trabajo colaborativo, el \textit{CAD distribuído e integrado} se ha convertido en un tema importante.\vskip
+\textquote{\textit{El \textbf{CAD distribuído} implica que los datos CAD están disponibles a través de una red distribuída. El CAD integrado implica que los datos CAD se pueden leer por más que un programa de computadora }}\citep{Synco1993}.\vskip
+Tanto el hardware como las tecnologías de software evolucionaron para admitir la comunicación y el acceso multiusuario a los datos de diseño, la forma de acceso varía desde archivos compartidos hasta accesos compartidos mediante Sistemas de Gestión de Bases de Datos en inglés \textit{Data Base Management System} (DBMS)\footnote{\url{https://en.wikipedia.org/wiki/Database}}. El modelado de los datos de diseño proporciona la base para establecer el semántica de los datos compartidos. Se supone que en \textit{el CAD distribuido permite el acceso a los datos de diseño a través de un sistema de CAD predeterminado o bien un DBMS}.\vskip
+Los esfuerzos hacia la integración del CAD generaron como resultado el desarrollo de varios formatos  estándares para el intercambio de datos en ingles \textit{Data Exchange}, así como muchos ``no estándares". Los formatos estándares de intercambio han variado desde formatos para datos de dibujo técnico hasta formatos para modelos de productos. 
+DXF\footnote{\url{https://es.wikipedia.org/wiki/DXF}} e IGES\footnote{\url{https://wiki.eclipse.org/IGES_file_Specification}} son algunos formatos que resultaron de los esfuerzos en el intercambio de bases de datos de gráficos entre sistemas CAD.\vskip
 
-El desarrollo del soporte informático para la colaboración sincrónica se puede lograr mediante un espacio de trabajo compartido, como se ilustra en la Figura \ref{fig:espacio0}. El espacio de trabajo compartido es el medio a través del cual se produce la comunicación entre los participantes en el diseño colaborativo. Un espacio de trabajo compartido no solo proporciona una comunicación visual flexible y efectiva, sino que también proporciona un medio en el que un diseñador puede comprender el modelo/diseño de otro participante sin necesidad de tener el mismo vocabulario. Por lo tanto, también es importante compartir la representación subyacente de los elementos de diseño en el espacio de trabajo.
+La falta de características de diseño en los estándares de intercambio de datos, como topología, relación entre objetos, etc., obligó un cambio en el enfoque hacia los estándares de \textit{intercambio de datos de productos}. El enfoque en el modelado de productos (por ejemplo, PDES- STEP\footnote{\url{https://pdesinc.org/}}, etc.) han puesto énfasis en el modelado sólido 3D, en la geometría, las características esenciales de los modelos, los datos no geométricos y el modelando del producto como un conjunto de conceptos u objetos.
+
+
+
+
+\subsection{Modelo para el soporte informático a la colaboración }
+
+La colaboración implica que el soporte informático debe proporcionar flexibilidad en la comunicación de datos e ideas, considerando que el diseño colaborativo involucra muchos tipos de conocimiento de diferentes dominios.
+Los diseñadores requieren diferentes vistas del diseño y pueden tener intereses diferentes respecto al desarrollo de la solución de diseño y su representación asociada. Se necesitan múltiples niveles de abstracción para gestionar la diversidad del conocimiento. En términos de soporte informático, se necesitan diferentes formas de interactuar con otros diseñadores y herramientas para respaldar la diversidad.\vskip
+
+El desarrollo del soporte informático para la colaboración se puede lograr mediante un espacio de trabajo compartido, como se ilustra en la Figura \ref{fig:espacio0}. El espacio de trabajo compartido es el medio a través del cual se produce la comunicación entre los participantes en el diseño colaborativo. Un espacio de trabajo compartido no solo proporciona una comunicación visual flexible y efectiva, sino que también proporciona un medio en el que un diseñador puede comprender el modelo/diseño de otro participante sin necesidad de tener el mismo vocabulario. Por lo tanto, también es importante compartir la representación subyacente de los elementos de diseño en el espacio de trabajo.
 
 \begin{figure}[h]
 \includegraphics[width=12cm]{Img/CPD/cad-shared0.png}
@@ -277,15 +277,15 @@ La necesidad de mantener dos formas de representación compartida proviene de lo
 
 En este trabajo se aborda el concepto de diseño computacional con la utilización de modelos 3D paramétricos. Para lograr la colaboración entre personas con diferente formación o conocimientos técnicos es indispensable que los diseños se generen en función de sus parámetros y expongan sus características de manera comprensible por todas las partes involucradas. \vskip
 
-Para ello surge la necesidad de desarrollar un sistema de CAD colaborativo para una comunicación eficiente mediante la compartición de modelos 3D entre los interesados, y así gracias al diseño iterativo\footnote{Iteración significa el acto de repetir un proceso con el objetivo de alcanzar una meta deseada, objetivo o resultado.} lograr la colaboración para generar nuevas soluciones.
+Para ello surge la necesidad de desarrollar un sistema de CAD distribuído para una comunicación eficiente mediante la compartición de modelos 3D entre los interesados, y así gracias al diseño iterativo lograr la colaboración para generar nuevas soluciones.
 
 \clearpage
 \section{Informática Gráfica: perspectiva del trabajo}
-
-No cabe duda de que la vista es una de las principales vías de entrada de información al cerebro. La interpretación por éste de la \textbf{información visual}, sólo es posible después de un proceso de aprendizaje; una vez que se aprenda a tratar la información visual, como por ejemplo, reconocer los objetos y la utilidad de cada uno, dicha información ayuda a la toma decisiones. \vskip
+La Informática Gráfica es sin lugar a dudas un tema central en el desarrollo de este trabajo, a continuación se explican los principales campos que abarca, y la utilidad de cada uno.\vskip
+La interpretación de la \textbf{información visual} por parte del cerebro, sólo es posible después de un proceso de aprendizaje; una vez que se aprende a tratar la información visual, como por ejemplo, reconocer los objetos y la utilidad de cada uno, dicha información ayuda a la toma decisiones. \vskip
 A pesar de la disparidad que puede haber entre los diferentes medios de registro, por ejemplo, entre una hoja de papel y una pantalla de computadora, el conocimiento básico necesario para registrar información visual es el mismo.
 Así, en el papel se necesitan conocer los puntos a entintar y su color, y en la pantalla es necesario saber qué píxeles de la pantalla se deben activar para que emitan luz del color apropiado. \vskip
-Haciendo un poco de abstracción, si se llaman \textit{“puntos del espacio de referencia”}
+Haciendo un poco de abstracción, si se llaman \textit{``puntos del espacio de referencia”}
 a los puntos del papel, de la pantalla, o de cualquier otro medio de registro, \textit{la información necesaria para asignar características o propiedades ópticas a cada punto del espacio de referencia, tales como color, opacidad, etc., es o se conoce como \textbf{información gráfica}}.\vskip
 
 Tomando como referencia la definición anterior, podemos definir la \textbf{Informática Gráfica} (IG), como \textit{el área de la Informática que se dedica al estudio y desarrollo de procesos que permitan el tratamiento automático de la información gráfica}.\vskip 
@@ -300,7 +300,7 @@ La información gráfica con que trabaja la IG puede estar dada por conjuntos de
 
 En los espacios continuos, la información gráfica definida en un espacio 2D se conoce como \textbf{imagen vectorial}, y si el espacio es 3D, entonces se llama \textbf{modelo vectorial}. Algo similar ocurre en los espacios discretos. Así, en 2D la información gráfica recibe el nombre de \textbf{imagen raster}\footnote{Una imagen ráster o mapa de bits es un archivo que representa una matriz de píxeles o puntos de color, a partir de un modelo vectorial 3D} o imagen discreta; en cambio, en los espacios discretos 3D es conocida como \textbf{información volumétrica}.
 
-En la actualidad, la mayoría de las aplicaciones gráficas o \textit{sistemas gráficos} se limitan al tratamiento de la información gráfica definida en espacios de 2 y 3 dimensiones, aunque hay sistemas que permiten el estudio, tratamiento y visualización de información gráfica en espacios de dimensión mayor, espacialmente en 4D. Este trabajo se limita a estudiar la IG con información definida en 2 y 3D exclusivamente.
+En la actualidad, la mayoría de las aplicaciones gráficas o \textit{sistemas gráficos} se limitan al tratamiento de la información gráfica definida en espacios de 2 y 3 dimensiones, aunque hay sistemas que permiten el estudio, tratamiento y visualización de información gráfica en espacios de dimensión mayor, espacialmente en 4D. Este trabajo se limita a estudiar la IG con la información definida en 2D y 3D exclusivamente.
 
 \subsection{Campos que abarca la Informática Gráfica}
 Hay muchas formas de tratar información gráfica, y cada una de ellas puede dar lugar a un campo o subárea de especialización dentro de la IG.
@@ -3026,78 +3026,7 @@ RECOMENDACIONES
 \subsection{Interfaces de manipulación directa}
 
 
-\clearpage
-\section{Trabajos relacionados}
-A continuación se detallan algunas herramientas existentes que poseen características similares al prototipo COCADA. 
-En la explicación de estas tecnologías se pueden apreciar algunas diferencias respecto al prototipo planteado en este trabajo, tanto en la representación de los modelos como en la gestión de la información. De todas maneras, estas herramientas son antecedentes de gran valor porque aportan ideas de gran utilidad para posibles soluciones, sobre todo en las áreas de experiencia de usuario UX y diseño UI\footnote{UI o interfaz de usuario es el espacio donde se producen las interacciones entre seres humanos y máquinas.}.
 
-\subsection{Customizer}
-Customizer\citep{MakerBot2018} es una aplicación web desarrollada por la empresa Makerbot\footnote{\url{https://www.makerbot.com/}} y disponible en Thingiverse\footnote{\url{https://www.thingiverse.com/}}, una plataforma para publicación de diseños  especializada en impresión 3D.
-
-Customizer permite adjuntar o subir a la aplicación archivos de código OpenSCAD. En éstos se especifican modelos 3D paramétricos con la definición de sus variables.
-
-Luego procesa el código OpenSCAD, analiza las variables y agrega los elementos o controles UI correspondientes, como barras deslizantes, botones de opciones, etc.\vskip 
-
-Mediante la modificación de los parámetros por medio de los controles UI se pueden generar objetos sólidos personalizados. En la Figura \ref{fig:customizer} se puede ver la interfaz.
-
-Customizer es una manera sencilla de generar diseños colaborativos mediante la personalización de modelos 3D por parte de la comunidad de usuarios de la plataforma Thingverse.
-
-\begin{figure}[h]
-\includegraphics[width=14cm]{Img/WEB/web-maker.jpg}
-\centering
-\caption{\textbf{ \footnotesize{Interfaz de Customizer con un objeto y sus parametros}}}
-\label{fig:customizer}
-\end{figure}
-
-\subsection{Beta.Spekle}
-
-Spekle\citep{UCL2018} es un proyecto desarrollado por \textit{The Bartlett School of Architecture UCL}\footnote{\url{https://www.ucl.ac.uk/bartlett/architecture/}} pensado para que los usuarios de Grasshopper puedan compartir diseños paramétricos en la web. 
-El proyecto consta de:
-\begin{itemize}
-    \item Un plugin Spekle, que en combinación con Grasshopper permite establecer los parametros de los modelos y exportarlos a archivos SPK para luego visualizarlos en la web. En la Figura \ref{fig:plugin} se puede ver un ejemplo de uso.
-    \item Una aplicación web que permite subir archivos SPK para visualizar los modelos paramétricos con sus respectivas variables, crear versiones modificadas y registrar un historial de los cambios en los modelos. Ver \ref{fig:spekle}
-\end{itemize}
-
-\textbf{Beta.Spekle}\footnote{\url{http://beta.speckle.xyz/}} es la versión de desarrollo de la plataforma web y se publica como un proyecto FLOSS que acepta contribuciones de la comunidad.
-
-\begin{figure}[h]
-\includegraphics[width=8cm]{Img/WEB/web-plugin.jpg}
-\centering
-\caption{\textbf{ \footnotesize{Uso de Spekle junto a Grasshopper.}}}
-\label{fig:plugin}
-\end{figure}
-
-\begin{figure}[h]
-\includegraphics[width=14cm]{Img/WEB/web-spekle.jpg}
-\centering
-\caption{\textbf{ \footnotesize{Interfaz de beta.spekle, a la izquierda se pueden apreciar los parámetros del modelo.}}}
-\label{fig:spekle}
-\end{figure}
-
-
-\subsection{Modelo.io}
-
-Modelo.io\citep{Modelo.io2018} es una plataforma web creada por Qi Su y Tian Deng, orientada a profesionales que trabajan con software CAD como Rhino\footnote{\url{https://www.rhino3d.com/es}} y SketchUp\footnote{\url{https://www.sketchup.com/es}}. Permite una colaboración intuitiva entre los miembros de un equipo para perfeccionar los diseños y presentarlos de forma interactiva.
-
-Mediante modelo, los usuarios visualizan y exploran diseños en 3D, proporcionan comentarios, almacenan archivos de proyectos, se comunican entre los miembros del equipo y puedan crear presentaciones 3D interactivas para los clientes. En la Figura \ref{fig:modelo.io} se puede ver la interacción de usuarios.
-
-La características más llamativas que incluyen son los recorridos virtuales para arquitectura y la visualización de escenas en realidad virtual.
-
-El servicio ofrece una versión reducida, gratuita para estudiantes registrados. Para acceder a todas las funcionalidades de modelo.io las cuentas son de servicio pago.
-
-\begin{figure}[h]
-\includegraphics[width=14cm]{Img/WEB/web-modelo.jpg}
-\centering
-\caption{\textbf{ \footnotesize{Interfaz de Modelo.io, a la derecha se puede apreciar la interacción entre usuarios.}}}
-\label{fig:modelo.io}
-\end{figure}
-
-\clearpage
-
-\section{Enfoque de desarrollo}
-
-
-\input{Chapters/2-marco-lean.tex}
 
 \section{Problemas y recomendaciones
 }
