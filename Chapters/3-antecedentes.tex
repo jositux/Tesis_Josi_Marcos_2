@@ -3,6 +3,50 @@
 
 En esta sección se establecen referencias que sirven de modelo o ejemplos para este trabajo de investigación. Incluyen metodologías y tecnologías que anteceden al prototipo planteado, es decir, trabajos en los que se manejan parámetros y objetivos similares que sirven de guía para realizar comparaciones y tener ideas sobre cómo se solucionaron los problemas planteados.
 
+\subsection{Fuzzy Front End}
+La figura \ref{fig:fuzzy1} muestra una representación simple del proceso de diseño. Se puede apreciar un creciente énfasis en la parte delantera o de la izquierda, proceso llamado \textit{pre-diseño} o \textit{front end}.
+El \textbf{Front End Difuso} en inglés  \textit{Fuzzy Front End} (FFE) suele denominarse de esa manera debido a la ambigüedad y la naturaleza caótica que lo caracteriza. El \textbf{FFE} se define en el diseño como: \textquote{\textit{el período comprendido entre el momento en que se examina por primera vez una idea y el momento en que se considera que esa idea está lista}} \citep{schreiner}.
+
+\begin{figure}
+\centering
+\includegraphics[width=14cm]{Img/CPD/cpd-fuzzy.png}
+\caption{\textbf{\footnotesize{Fuzzy Front End y el proceso de diseño}}}
+\label{fig:fuzzy1}
+\end{figure}
+
+Durante el FFE, en muchos casos no se sabe si el resultado del proceso de diseño será un producto, un servicio, una interfaz de usuario, etc. Los puntos de vista de muchas fuentes se unen en esta fase para ayudar a comprender los usuarios y contextos de uso, la selección de oportunidades tecnológicas tales las tecnologías de la información involucradas, etc. El objetivo de las investigaciones es determinar qué se diseñará y también qué no se debe diseñar. Luego del FFE continúan los procesos del diseño clásico donde las ideas resultantes para el producto, servicio, interfaz, etc., se desarrollan primero en conceptos, y luego en prototipos que se perfeccionan en base a los comentarios o feedback\footnote{Feedback es una palabra en inglés que significa retroalimentación; se utiliza como sinónimo de respuesta o reacción.} de los futuros usuarios.
+
+El FFE generalmente presenta oportunidades de mejora para los proyectos que pueden analizarse cuantitativamente y transformarse en beneficios. Las ideas difusas contienen elementos que pueden tener éxito o fallar y por lo tanto, esta fase necesita ser gestionada cuidadosamente.\vskip
+Desde la perspectiva del desarrollo de un producto el FFE se puede definir como:
+\textquote{\textit{el período comprendido entre el momento en que se aprueba el proyecto y el momento en que se inicia el desarrollo}}. Como se puede apreciar en la figura \ref{fig:fuzzy2}, en primera instancia se inicia con un nivel de incertidumbre alto que decrece a medida que pasa el tiempo. La reducción del tiempo que insume el FFE se puede traducir en un aprovechamiento eficiente del tiempo del proyecto gracias a una anticipación del punto de inicio del desarrollo.\vskip
+
+El prototipo de este trabajo de investigación pretende reducir el tiempo que insume el FFE mediante el co-diseño, brindando soporte a los participantes mediante herramientas tecnológicas. 
+\clearpage
+En la imagen \ref{fig:fuzzy2} se puede verificar que la reducción de la etapa del FFE permite optimizar el proceso de desarrollo de un producto debido a que:
+\begin{enumerate}
+    \item Incrementa el tiempo para la fase de desarrollo gracias a la reducción del tiempo desde la aprobación del proyecto hasta el inicio del desarrollo.
+    \item Reduce el nivel de incertidumbre en la etapa inicial del proyecto.
+\end{enumerate}
+
+
+
+\begin{figure}
+\centering
+\includegraphics[width=10cm]{Img/CPD/fuzzy0.png}
+\caption{\textbf{\footnotesize{Fuzzy Front End desde la perspectiva del desarrollo}}}
+\label{fig:fuzzy3}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=10cm]{Img/CPD/cpd-fuzzy1-margin.png}
+\caption{\textbf{\footnotesize{Fuzzy Front End desde la perspectiva del trabajo de investigación. La flecha indica la reducción del FFE, aumentando el tiempo para la fase de desarrollo y reduciendo la incertidumbre.}}}
+\label{fig:fuzzy2}
+\end{figure}
+
+
+
 \section{Antecedentes Metodológicos del desarrollo}
 
 Desde 1980 hasta fines de 1990 los diseñadores se enfocaron en el diseño de software de la misma manera que lo habían hecho con el resto de los materiales. \vskip
@@ -858,7 +902,7 @@ Las aplicaciones web están ingresando rápidamente en dominios donde las aplica
 
 Incluir gráficos 3D en aplicaciones web no es una nueva tendencia. En 1994, se estandarizó una forma de presentar escenas 3D en el navegador web a través de un lenguaje de marcado llamado VRML. VRML permite que las escenas 3D se especifiquen en un lenguaje similar al HTML. Si bien hay (o ha habido) aplicaciones de nicho que usan VRML, hoy en día existen pocos sitios populares que incluyen documentos VRML. Parece haberse convertido en un estándar que nunca creció lo suficientemente ni se utilizo demasiado como para ver un uso significativo a gran escala. Es probable que el motivo fué la potencia de procesamiento disponible, sobre todo en computadoras de precios razonables, que en esa época no fueron lo suficientemente potentes para proporcionar gráficos 3D convincentes. Esto ha cambiado recientemente con procesadores gráficos dedicados que se abren paso en más y más tipos de dispositivos. Gracias a esto, ha habido un renovado interés en las tecnologías que proporcionan gráficos 3D en páginas web y en aplicaciones web.\vskip
 
-Los gráficos 3D interactivos son una de las áreas más grandes e importantes donde las aplicaciones web no tuvieron mucho éxito hasta hace poco. Parte de esto se debe a que este tipo de interactividad exige comprometer en gran parte del dispositivo y el software relacionado, como las máquinas virtuales para lenguajes de scripting tan a menudo involucradas en este tipo de aplicaciones. Otra razón fué la falta de una Interfaz de Programación de Aplicaciones en inglés  Application Programming Interface (API) para gráficas 3D en la mayoría de las tecnologías de aplicaciones web. Ambas áreas han visto mejoras, la primera con técnicas tales como compilación just-in-time (JIT)\footnote{Un compilador JIT (Just-In-Time) es un componente de software que mejora el rendimiento de las aplicaciones compilando códigos de bytes en código de máquina nativa, en tiempo de ejecución. } y la segunda con la introducción de tecnologías como Stage 3D para Flash\footnote{\url{https://www.adobe.com/devnet/flashplayer/stage3d.html}} y WebGL. \citep{Waerner2012}  
+Los gráficos 3D interactivos son una de las áreas más grandes e importantes donde las aplicaciones web no tuvieron mucho éxito hasta hace poco. Parte de esto se debe a que este tipo de interactividad exige comprometer en gran parte del dispositivo y el software relacionado, como las máquinas virtuales para lenguajes de scripting tan a menudo involucradas en este tipo de aplicaciones. Otra razón fué la falta de una Interfaz de Programación de Aplicaciones en inglés  \textit{Application Programming Interface} (API) para gráficas 3D en la mayoría de las tecnologías de aplicaciones web. Ambas áreas han visto mejoras, la primera con técnicas tales como compilación just-in-time (JIT)\footnote{Un compilador JIT (Just-In-Time) es un componente de software que mejora el rendimiento de las aplicaciones compilando códigos de bytes en código de máquina nativa, en tiempo de ejecución. } y la segunda con la introducción de tecnologías como Stage 3D para Flash\footnote{\url{https://www.adobe.com/devnet/flashplayer/stage3d.html}} y WebGL. \citep{Waerner2012}  
 \vskip
 
 La realidad de las aplicaciones actuales implica que las soluciones sean capaces de ejecutarse en más plataformas, admitir más navegadores y dispositivos, por lo tanto, se vuelve fundamental elegir una tecnología desde una perspectiva de compatibilidad, como WebGL. La Figura \ref{fig:compa} muestra la compatibilidad de WebGL con los navegadores más utilizados y sus respectivas versiones.
