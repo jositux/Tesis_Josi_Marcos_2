@@ -3,51 +3,9 @@
 
 En esta sección se establecen referencias que sirven de modelo o ejemplos para este trabajo de investigación. Incluyen metodologías y tecnologías que anteceden al prototipo planteado, es decir, trabajos en los que se manejan parámetros y objetivos similares que sirven de guía para realizar comparaciones y tener ideas sobre cómo se solucionaron los problemas planteados.
 
-\subsection{Fuzzy Front End}
-La figura \ref{fig:fuzzy1} muestra una representación simple del proceso de diseño. Se puede apreciar un creciente énfasis en la parte delantera o de la izquierda, proceso llamado \textit{pre-diseño} o \textit{front end}.
-El \textbf{Front End Difuso} en inglés  \textit{Fuzzy Front End} (FFE) suele denominarse de esa manera debido a la ambigüedad y la naturaleza caótica que lo caracteriza. El \textbf{FFE} se define en el diseño como: \textquote{\textit{el período comprendido entre el momento en que se examina por primera vez una idea y el momento en que se considera que esa idea está lista}} \citep{schreiner}.
-
-\begin{figure}
-\centering
-\includegraphics[width=14cm]{Img/CPD/cpd-fuzzy.png}
-\caption{\textbf{\footnotesize{Fuzzy Front End y el proceso de diseño}}}
-\label{fig:fuzzy1}
-\end{figure}
-
-Durante el FFE, en muchos casos no se sabe si el resultado del proceso de diseño será un producto, un servicio, una interfaz de usuario, etc. Los puntos de vista de muchas fuentes se unen en esta fase para ayudar a comprender los usuarios y contextos de uso, la selección de oportunidades tecnológicas tales las tecnologías de la información involucradas, etc. El objetivo de las investigaciones es determinar qué se diseñará y también qué no se debe diseñar. Luego del FFE continúan los procesos del diseño clásico donde las ideas resultantes para el producto, servicio, interfaz, etc., se desarrollan primero en conceptos, y luego en prototipos que se perfeccionan en base a los comentarios o feedback\footnote{Feedback es una palabra en inglés que significa retroalimentación; se utiliza como sinónimo de respuesta o reacción.} de los futuros usuarios.
-
-El FFE generalmente presenta oportunidades de mejora para los proyectos que pueden analizarse cuantitativamente y transformarse en beneficios. Las ideas difusas contienen elementos que pueden tener éxito o fallar y por lo tanto, esta fase necesita ser gestionada cuidadosamente.\vskip
-Desde la perspectiva del desarrollo de un producto el FFE se puede definir como:
-\textquote{\textit{el período comprendido entre el momento en que se aprueba el proyecto y el momento en que se inicia el desarrollo}}. Como se puede apreciar en la figura \ref{fig:fuzzy2}, en primera instancia se inicia con un nivel de incertidumbre alto que decrece a medida que pasa el tiempo. La reducción del tiempo que insume el FFE se puede traducir en un aprovechamiento eficiente del tiempo del proyecto gracias a una anticipación del punto de inicio del desarrollo.\vskip
-
-El prototipo de este trabajo de investigación pretende reducir el tiempo que insume el FFE mediante el co-diseño, brindando soporte a los participantes mediante herramientas tecnológicas. 
-\clearpage
-En la imagen \ref{fig:fuzzy2} se puede verificar que la reducción de la etapa del FFE permite optimizar el proceso de desarrollo de un producto debido a que:
-\begin{enumerate}
-    \item Incrementa el tiempo para la fase de desarrollo gracias a la reducción del tiempo desde la aprobación del proyecto hasta el inicio del desarrollo.
-    \item Reduce el nivel de incertidumbre en la etapa inicial del proyecto.
-\end{enumerate}
 
 
-
-\begin{figure}
-\centering
-\includegraphics[width=10cm]{Img/CPD/fuzzy0.png}
-\caption{\textbf{\footnotesize{Fuzzy Front End desde la perspectiva del desarrollo}}}
-\label{fig:fuzzy3}
-\end{figure}
-
-
-\begin{figure}
-\centering
-\includegraphics[width=10cm]{Img/CPD/cpd-fuzzy1-margin.png}
-\caption{\textbf{\footnotesize{Fuzzy Front End desde la perspectiva del trabajo de investigación. La flecha indica la reducción del FFE, aumentando el tiempo para la fase de desarrollo y reduciendo la incertidumbre.}}}
-\label{fig:fuzzy2}
-\end{figure}
-
-
-
-\section{Antecedentes Metodológicos del desarrollo}
+\section{Antecedentes Metodológicos}
 
 Desde 1980 hasta fines de 1990 los diseñadores se enfocaron en el diseño de software de la misma manera que lo habían hecho con el resto de los materiales. \vskip
 Cuando se diseña para producir un objeto tangible, se necesita tener muy claro lo que se hace antes de iniciar la producción física, porque la producción es costosa, es costoso poner en marcha una fábrica para producir bienes físicos. \vskip En el ámbito del desarrollo de software, los diseñadores tuvieron que enfrentar nuevos retos, descubrir los nuevos medios y, a medida que lo hacían, aparecían nuevas especialidades, como el diseño de interacción o la arquitectura de información. Sin embargo, en esa época la práctica de los diseñadores apenas cambió. Todavía diseñaban los productos de manera tradicional, con mucho detalle y por adelantado, porque había un proceso de ``fabricación": había que hacer copias de los trabajo en discos flexibles y CDs y distribuirlas de la misma manera en la que se distribuyen los bienes físicos. Cometer errores en ese contexto se traducía en enormes costos de producción. \vskip
@@ -56,8 +14,23 @@ Internet cambió la lógica de distribución de software de una manera radical, 
 Sin embargo el porcentaje de fracazos en los proyectos de software es notable, a continuación se realiza un análisis sobre este hecho:
 
 \subsection{Análisis sobre fracazos y éxitos de los proyectos TI}
-El informe del Caos en inglés \textit{Chaos Report} es publicado desde 1994 y cada dos años por la agencia de investigación ``Standish Group"\footnote{\url{https://www.standishgroup.com/}}, dando una visión sobre el fracaso o éxito de los proyectos en el sector de las TI, en inglés \textit{Information Technology} (IT). Para el informe del año 2015 se analizaron aproximadamente 50.000 proyectos de todo el mundo, desde mantenimientos pequeños hasta gigantescos proyectos de reingeniería.\vskip
-Los proyectos se clasifican de la siguiente manera:
+\textquote{\textit{En 1986, Alfred Spector, presidente de Transarc Corporation, fue coautor de un documento que compara la construcción de puentes con el desarrollo de software. La premisa: los puentes normalmente se construyen a tiempo, en presupuesto, y no se rompen. Por otro lado, el software nunca llega a tiempo o dentro del presupuesto y además, siempre se rompen}}  \citep{Mulder1995}, (sin embargo, la construcción de puentes no siempre tuvo un registro tan estelar. Muchos proyectos de construcción de puentes excedieron sus estimaciones, plazos de tiempo y algunos incluso se rompieron.\vskip
+Una de las principales razones por las cuales los puentes se finalizan a tiempo, dentro del presupuesto y no se caen es por el detalle extremo del diseño. El diseño se cierra de antemano y el contratista tiene poca flexibilidad para cambiar las especificaciones. Sin embargo, en el entorno empresarial de rápido movimiento de la actualidad, un esquema con un diseño cerrado no admite cambios en las prácticas comerciales. Por lo tanto, es necesario el uso modelos más flexible. Esto podría ser y ha sido la razón fundamental para el fracaso de los desarrollos.
+
+Pero hay otra diferencia entre las fallas del software y las fallas del puente, además de 3.000 años de experiencia. Cuando un puente se cae, se investiga y se escribe un informe sobre causa de la falla. Esto no es así en la industria del software donde las fallas muchas veces se ignoran. Como resultado, se siguen cometiendo los mismos errores una y otra vez.
+En consecuencia, el foco en los proyectos de investigación de la agencia \textbf{The Standish Group}\footnote{\url{https://www.standishgroup.com/}} ha sido identificar:
+\begin{itemize}
+    \item El alcance de las fallas del proyecto de software.
+    \item Los principales factores que hacen que los proyectos de software fallen.
+    \item Los factores clave que pueden reducir las fallas del proyecto.
+\end{itemize}
+
+
+AGREGAR factores https://www.infoq.com/articles/standish-chaos-2015
+
+El \textbf{Informe del Caos} en inglés \textit{Chaos Report} es publicado desde 1994 y cada dos años por ``Standish Group'', dando una visión sobre el fracaso o éxito de los proyectos en el sector de las TI, en inglés \textit{Information Technology} (IT). \textquote{\textit{Para el informe del 2015 se estudiaron 50000 proyectos en todo el mundo, desde pequeñas mejoras hasta implementaciones masivas de reingeniería de sistemas}} \citep{Hastie2015}. \vskip
+
+Los proyectos en el informe se clasifican de la siguiente manera:
 \begin{itemize}
     \item \textbf{Exitosos}: Son aquellos en los que no hay duda de que fueron un éxito.
     \item \textbf{Discutidos}: Son aquellos en los que hay dudas sobre si tuvieron éxito o fueron un fracaso
@@ -69,7 +42,7 @@ El éxito de estos proyectos se mide de acuerdo a tres variables:
 \begin{itemize}
     \item \textbf{Acabado en plazos}.
     \item \textbf{Acabado en presupuesto}.
-    \item Y \textbf{con resultados satisfactorios} (en el 2015 se elimina el ``Acabado en alcance” dada la necesaria variabilidad del mismo en el sector, recalculándose los cinco años anteriores con este criterio).
+    \item Y \textbf{con resultados satisfactorios} (en el 2015 se elimina la categoría ``Acabado en alcance'' dada la necesaria variabilidad del mismo en el sector, recalculándose los cinco años anteriores con este criterio).
 \end{itemize}
 
 A continuación se pueden ver las cifras calculadas en el informe desde el 2011 al 2015.
@@ -95,9 +68,9 @@ A continuación se pueden ver las cifras calculadas en el informe desde el 2011 
 \label{fig:caos0}
 \end{figure}
 
-Lo primero que sorprende de esta comparativa es que del total de proyectos no hay ninguna tendencia en el éxito, se muestra oscilante sobre los mismos valores: el éxito entorno al 29\%, los discutidos entorno al 50\% y los fallidos entorno al 19\%. 
+Lo primero que se destaca de esta comparativa es que del total de proyectos no hay ninguna tendencia en el éxito, se muestra oscilante sobre los mismos valores: el éxito entorno al 29\%, los discutidos entorno al 50\% y los fallidos entorno al 19\%. 
 
-Hay otros factores para analizar que afectan al éxito o fracaso de los proyectos. Si se segmenta el informe por el tamaño de los proyectos como se puede apreciar en la Figura \ref{fig:caos1} , el resultado es claro e incluso esperado.
+Hay otros factores para analizar que afectan al éxito o fracaso de los proyectos. Si se segmenta el informe por el tamaño de los proyectos como se puede apreciar en la figura \ref{fig:caos1} , el resultado es claro e incluso esperado.
 Se muestran los proyectos exitosos desde 2011 a 2015 desde la perspectiva del tamaño. El dato es muy significativo y confirma que más del 62\% de los proyectos exitosos son pequeños. Está claro que los proyectos grandes son exponencialmente más complejos que los proyectos pequeños y los proyectos gigantes son prácticamente imposibles de controlar.
 
 \begin{figure}[h]
@@ -107,7 +80,7 @@ Se muestran los proyectos exitosos desde 2011 a 2015 desde la perspectiva del ta
 \label{fig:caos1}
 \end{figure}
 
-Otra información interesante que ofrece el Chaos Report es la comparativa del éxito de los proyectos en función de la metodología seguida para su desarrollo: \textit{ágil vs cascada}.
+Otra información interesante que ofrece el Chaos Report es la comparativa del éxito de los proyectos en función de la metodología seguida para su desarrollo: \textbf{ágil vs cascada}.
 
 \begin{figure}[h]
 \includegraphics[width=15cm]{Img/Desarrollo/caos2.png}
@@ -118,66 +91,78 @@ Otra información interesante que ofrece el Chaos Report es la comparativa del �
 
 En los proyectos pequeños la diferencia no es tan grande pero es evidente. Los proyectos ágiles siguen siendo los más exitosos aunque por un margen menor. Ahora bien cuando el tamaño aumenta hacia proyectos grandes la diferencia se vuelve mucho más grande.
 
-Al revisar los datos se debe considerar que hay muchos más proyectos en cascada que ágiles y que el dato que se muestra es relativo, es decir la muestra en ambos casos tiene distinto tamaño, por lo que puede ser un poco engañoso.
+Al revisar los datos se evidencia que existen muchos más proyectos en cascada que ágiles y que el dato que se muestra es relativo debido a la naturaleza dinámica de los proyectos de soluciones digitales, es decir la muestra en ambos casos puede ser inexacta.
 Aún así, por los datos presentados, los proyectos ágiles son mucho más éxitos que los no ágiles.\vskip
-Con estos datos se puede ver que la metodología en sí no es el único motivo para la mejora del éxito de los proyectos sino que, si se divide el problema en partes más manejables, más pequeñas y se contruye progresivamente será más sencillo tener éxito.
+Con estos datos se puede verificar que la metodología en sí no es el único motivo para la mejora del éxito de los proyectos sino que, si se divide el problema en partes más manejables, más pequeñas y se trabaja progresivamente será más sencillo tener éxito.
 
 
 
+%https://www.infoq.com/articles/standish-chaos-2015
 
+%http://www.laboratorioti.com/2016/05/16/informe-del-caos-2015-chaos-report-2015-bien-mal-fueron-los-proyectos-ano-2015/
+\clearpage
 
-
-
-https://www.infoq.com/articles/standish-chaos-2015
-
-http://www.laboratorioti.com/2016/05/16/informe-del-caos-2015-chaos-report-2015-bien-mal-fueron-los-proyectos-ano-2015/
-
-\subsection{Enfoque LEAN UX}
+\clearpage
+\subsection{Lean UX}
 \label{section:pmv}
-https://www.ida.cl/blog/estrategia-digital/principios-metodologia-lean-ux/
 Los equipos de desarrollo de software en la actualidad utilizan técnicas como el desarrollo ágil, la integración continua y el despliegue continuo reduciendo drásticamente el tiempo para generar nuevas cambios en el software. Estos equipos realizan cambios en el código y suben los cambios a producción\footnote{Producción es la instancia del software cuando se encuentra a disposición de los usuarios finales.} con velocidad similar a la acción de guardar cualquier archivo en una computadora. Además, utilizan esos ciclos cortos como ventaja competitiva, producen nuevas versiones del software en tiempos acotados, lo que permite obtener retroalimentación del mercado e iterar incorporando lo que han aprendido y tal vez sin advertirlo aumentan las expectativas de los clientes que pueden obtener más calidad en menos tiempo. En este nuevo contexto, las prácticas de pensar todo al inicio de los procesos quedaron obsoletas. \vskip
-\textit{Lean User Experience} (Lean UX) se puede traducir como \textit{Experiencia de Usuario\footnote{La experiencia de usuario es el conjunto de factores y elementos relativos a la interacción del usuario, con un entorno o dispositivo concretos, cuyo resultado es la generación de una percepción positiva o negativa de dicho servicio, producto o dispositivo.} limpia o sin desperdicios} y se describe como una nueva etapa evolutiva en el diseño de productos, de manera que se puedan solventar las prácticas de diseño obsoletas. Su objetivo es tomar las mejores herramientas del diseño y adaptarlas a esta nueva realidad. \citep{Gothelf2013}
+\textbf{Lean User Experience} (Lean UX) se puede traducir como \textbf{Experiencia de Usuario limpia o sin desperdicios}. Jeff Gothelf y Josh Seiden lo describen como \textquote{\textit{una nueva etapa evolutiva en el diseño de productos. Esta metodología utiliza las mejores herramientas de las que disponemos y las combina de forma diferente para adecuarlas a esta nueva realidad}} \citep{Gothelf2013}.
 
-Lean UX es profundamente colaborativo, en gran medida porque:
+
+Lean UX es profundamente colaborativo y multifuncional, en gran medida porque:
 \begin{itemize}
 
     \item Logra que los diseñadores no están aislados del resto del equipo de trabajo.
     \item Permite implementar técnicas para construir una comprensión compartida del proyecto. 
     \item Logra un clima propicio para la retroalimentación con los usuarios finales y  replantea las conversaciones de diseño en términos objetivos, se pueden obtener métricas sobre las funcionalidades, analizar y ajustar.
-    \item Cambia la forma en que se comunica el diseño del producto: en lugar de comunicar características y documentos exhaustivos se puede comunicar funcionalidad.
+    \item Cambia la forma en que se comunica el diseño del producto: En lugar de hablar de funciones y documentos, se puede hablar de lo que efectivamente funciona y de lo que no.
+
 \end{itemize}
 
- 
-\vskip
+\textquote{\textit{Lean UX es tres cosas. Es fácil ver que se trata, en primer lugar, de \textbf{un cambio de procesos para los diseñadores}. Pero es más que eso. También es \textbf{una nueva mentalidad que cambia la manera en la que nos enfrentamos a nuestro trabajo} . Y también \textbf{una nueva manera de pensar en la gestión de software}}} \citep{Gothelf2013}. 
 
+\vspace{5mm}
 
-Los 3 pilares principales de Lean UX son:
+Los \textbf{3 pilares principales de Lean UX} son:
 \begin{enumerate}
     \item \textbf{Design Thinking o Pensamiento de Diseño} \vskip
-    Alienta al equipo a colaborar en todas las etapas del proyecto y a considerar el producto desde una perspectiva global, utilizando la sensibilidad y los métodos de los diseñadores para satisfacer las necesidades del usuario final con soluciones tecnológicamente viables.
+    Tim Brown describió el \textbf{design thinking} como \textquote{\textit{innovación que se alimenta de […] la observación directa de lo que la gente quiere y necesita en sus vidas y lo que les gusta o disgusta de cómo se hacen los productos, cómo se empaquetan, cómo se ponen en el mercado, cómo se venden y cómo se les presta ayuda […]. Se trata de una disciplina que, utilizando la sensibilidad y los métodos de los diseñadores, satisface las necesidades del público con aquello que resulta tecnológicamente posible y que, gracias a una estrategia de negocio viable, puede convertirse en valor para los clientes y en oportunidades en el mercado}} \citep{Brown2009}. \vskip
+    Lean UX considera importante el design thinking porque esta manera de concebir el diseño defiende una posición concreta para todos los aspectos del negocio que deban abordarse con él. Además, permite a los diseñadores superar los límites habituales que se les imponen en los proyectos. Por otra parte, anima a los no diseñadores a utilizar los métodos propios del diseño para resolver los problemas de sus respectivas disciplinas. El design thinking es un pilar básico de esta metodología, una manera de trabajar que alienta la colaboración en el equipo, independientemente del rol que cada uno desempeñe, y que considera el producto desde una perspectiva abarcadora.
 
-    \item \textbf{Desarrollo Ágil}\vskip
-     Aplica los cuatro principios básicos del desarrollo Ágil al diseño de los productos.
+    \item \textbf{Metodologías de desarrollo ágil de software}.\vskip
+    Los desarrolladores de software han usado durante mucho tiempo las metodologías de desarrollo ágil para reducir el ciclo de vida de sus productos y aportar de forma constante valor a sus clientes. No obstante, estas metodologías muchas veces constituyen un reto para los diseñadores.
+
+     Aplican los cuatro principios básicos del \textbf{Desarrollo Ágil} al diseño de productos.
         
-\begin{itemize}
-\item
-\textbf{Los individuos y las interacciones son más importantes que los procesos y las herramientas}\vskip
-Para generar rápidamente las mejores soluciones, es necesario implicar al todo el equipo. El intercambio de ideas deberá ser libre y frecuente. La conversación fluida entre colegas deberá primar por encima de las restricciones propias de las herramientas, ya sea en los procesos o en la producción.
-\item
-\textbf{El software funcional es más importante que la documentación exhaustiva}\vskip
-Se pueden encontrar múltiples soluciones para todos los problemas de negocio y todos los miembros del equipo podrán tener una opinión diferente de cuál es la mejor. El reto está en averiguar cuál de ellas es la que tiene más posibilidades. Por eso, cuanto antes se cuente con un software que funcione, antes se puede encontrar la solución que mejor se adapte a los requerimientos.
-\item
-\textbf{La colaboración con los clientes es más importante que la negociación de contratos con ellos}\vskip
-Si el equipo colabora con los usuarios/clientes, hay un entendimiento común sobre los problemas y las posibles soluciones. Cualquier decisión que se adopte después se tomará por consenso, lo que se traduce en iteraciones más rápidas y una verdadera implicación de todos los actores con la ventaja de trabajar siempre con soluciones validadas. Además, como todos los miembros del equipo participan en la toma de decisiones, no se requieren tantas entregas de documentación por escrito.
-\item
-\textbf{La respuesta a los cambios es más importante que la planificación}\vskip
-Lean UX asume que los diseñadores del producto inicial no encontrarán la solución a la primera, por lo que el objetivo consiste en averiguar qué han hecho mal lo antes posible. Una vez que se descubra lo que funciona y lo que no, se pueden ajustar las propuestas y volver a probarlas. Así, la retroalimentación mantendrá ágil al equipo, dirigiendo la solución siempre en la dirección correcta.
-\end{itemize}
+        \begin{enumerate}
+        \item
+        \textbf{Los individuos y las interacciones son más importantes que los procesos y las herramientas}\vskip
+        Para generar rápidamente las mejores soluciones, es necesario implicar al todo el equipo. El intercambio de ideas deberá ser libre y frecuente. La conversación fluida entre colegas deberá primar por encima de las restricciones propias de las herramientas, ya sea en los procesos o en la producción.
+        \item
+        \textbf{El software funcional es más importante que la documentación exhaustiva}\vskip
+        Se pueden encontrar múltiples soluciones para todos los problemas de negocio y todos los miembros del equipo podrán tener una opinión diferente de cuál es la mejor. El reto está en averiguar cuál de ellas es la que tiene más posibilidades. Por eso, cuanto antes se cuente con un software que funcione, antes se puede encontrar la solución que mejor se adapte a los requerimientos.
+        \item
+        \textbf{La colaboración con los clientes es más importante que la negociación de contratos con ellos}\vskip
+        Si el equipo colabora con los usuarios/clientes, hay un entendimiento común sobre los problemas y las posibles soluciones. Cualquier decisión que se adopte después se tomará por consenso, lo que se traduce en iteraciones más rápidas y una verdadera implicación de todos los actores con la ventaja de trabajar siempre con soluciones validadas. Además, como todos los miembros del equipo participan en la toma de decisiones, no se requieren tantas entregas de documentación por escrito.
+        \item
+        \textbf{La respuesta a los cambios es más importante que la planificación}\vskip
+        Lean UX asume que los diseñadores del producto inicial no encontrarán la solución a la primera, por lo que el objetivo consiste en averiguar qué han hecho mal lo antes posible. Una vez que se descubra lo que funciona y lo que no, se pueden ajustar las propuestas y volver a probarlas. Así, la retroalimentación mantendrá ágil al equipo, dirigiendo la solución siempre en la dirección correcta.
+        \end{enumerate}
 
-\item \textbf{Método Lean Startup}\vskip Utiliza un bucle de retroalimentación llamado  ``Construir-Medir-Aprender" para minimizar el riesgo del proyecto, haciendo que los equipos construyan y aprendan rápidamente.
-Los equipos construyen productos viables mínimos en inglés \textit{Minimum Viable Product} (MVP) y los envían para comenzar el proceso de aprendizaje tan pronto como sea posible. En la Figura \ref{fig:leanux} se puede apreciar el proceso.\vskip
-Lean Startup\footnote{\url{https://es.wikipedia.org/wiki/Lean_startup} } es una filosofía inspirada en \textit{Lean Manufacturing}\footnote{\url{https://es.wikipedia.org/wiki/Lean_manufacturing}} que desde el principio aboga por la creación de prototipos rápidos para comprobar, por un lado, que las suposiciones son correctas y, por otro, para conseguir retroalimentación de los usuarios de forma inmediata y así poder mejorar el software más rápido que las prácticas tradicionales de ingeniería de software.\vskip
-Lean UX, por su parte, es una implementación directa de esta filosofía aplicada al diseño de productos. Cada diseño es una solución propuesta, una hipótesis. Su objetivo consiste en validar la solución de la manera más eficiente posible mediante la realimentación. El componente más pequeño que se puede construir para probar cada hipótesis es el Producto Viable Mínimo MVP. 
+\item \textbf{Método Lean Startup}\vskip 
+Lean Startup\footnote{\url{http://theleanstartup.com/}} utiliza un ciclo de feedback denominado \textbf{``crear-medir-aprender''} que minimiza el riesgo de los proyectos y que consigue que el equipo pueda desarrollar software y aprender de él en muy poco tiempo. Con este método, los equipos desarrollan lo antes posible los denominados \textbf{Productos Mínimos Viables} en inglés \textit{Minimum Viable Products} (MVP)\footnote{El producto viable mínimo MVP es un producto con suficientes características para satisfacer a los clientes iniciales, y proporcionar retroalimentación para el desarrollo futuro} para comenzar cuanto antes el proceso de aprendizaje. Tal y como indica Eric Ries: \textquote{\textit{\textbf{Lean Startup} aboga desde el principio por la creación de prototipos rápidos para comprobar, por un lado, que las suposiciones que hemos hecho sobre el mercado son correctas y, por otro, para conseguir feedback de los clientes y así poder mejorar el software mucho más rápido que las prácticas tradicionales de ingeniería de software […] Al aumentar la frecuencia de contacto con clientes reales, se reduce el despilfarro y se prueban lo antes posible las ideas del equipo, evitando así las suposiciones incorrectas sobre el mercado}} \citep{Gothelf2013}. Lean UX, por su parte, consiste en la aplicación directa de esta filosofía al diseño de productos. En Lean UX, cada diseño es una solución propuesta para el problema, una hipótesis. El objetivo consiste en validar esa solución de una manera eficiente, utilizando para ello el feedback de los clientes/usuarios. \vskip
+\vspace{5mm}
+El proceso es el siguiente: 
+    \begin{itemize}
+    \item En primer lugar, se crea el MVP, es decir, \textbf{el desarrollo más pequeño que pueda construirse para probar cada hipótesis}. Los MVP no tienen por qué estar hechos solo de código de programación, también pueden ser aproximaciones, verbales o escritas, a la experiencia de usuario final. 
+    \item A continuación, se muestra el MVP a los clientes/usuarios.
+    \item Después, se utiliza lo aprendido de ellos para hacer modificaciones.
+    \item Y entonces se itera, se comienza todo el proceso de nuevo. 
+    \end{itemize} 
+    
+En la figura \ref{fig:leanux} se puede apreciar el proceso de este enfoque.
+Lo que Lean UX hace en realidad es sacar a la luz más rápido la verdadera naturaleza de los productos. Para ello, elige un camino colaborativo y multifuncional, un camino que otorga más importancia a la creación de un entendimiento común de la experiencia de usuario que se está diseñando que a la creación y entrega de documentación.
+
 \end{enumerate}
 
 
@@ -188,12 +173,12 @@ Lean UX, por su parte, es una implementación directa de esta filosofía aplicad
 \end{figure}
 \label{fig:leanux}
 
-Lean UX funciona como una práctica para entender rápidamente la función de un producto. Para ello elije un camino colaborativo y multidisciplinario; reduce el énfasis por la documentación exhaustiva y aumenta el enfoque en la construcción de un entendimiento compartido del producto que está siendo diseñado. Como consecuencia de usar este enfoque se obtiene: un equipo que trabaja de forma colaborativa, iterativamente, reduciendo al mínimo los documentos entregables, enfocándose en el software funcional y en la retroalimentación con el usuario final.
+En resúmen, Lean UX funciona como una práctica para entender rápidamente la función de un producto. Para ello elije un camino colaborativo y multidisciplinario; reduce el énfasis por la documentación exhaustiva y aumenta el enfoque en la construcción de un entendimiento compartido del producto que está siendo diseñado. Como consecuencia de usar este enfoque se obtiene: un equipo que trabaja de forma colaborativa, iterativamente, reduciendo al mínimo los documentos entregables, enfocándose en el software funcional y en la retroalimentación con el usuario final.
 
 \subsubsection{Principios de LEAN UX}
-\textit{Lean UX} contiene en su núcleo un juego de principios clave, que abarcan el proceso de diseño, la colaboración, la gestión, etc., para que los equipos puedan sacarle el máximo provecho al enfoque propio de la metodología. Se consigue con ellos que los equipos se encaminen en la dirección correcta y sean especialmente útiles para implementar los procesos de Lean UX. Los procesos, sin duda se deben ajustar a cada proyecto, por ende los principios de utilizan como guía y no de forma obligatoria. Algunos de ellos serán más difíciles de implementar y su impacto será mayor. Los equipos adoptarán sin problema otros, pero, independientemente de las dificultades, todos ellos ayudan a crear una organización más colaborativa, multifuncional y adaptada a la realidad actual de los proyectos.\vskip
+Lean UX contiene en su núcleo un juego de principios clave, que abarcan el proceso de diseño, la colaboración, la gestión, etc., para que los equipos puedan sacarle el máximo provecho al enfoque propio de la metodología. Se consigue con ellos que los equipos se encaminen en la dirección correcta y sean especialmente útiles para implementar los procesos de Lean UX. Los procesos, sin duda se deben ajustar a cada proyecto, por ende los principios se utilizan como guía y no de forma obligatoria. \vskip
 
-A continuación se detallan los principios:
+A continuación se explican los principios:
 \begin{itemize}
     \item \textbf{Principio: Equipos multifuncionales}\vskip 
     ¿De qué se trata? Los equipos multifuncionales deben incluir todas las disciplinas que intervienen en la creación del producto. La ingeniería del software, la gestión del producto, el diseño de interacciones, el diseño gráfico, la estrategia de contenidos y el control de calidad (QA), todas deben contar con representantes en ellos. Lean UX necesita que todos los que se dedican a estos campos colaboren intensamente, por lo que la implicación del equipo debe ser continua, desde el primer día del proyecto hasta el final.\vskip
@@ -207,12 +192,12 @@ A continuación se detallan los principios:
     ¿De qué se trata? Un equipo centrado en los problemas es un grupo que sabe que debe resolver el problema asignado y no limitarse a implementar un grupo de funciones. Este principio es una extensión lógica del anterior, que afirmaba que el progreso del proyecto dependía de los resultados.\vskip
     ¿Por qué hacerlo? Si se asignan problemas completos a un equipo se demuestra más confianza en las personas que lo conforman. Además, así se les permite llegar a sus propias soluciones, con lo que se consigue aumentar la sensación de pertenencia en el proyecto.
     
-    \item \textbf{Principio: Eliminación del despilfarro}\vskip
-    ¿De qué se trata? Una de los prácticas principales de \textit{Lean manufacturing} es la eliminación de todo lo que no contribuya a conseguir el objetivo final. En Lean UX, este objetivo final es la producción de mejores resultados, por lo que todo lo que no ayude a conseguirlos se considera despilfarro y debe eliminarse del proceso de trabajo del equipo.\vskip
-    ¿Por qué hacerlo? Los recursos del equipo son limitados, por lo que cuanto más despilfarro se elimine, más rápido podrán producir sus miembros. En realidad, lo que los equipos necesitan es ser efectivos y trabajar en los retos adecuados. Si se elimina el despilfarro, la atención de los equipos estará centrada donde se debe.
+    \item \textbf{Principio: Eliminación del desperdicio}\vskip
+    ¿De qué se trata? Una de los prácticas principales de \textbf{Lean manufacturing}\footnote{Lean manufacturing es un modelo de gestión enfocado en la creación de flujo para poder entregar el máximo valor a los clientes. Para ello, utiliza la mínima cantidad de recursos, es decir, los necesarios} es la eliminación de todo lo que no contribuya a conseguir el objetivo final. En Lean UX, este objetivo final es la producción de mejores resultados, por lo que todo lo que no ayude a conseguirlos se considera despilfarro y debe eliminarse del proceso de trabajo del equipo.\vskip
+    ¿Por qué hacerlo? Los recursos del equipo son limitados, por lo que cuanto más desperdicio se elimine, más rápido podrán producir los miembros del equipo. En realidad, lo que los equipos necesitan es ser efectivos y trabajar en los retos adecuados, con la atención en donde se debe.
     
     \item \textbf{Principio: Lotes pequeños}\vskip
-    ¿De qué se trata? Otra idea fundamental de \textit{Lean manufacturing} es la utilización de lotes pequeños. En ese modelo, esta noción se usa para indicar que no se deben tener muchos productos en stock y que la calidad de producción debía ser alta. Adaptado a Lean UX, su significado es que el equipo solo debe crear los diseños necesarios para avanzar, evitando crear un gran stock de ideas de diseño sin probar ni implementar. \vskip
+    ¿De qué se trata? Otra idea fundamental de Lean manufacturing es la utilización de lotes pequeños. En ese modelo, esta noción se usa para indicar que no se deben tener muchos productos en stock y que la calidad de producción debía ser alta. Adaptado a Lean UX, su significado es que el equipo solo debe crear los diseños necesarios para avanzar, evitando crear un gran stock de ideas de diseño sin probar ni implementar. \vskip
     ¿Por qué hacerlo? El diseño en grandes lotes resta eficiencia al equipo, ya que, para poder realizar grandes entregas de diseño, se insume mucho tiempo. En ese tiempo no se puede aprender si las ideas funcionan e, inevitablemente, algunos de los miembros tendrán que estar desocupados, aparte de generar recursos de diseño inútiles. Es decir, se trata de una estrategia con un despilfarro que no maximiza el potencial de aprendizaje del equipo.
     
     \item \textbf{Principio: Descubrimiento continuo }\vskip
@@ -220,7 +205,7 @@ A continuación se detallan los principios:
     ¿Por qué hacerlo? Las conversaciones regulares con los usuarios ofrecen oportunidades de validar nuevas ideas sobre el producto. Por otra parte, al incluir al equipo completo en el ciclo de desarrollo, estos desarrollarán empatía por los usuarios y por los problemas a los que tienen que enfrentarse. Además, como todos los miembros aprenden juntos en las reuniones, no será necesario generar demasiada documentación ni explicar lo sucedido en otras reuniones internas.
     
     \item \textbf{Principio: GOOB: La nueva centralidad del usuario}\vskip
-    ¿De qué se trata? Se utiliza el acrónimo \textit{Salir del edificio} en ingles \textit{Getting Out Of the Building} (GOOB). Quiere decir que los debates sobre las necesidades de los usuarios no tienen por qué cerrarse en el mismo lugar en el que se desarrollan, es decir, en la oficina. Las respuestas, más bien, están en el mercado, fuera de ella. Después de mucho tiempo abogando por la investigación del comportamiento de los usuarios, la comunidad de experiencia de usuarios (UX) tiene un aliado en Steve Blank, que viene del mundo de los negocios. Su consejo: Ofrecer la posibilidad a los usuarios de dar su opinión sobre las ideas mucho antes de lo que lo han hecho en el pasado. Mucho antes. Brindar nociones de la realidad mientras aún se está en etapas prematuras de desarrollo. Es mucho mejor averiguar que las ideas no son correctas mucho antes de dedicar tiempo y recursos a construir un producto que nadie quiere o necesota.\vskip
+    ¿De qué se trata? Se utiliza el acrónimo \textbf{``Salir del edificio''} en inglés \textit{Getting Out Of the Building} (GOOB). Significa que los debates sobre las necesidades de los usuarios no tienen por qué cerrarse en el mismo lugar en el que se desarrollan, es decir, en la oficina. Las respuestas, más bien, están en el mercado, fuera de ella. Después de mucho tiempo abogando por la investigación del comportamiento de los usuarios, la comunidad de experiencia de usuarios (UX) tiene un aliado en Steve Blank, que proviene del mundo de los negocios. Su consejo: \textquote{\textit{ofrezcamos la posibilidad a los clientes potenciales de dar su opinión sobre nuestras ideas mucho antes de lo que lo han hecho en el pasado. Mucho antes. Démosles un baño de realidad mientras aún están en su infancia. Es mucho mejor averiguar que nuestras ideas han errado el tiro antes de dedicar tiempo y recursos a construir un producto que nadie quiere}} \citep{Gothelf2013}.\vskip
     ¿Por qué hacerlo? En los últimos tiempos, el éxito o el fracaso de los productos no dependen de las decisiones del equipo de desarrollo, sino de los usuarios. Son ellos los que tendrán que utilizar los producto. Cuanto antes se los haga participar, antes se aprende si las ideas están listas para pasar a la fase de desarrollo.
 
     \item \textbf{Principio: Entendimiento común}\vskip 
@@ -230,13 +215,16 @@ A continuación se detallan los principios:
     \item \textbf{Principio: Antimodelos: estrellas, gurús y ninjas }\vskip 
     ¿De qué se trata? Lean UX aboga por una mentalidad de equipo. Las estrellas, los gurús, los ninjas y, en general, rompen la cohesión del equipo y reducen la colaboración.\vskip ¿Por qué hacerlo? Las estrellas no comparten las ideas ni la atención de los demás. Si se cuenta con individuos de este tipo en los equipos, con grandes egos y determinados a brillar por encima de todos, se rompe la colaboración del grupo. Si eso sucede no se cuenta con un entorno en el que se pueda construir un entendimiento común, necesario para avanzar de forma efectiva.
     
-    \item \textbf{Principio:Exteriorización del trabajo}\vskip
+    \item \textbf{Principio: Exteriorización del trabajo}\vskip
     ¿De qué se trata? Con exteriorización me refiero a exponer el trabajo de forma pública, más allá de las computadoras. Los equipos pueden utilizar pizarras, tableros de cartón, paredes repletas de artefactos, salidas impresas, notas adhesivas, lo que sea que hayan utilizado para reflejar sus ideas, para poder mostrar el trabajo a compañeros, colegas y clientes.\vskip 
     ¿Por qué hacerlo? La exteriorización somete las ideas a escrutinio público y así todos los miembros del equipo pueden ver dónde se encuentran como grupo. De esta manera se crea un flujo de información que circula entre todos los miembros, información que está en el ambiente y que inspira nuevas ideas, construidas sobre las que se han compartido. Además, esta forma de trabajar hace participar a todos los miembros del equipo, incluso las personas tímidas, ya que las notas adhesivas, se tratan por igual.
 
     \item \textbf{Principio: Aprendizaje en lugar de crecimiento}\vskip
     ¿De qué se trata? Es complicado concebir una buena idea y hacerla crecer al mismo tiempo. Son actividades contradictorias. Lean UX apuesta por que, en primer lugar, se concentre en el aprendizaje y luego en su crecimiento.\vskip 
     ¿Por qué hacerlo? Escalar una idea que no se ha probado es arriesgado. Podría funcionar o podría no hacerlo. Si no lo hace y la idea se sube a producción para todos los usuario, en lugar de para unos cuantos con los que probar, el equipo habrá perdido tiempo y recursos valiosos en hacerlo. Al asegurarse de que una idea funciona antes de hacerla crecer, se reduce el riesgo que conllevan los grandes despliegues de funciones.
+    
+    \item \textbf{Principio: Hacer en lugar de analizar}\vskip
+    ¿De qué se trata? Lean UX valora la acción por encima del análisis. Hay más valor en crear la primera versión de una idea que en emplear medio día debatiendo sus méritos en una sala de reuniones. ¿Por qué hacerlo? La respuesta a las cuestiones más difíciles que tendrá que afrontar el equipo no surgirá de una sala de reuniones, sino de la reacción de los clientes. Sin embargo, para conseguirla es necesario concretar las ideas y hacer algo a lo que la gente pueda responder. El debate de ideas es un desperdicio. En lugar de analizar los escenarios potenciales, es mejor hacer algo concreto y salir del edificio con él bajo el brazo.
     
     \item \textbf{Principio: Permiso para equivocarse}\vskip
     ¿De qué se trata? Para encontrar las mejores soluciones a los problemas, los equipos Lean UX necesitan experimentar con las ideas. La mayoría de estas ideas no funcionarán en primera instancia, por lo que, si se necesita que sean exitosas, el equipo debe sentirse libre para equivocarse. Este permiso significa que puede contar con un entorno seguro en el que experimentar, una filosofía que se debe aplicar tanto al entorno técnico (deben ser capaces de generar ideas en un entorno seguro) como al cultural (nadie debe penalizar a un miembro del equipo por probar ideas que no funcionen).\vskip 
@@ -251,44 +239,39 @@ A continuación se detallan los principios:
 
 
 Los principios fundacionales de Lean UX tratan de los atributos principales que debe tener cualquier equipo que trabaje con esta metodología.
-Por todo lo señalado se considera que este enfoque es el adecuado para abordar el trabajo en la aplicación COCADA para los métodos de trabajo en equipo.
-Las etapas de LEAN UX se pueden ver aplicadas en este documento en el siguiente capítulo correspondiente al desarrollo del prototipo.
+Por todo lo señalado se considera que este enfoque es el adecuado para abordar el trabajo en la aplicación COCADA respecto al enfoque de trabajo en equipo.
+Las etapas de Lean UX y el uso de sus herramientas metodológicas para llevar a cabo las declaraciones de hipótesis, el diseño, el producto mínimo viable MVP y el feedback con los usuarios finales se pueden ver aplicadas en el capítulo XXX correspondiente al desarrollo del prototipo.\vskip
 
 
-
-Agregar lo de chaos report http://www.laboratorioti.com/2016/05/16/informe-del-caos-2015-chaos-report-2015-bien-mal-fueron-los-proyectos-ano-2015/
-
-https://modelometodoygestion.wordpress.com/2017/02/21/chaos-report-15-scrum/
-
-Ver frase final para chamu
-http://www.uxline.com/blog/agile-ux-versus-lean-ux/
+AGREGAR https://medium.com/@drewmck/lean-ux-is-about-reducing-risk-1d7d505d2881
 
 
-
-VER LO DE FUZZY DESIGN y agregar tambien a la parte de codiseño
-
-https://blog.prototypr.io/the-teapot-model-how-to-explain-a-fuzzy-design-process-to-anxious-clients-4a2e8487bc87
-
-
-COMO ENGANCHAR TODO
-https://es.linkedin.com/pulse/design-thinking-lean-startup-agile-victor-mansilla
-
-
-https://www.cio.com/article/3174516/project-management/it-project-success-rates-finally-improving.html
-
-
-
-https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/thought-leadership/pulse/pulse-of-the-profession-2017.pdf
-
+\clearpage
 
 \section{Antecedentes Tecnológicos}
 
+A continuación se explican algunas herramientas y técnicas fuertemente vinculadas al trabajo de investigación en las que se pueden identificar conocimientos aplicados al desarrollo de soluciones tecnológicas, estas herramientas han posibilitado la experimentación y adquisición del conocimiento utilizado para el desarrollo de prototipo.
+
 \subsection{Modelado sólido en programas de diseño 3D}
-Existen muchos programas con herramientas para el modelado sólido y booleano como el caso de Blender\footnote{\url{http://blender.org}}, un programa informático FLOOS multiplataforma, dedicado especialmente al modelado, iluminación, renderizado, animación y creación de gráficos 3D. También puede realizar composición digital, edición de vídeo, escultura y pintura digital. Entre todas sus características provee mecanismos para asegurar que los modelos sean sólidos.
+Existen muchos programas con herramientas para el modelado sólido y booleano como el caso de \textbf{Blender}\footnote{\url{http://blender.org}}, \textquote{\textit{una suite de creación 3D de código abierto y gratuita. Es compatible con la totalidad del pipeline 3D: modelado, rigging, animación, simulación, renderizado, composición y tracking de movimiento, incluso edición de video y creación de videojuegos}} \citep{BlenderFoundation}. 
+Entre sus características también provee mecanismos para asegurar que los modelos sean sólidos como se puede ver a continuación.
+
+\begin{figure}[h]
+\includegraphics[width=14cm]{Img/GEO/geo-blender.png}
+\centering
+\caption{\textbf{ \footnotesize{Conjunto de primitivas 2D y 3D disponibles en Blender.}}}
+\end{figure}
+
 
 \subsubsection{Geometría non-manifold en Blender}
 
-\textit{Se considera non-manifold una geometría que no puede ser representada en el mundo real}, para ver en detalle los conceptos se puede ver la sección 2.4.2
+Se considera \textbf{non-manifold} una geometría que no puede ser representada en el mundo real, una malla non-manifold puede tener uno o más elementos con las siguientes propiedades:
+
+\begin{enumerate}
+    \item Una arista que une a más de dos caras.
+    \item Dos o más caras conectadas solo por un vértice y no por una arista.
+    \item Caras adyacentes cuyas normales apuntan en direcciones opuestas.
+\end{enumerate}
 
 \begin{figure}[h]
 \includegraphics[width=12cm]{Img/Modelos/modelado20.jpg}
@@ -297,20 +280,19 @@ Existen muchos programas con herramientas para el modelado sólido y booleano co
 \end{figure}
 
 
-Para explicar una solución utilizaremos la Figura \ref{fig:blender} que se muestra a continuación. El modelo 3D de la izquierda no consiste en un volumen, sino en una serie de superficies que no están cerradas y no posee grosor. Para garantizar que el objeto sea sólido es importante cerrar los agujeros en el modelo. Esto es posible creando una superficie con $N$ caras como vemos en el resultado de la derecha.
+Para explicar una solución se utiliza la Figura \ref{fig:blender}. El modelo 3D de la izquierda no consiste en un volumen completo, sino en una serie de superficies que no están cerradas. Para garantizar que el objeto sea sólido es importante cerrar los agujeros en el modelo. Esto es posible creando una superficie con $N$ caras para tapar los agujeros como se puede apreciar en el resultado de la derecha.
 
 \begin{figure}[h]
 \includegraphics[width=10cm]{Img/Modelos/modelado21.jpg}
 \centering
-\caption{\textbf{ \footnotesize{Objetos no sólido por superficies no cerradas y su solución }}}
+\caption{\textbf{ \footnotesize{Objeto no sólido por superficies no cerradas (izquierda)  y su solución incorporando caras  para cerrar los agujeros (derecha) }}}
 \label{fig:blender}
 \end{figure}
 
-\vspace{5mm}
 \subsubsection{Modelado booleano en Blender}
 
-Lo recomendado en Blender es usar un Modificador\footnote{
-Los modificadores en Blender son operaciones automáticas que afectan a un objeto de una manera no destructiva.} Booleano para tener mayor flexibilidad y realizar ediciones no destructivas. Mediante los modificadores se pueden mover los objetos y ver el operador booleano (union, intersección o diferencia) aplicado de forma interactiva en tiempo real.
+La recomendación en Blender para realizar operaciones booleanas es usar un \textbf{Modificador\footnote{
+Los modificadores en Blender son operaciones automáticas que afectan a un objeto de una manera no destructiva.} Booleano} con el fin de tener mayor flexibilidad y realizar ediciones no destructivas\footnote{El método de edición no destructivo permite conservar la información geométrica que compone un modelo y así poder corregir errores y realizar cambios durante cualquier fase del proyecto}. Mediante los modificadores se pueden modificar los objetos y visualizar el operador booleano (union, intersección o diferencia) aplicado de forma interactiva y en tiempo real.
 
 \begin{figure}[h]
 \includegraphics[width=9cm]{Img/Modelos/modelado22.jpg}
@@ -318,8 +300,8 @@ Los modificadores en Blender son operaciones automáticas que afectan a un objet
 \caption{\textbf{ \footnotesize{Modificador booleano, aplicación de intersecciones y su resultado. }}}
 \end{figure}
 
-La herramienta booleana nativa de Blender es excelente para partes simples o de modelado mecánico con resultados en tiempo real. Con complementos en inglés \textit{add-ons} se puede extender la aplicación booleana a modelos con mallas complejas, con muchos polígonos y que requieren una elevada potencia de cálculo.
-Cork\footnote{\url{https://github.com/dfelinto/cork-on-blender}} es un complemento para Blender que se desarrolló especialmente para el ámbito de la impresión 3D. En la Figura \ref{fig:cork} se puede ver un ejemplo de su potencia en operaciones booleanas aplicado a casos reales de medicina.
+La herramienta booleana nativa de Blender es muy útil para partes simples (pocos polígonos) o para modelado mecánico. Con extensiones en inglés \textit{add-ons}\footnote{Un Add-on se entiende, del inglés, como una extensión o añadidura son programas que sólo funcionan anexados a otro y que sirven para incrementar o complementar sus funcionalidades} se puede extender la aplicación booleana a modelos con mallas complejas (con milones de polígonos) y que requieren una elevada potencia de cálculo.
+\textbf{Cork}\footnote{\url{https://github.com/dfelinto/cork-on-blender}} es un complemento para Blender que se desarrolló especialmente para el ámbito de la impresión 3D. En la Figura \ref{fig:cork} se puede ver un ejemplo de su potencia en operaciones booleanas aplicado a casos reales de medicina.
 
 \begin{figure}[h]
 \includegraphics[width=12cm]{Img/Modelos/corkc.jpg}
@@ -334,10 +316,14 @@ Cork\footnote{\url{https://github.com/dfelinto/cork-on-blender}} es un complemen
 
 \clearpage
 
-\subsection{Programas para diseño especificado en algoritmos}
-Las interfaces de scripting explicadas en la secciónXX, utilizadas para definir diseños paramétricos se puede encontrar en programas como OpenSCAD\footnote{\url{http://www.openscad.org/}}, una aplicación FLOSS para crear objetos sólidos de CAD utilizando geometría constructiva de sólidos (CSG). No es un editor interactivo sino un compilador 3D basado en un lenguaje de descripción textual. Un documento de OpenSCAD especifica primitivas geométricas y define como son modificadas y manipuladas para reproducir un modelo 3D.
+\subsection{Programas para CAD especificado en algoritmos}
+Las interfaces de scripting explicadas en la secciónXX, utilizadas para definir diseños paramétricos se puede encontrar en programas como \textbf{OpenSCAD}\footnote{\url{http://www.openscad.org/}}, una aplicación FLOSS para crear objetos sólidos de CAD utilizando geometría constructiva de sólidos (CSG).
 
-En la última década se ha visto la aparición de un nuevo tipo de interfaz de secuencias de comandos, la interfaz visual. La programación visual implica representar programas no como texto, sino como diagramas. Un ejemplo es Grasshopper \footnote{ \url{http://www.grasshopper3d.com/}} que se basa en gráficos que mapean el flujo de relaciones desde parámetros, a través de funciones definidas por el usuario, concluyendo normalmente con la generación de geometría. Los cambios en los parámetros o las relaciones del modelo hacen que los cambios se propaguen a través de las funciones explícitas para volver a dibujar automáticamente la geometría. Como tal, son otra forma de crear un modelo paramétrico.
+\textquote{\textit{A diferencia de la mayoría del software libre para crear modelos 3D (como Blender), no se enfoca en los aspectos artísticos del modelado 3D sino en los aspectos CAD. Por lo tanto, podría ser la aplicación que está buscando cuando planea crear modelos 3D de partes de máquinas, pero que seguramente no está buscando cuando está más interesado en crear películas animadas por computadora.
+OpenSCAD no es un modelador interactivo. En cambio, es algo así como un compilador 3D que lee un archivo de script que describe el objeto y representa el modelo 3D a partir de ese archivo. Esto le brinda a usted (el diseñador) un control total sobre el proceso de modelado y le permite cambiar fácilmente cualquier paso en el proceso o realizar diseños que están definidos por parámetros configurables}} \citep{Kintel}.
+Un documento de OpenSCAD especifica primitivas geométricas y define como son modificadas y manipuladas para reproducir un modelo 3D.
+
+En la última década se ha visto la aparición de un nuevo tipo de interfaz de secuencias de comandos, la interfaz visual. La programación visual implica representar programas no como texto, sino como diagramas. Un ejemplo es \textbf{Grasshopper}\footnote{ \url{http://www.grasshopper3d.com/}}, \textquote{\textit{editor de algoritmos gráficos estrechamente integrado con las herramientas de modelado 3-D de Rhino}} \citep{BobMcNeel}. Grasshopper se basa en gráficos que mapean el flujo de relaciones desde parámetros, a través de funciones definidas por el usuario, concluyendo normalmente con la generación de geometría. Los cambios en los parámetros o las relaciones del modelo hacen que los cambios se propaguen a través de las funciones explícitas para volver a dibujar automáticamente la geometría. Como tal, son otra forma de crear un modelo paramétrico.
 
 
 \begin{figure}[h]
@@ -352,557 +338,18 @@ En la última década se ha visto la aparición de un nuevo tipo de interfaz de 
 \caption{\textbf{\footnotesize{Rhinoceros con Graphopper, a la derecha se puede ver el diagrama que genera el modelo 3D}}}
 \end{figure}
 
-\subsection{Modelado booleano especificado en algoritmos, DEJAR PARA DESARROLLO}
 
-El lenguaje de descripción debe proveer los mecanismos para crear y manipular sólidos en 3D, así también formas en 2D para poder producir modelos de barrido (extrusión) o bien nuevas primitivas a través de la intersección. El  modelado  booleano  es  un proceso  descriptivo,  es  decir,  sólo  se limita  a  especificar que primitivas se utilizan y cómo se combinan, para una mejor comprensión se utiliza un pseudocódigo\footnote{Un pseudocódigo (o falso lenguaje) es una descripción de alto nivel compacta e informal del principio operativo de un algoritmo} similar al lenguaje descriptivo de OpenSCAD.
 
-\textbf{Objetos}. Los Objetos representan la construcción de los modelos, creados a partir  de las primitivas. Los objetos pueden utilizar uno o más parámetros por lo tanto se pueden especificar utilizando paréntesis \textbf{( )}
 
-\begin{minted}[baselinestretch=1]{python}
-   objeto()
-\end{minted}
+\subsection{Gráficos 3D en la web.}
 
+\textquote{\textit{Las aplicaciones web se están volviendo cada vez más sofisticadas y la funcionalidad que alguna vez fue exclusiva de las aplicaciones de escritorio ahora también se puede encontrar en las aplicaciones web. Uno de los avances más recientes en este campo es la capacidad de las aplicaciones web para representar gráficos en 3D. Junto con el creciente número de dispositivos con procesadores gráficos y la capacidad de las aplicaciones web para ejecutarse en diferentes plataformas utilizando una única base de código, esto representa una posibilidad nueva y emocionante para los desarrolladores de aplicaciones gráficas en 3D}} \citep{Waerner2012}.
 
-\textbf{Operadores}. Los Operadores o Transformaciones sirven para modificar la escala, rotación y aplicar otras operaciones sobre los objetos. Los Operadores pueden recibir uno o más parámetros utilizando paréntesis \textbf{()}
+Además, el usuario final no tiene que instalar el software en su dispositivo para usarlo, esto se realiza automáticamente mediante el navegador web y cualquier complemento asociado. En general, las aplicaciones web ofrecen a los desarrolladores la oportunidad de llegar a una gran audiencia sin muchas dificultades a la hora de soportar múltiples plataformas, como sí sucedía anteriormente con las aplicaciones de escritorio. \vskip
 
-\begin{minted}[baselinestretch=1]{python}
-   operador()
-\end{minted}
+Incluir gráficos 3D en aplicaciones web no es una nueva tendencia. En 1994, se estandarizó una forma de presentar escenas 3D en el navegador web a través de un lenguaje de marcado llamado \textbf{VRML}\footnote{\url{https://www.w3.org/MarkUp/VRML/}}. VRML permite que las escenas 3D se especifiquen en un lenguaje similar al HTML. Si bien hay (o ha habido) aplicaciones de nicho que usan VRML, hoy en día existen pocos sitios populares que incluyen documentos VRML. Parece haberse convertido en un estándar que nunca creció lo suficientemente ni se utilizo demasiado como para ver un uso significativo a gran escala. Es probable que el motivo fué la potencia de procesamiento disponible, sobre todo en computadoras de precios razonables, que en esa época no fueron lo suficientemente potentes para proporcionar gráficos 3D convincentes. Esto ha cambiado recientemente con procesadores gráficos dedicados que se abren paso en más y más tipos de dispositivos. Gracias a esto, ha habido un renovado interés en las tecnologías que proporcionan gráficos 3D en páginas web y en aplicaciones web.\vskip
 
-
-\textbf{Parámetros}. Los parámetros o acciones sirven para construir objetos y definir operadores. Pueden ser asignados de forma directa utilizando variables.
-
-\begin{minted}[baselinestretch=1]{python}
-   parametro
-   var a = parametro
-\end{minted}
-
-\textbf{Comentarios}. Sirve para agregar texto informativo sin que el mismo afecte al funcionamiento del código del programa. Se especifica con numeral \# seguido del texto.
-\begin{minted}[baselinestretch=1, 
-framesep=0]{python}
-    # esto es un comentario
-\end{minted}
-
-\vspace{5mm}
-Un ejemplo de utilización del pseudocódigo, ver resultado en la Figura \ref{fig:traslacion}
-
-\begin{minted}[baselinestretch=1, framesep=0]{python}
-    # objeto(parametro1, ...).operador(parametro2, parametro3, ...)
-    b = cubo(10, 10, 20).trasladar(15, 0, 2) 
-\end{minted}
-
-
-\clearpage
-\subsubsection{Cubo especificado en algoritmos}
-\begin{description}
-\item  \textbf{Parámetros:}
-\item   \textbf{longitud}:
-\begin{description}
-\item \textbf{1 valor} único que especifica la longitud de todos los lados del cubo.
-\item \textbf{3 valores} en un vector $[x,y,z]$, especificando dimensiones $x$, $y$ y $z$.
-\end{description}
-\item   \textbf{centro}:
-\begin{description}
-\item \textbf{F} falso (por defecto), 1er octante positivo, esquina en $(0, 0, 0)$
-\item \textbf{V} Verdadero, el centro del cubo está en $(0, 0, 0)$
-\end{description}
-\end{description}
-
-Ver aplicación en los ejemplos a y b:
-
-\textbf{a)} Todos los scripts (lineas de código) son equivalentes en este ejemplo: \begin{listing}[ht]
-\begin{minted}[baselinestretch=1]{python}
-        cubo(longitud=8)
-        cubo(8)
-        cubo([8, 8, 8])
-         
-        cubo(8, F)
-        cubo([8, 8, 8], F)
-        cubo([8, 8, 8], centro=F)
-        cubo(longitud=[8, 8, 8], centro=F)
-        cubo(centro=F, longitud=[8, 8, 8])
-\end{minted}
-\end{listing}
-
-\begin{figure}[h]
-\includegraphics[width=7cm]{Img/Modelos/modelado1.jpg}
-\centering
-\caption{\textbf{\footnotesize{Cubo de $longitud = 8$ y ubicado en la esquina $(0,\ 0, \ 0)$. }}}
-\end{figure}
-
-
-\clearpage
-\textbf{b)} Todos los scripts (lineas de código) son equivalentes en este ejemplo: \begin{listing}[ht]
-\begin{minted}[baselinestretch=1]{python}
-    cubo([18, 28, 8], centro=V)
-    caja=[18, 28, 8] cubo(caja, V)
-\end{minted}
-\end{listing}
-
-\begin{figure}[h]
-\includegraphics[width=7cm]{Img/Modelos/modelado2.jpg}
-\centering
-\caption{\textbf{\footnotesize{prisma rectangular construido a partir de un cubo. }}}
-\end{figure}
-
-\clearpage
-\subsubsection{Esfera especificada en algoritmos}
-
-\begin{description}
-\item \textbf{Parámetros:}
-\item  \textbf{r}: Radio de la esfera.
-\item  \textbf{d}: Diámetro de la esfera.
-\item  \textbf{res}: Resolución de la esfera.
-\end{description}
-
-\textbf{a)} 
-
-\begin{minted}{python}
-    esfera(r=6, res=12); 
-\end{minted}
-
-
-\begin{figure}[h]
-\includegraphics[width=7cm]{Img/Modelos/modelado3.jpg}
-\centering
-\caption{\textbf{\footnotesize{Esfera de $radio=6$ con baja resolución (12 polígonos en $360^\circ)$. }}}
-\end{figure}
-
-\textbf{b)} 
-
-\begin{minted}{python}
-    esfera(r=8, res=100); 
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=7cm]{Img/Modelos/modelado4.jpg}
-\centering
-\caption{\textbf{ \footnotesize{Esfera de $radio=8$ con alta resolución (100 polígonos en $360^\circ$).}}}
-\end{figure}
-
-\clearpage
-\subsubsection{Cilindro especificado en algoritmos}
-\begin{description}
-\item  \textbf{Parámetros:}
-\item  \textbf{alto}: Alto del cilindro o cono.
-\item  \textbf{r}: Radio del cilindro cuando r1 = r2.
-\item  \textbf{r1}: Radio inferior.
-\item  \textbf{r2}: Radio superior.
-\item  \textbf{d1}: Diámetro inferior.
-\item  \textbf{d2}: Diámetro superior.
-\item   \textbf{centro}:
-\begin{description}
-\item \textbf{F} falso (por defecto), Inicia en el $z$ desde $0$ hasta $alto$
-\item \textbf{V} Verdadero, sobre el eje Z en el rango $-alto/2$ hasta $alto/2$
-
-\end{description}
-\item \textbf{res}: Resolución de la esfera.
-\end{description}
-
-Ver aplicación en los ejemplos a y b:
-
-\textbf{a)} Todos los scripts son equivalentes para este ejemplo:
-
-
-\begin{minted}[baselinestretch=1]{python}
-    cilindro(alto=15, r1=9.5, r2=19.5, centro=F)
-    cilindro(15, 9.5, 19.5, F)
-    cilindro(15, 9.5, 19.5)
-    cilindro(15, 9.5, d2=39)
-    cilindro(15, d1=19, d2=39)
-    cilindro(15, d1=19, r2=19.5)
-\end{minted}
-
-
-\begin{figure}[h]
-\includegraphics[width=7cm]{Img/Modelos/modelado5.jpg}
-\centering
-\caption{\textbf{a) \footnotesize{Un cilindro con radios diferentes. }}}
-\end{figure}
-
-\textbf{b)} Todos los scripts son equivalentes para este ejemplo:
-
-\begin{minted}[baselinestretch=1]{python}
-    cilindro(altura=15, r1=10, r2=0, centro=V)
-    cilindro(15, 10, 0, V)
-    cilindro(altura=15, d1=20, d2=0, centro=V)
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=7cm]{Img/Modelos/modelado6.jpg}
-\centering
-\caption{\textbf{b) \footnotesize{Un cono generado a partir de un cilindro.}}}
-\end{figure}
-
-Al aumentar los valores del parámetro \textbf{res} (resolución) se genera una superficie cada vez mas suave o lisa. A su vez, el uso de valores bajos de \textbf{res} produce algunos objetos no circulares que pueden ser útiles o interesantes. Algunos ejemplos a continuación:
-
-\begin{minted}[baselinestretch=1]{python}
-    cilindro(20, 20, 20, res=3)
-    cilindro(20, 20,  0, res=4)
-    cilindro(20, 20, 10, res=4)
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=12cm]{Img/Modelos/modelado7.jpg}
-\centering
-\caption{\textbf{b). \footnotesize{Figuras generadas a partir de un cilindro con baja resolución.}}}
-\end{figure}
-
-\clearpage
-\subsubsection{Poliedro especificado en algoritmos}
-El poliedro es una primitiva 3D genérica puede representar cualquier objeto sólido debido a que se define como un cuerpo geométrico cuyas caras son obligatoriamente planas y encierran un volumen como se vió en la sección \ref{sectionpoliedro}. A continuación vemos cómo especificar poliedros usando algoritmos.\vskip
-
-
-
-\begin{description}
-\item  \textbf{Parámetros:}
-\item  \textbf{puntos}: Vector con puntos o vértices. Cada punto se define mediante un vector con sus coordenadas $[x,\ y,\ z]$.
-Los puntos se pueden definir en cualquier orden. $N$ puntos son referenciados en un orden definido de $0$ a $N-1$.
-\item  \textbf{caras}: Vector con caras que cierran la superficie del sólido. Cada cara es un vector que contiene los índices de 3 o más puntos pertenecientes al vector de puntos. 
-Las caras se pueden definir en cualquier orden. Se debe definir suficientes caras para encerrar por completo el sólido, sin superposición entre ellas.
-\end{description}
-
-En el ejemplo \textbf{a)} se utiliza un poliedro para generar el mismo resultado que el siguiente cubo:
-
-\begin{minted}{python}
-    cubo([10, 7, 5])
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=8cm]{Img/Modelos/modelado9.jpg}
-\centering
-\caption{\textbf{\footnotesize{Resultado del algoritmo del poliedro para un cubo.}}}
-\end{figure}
-
-Para comprender como funciona el algoritmo \textbf{a)} del poliedro, observar la Figura \ref{fig:poliedrodes} que ilustra el despliegue del poliedro con sus vértices y caras.
-
-\clearpage
-\textbf{a)}
-\begin{minted}[baselinestretch=1]{python}
-    puntos = [ [ 0, 0, 0],  # 0
-               [10, 0, 0],  # 1
-               [10, 7, 0],  # 2
-               [ 0, 7, 0],  # 3
-               [ 0, 0, 5],  # 4
-               [10, 0, 5],  # 5
-               [10, 7, 5],  # 6
-               [ 0, 7, 5] ] # 7
-  
-    caras = [ [0, 1, 2, 3],  # abajo
-              [4, 5, 1, 0],  # frente
-              [7, 6, 5, 4],  # arriba
-              [5, 6, 2, 1],  # derecha
-              [6, 7, 3, 2],  # atras
-              [7, 4, 0, 3] ] # izquierda
-  
-    poliedro(puntos, caras)
-
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=10cm]{Img/Modelos/modelado8.png}
-\centering
-\caption{\textbf{ \footnotesize{Despliegue de poliedro con vértices y caras.}}}
-\label{fig:poliedrodes}
-\end{figure}
-
-\clearpage
-\textbf{b)} Una pirámide con base cuadrada
-
-\begin{minted}[baselinestretch=1]{python}
-    poliedro(
-    puntos=[ [10, 10, 0], [10, -10, 0], [-10, -10, 0], [-10, 10, 0], 
-          # los cuatro puntos de la base
-           [0, 0, 10] ],  
-          # la punta de la pirámide                                
-    caras=[ [0, 1, 4], [1, 2, 4], [2, 3, 4], [3, 0 , 4],               
-          # los triángulos de los lados
-          [1, 0, 3], [2, 1, 3 ] ]                         
-          # dos triángulos para la base cuadrada
-    )
-
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=8cm]{Img/Modelos/modelado10.jpg}
-\centering
-\caption{\textbf{ \footnotesize{Pirámide con base cuadrada.}}}
-\end{figure}
-
-\clearpage
-Definir objetos mediante poliedros puede ser una herramienta muy potente, sin embargo su complejidad aumenta cuando se definen objetos con mucha resolución o con formas elaboradas. En el ejemplo \textbf{c)} se muestra un modelo de zapato generado a partir de \textbf{49818} triángulos. 
-
-\textbf{c)} 
-
-\begin{minted}[baselinestretch=1]{python}
-    poliedro(
-    puntos = [
-        	[33.329444, 29.010915, 35.886886],
-        	[30.592163, 29.074943, 29.971662],
-        	[33.969806, 29.182254, 35.545883],
-        	[30.592163, 29.074943, 29.971662],
-        	... # A partir de esta linea 49814 vectores
-        	]
-    caras =  [
-        	[0, 1, 2],
-        	[3, 4, 5],
-        	[6, 7, 8],
-        	[9,10,11],
-        	... # A partir de esta linea 49814 vectores
-        	]
-    )
-
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=8cm]{Img/Modelos/modelado14.jpg}
-\centering
-\caption{\textbf{ \footnotesize{Modelo de zapato formado por 49818 triángulos }}}
-\end{figure}
-
-\clearpage
-\subsubsection{Transformaciones especificadas en algoritmos}
-
-Las transformaciones se realizan mediante operadores indicando el objeto a transformar seguido de un $``."$ e indicando la acción a realizar (trasladar, escalar, rotar, etc). Las transformaciones compuestas se realizan utilizando el mismo mecanismo.
-
-\begin{description}
-\item  \textbf{Traslación - Parámetros:}
-\item  \textbf{punto}: Vector con las coordenadas $[x,\ y, \ z]$ del punto al que se traslada el objeto.
-\end{description}
-
-\begin{minted}[baselinestretch=1]{python}
-    a = cubo(10, centro=V)
-    
-    b = cubo(10, 10, 20)
-    b.trasladar([15, 0, 0]) 
-   
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=8cm]{Img/Modelos/modelado11.jpg}
-\centering
-\caption{\textbf{ \footnotesize{Traslación del objeto $b$ (prisma rectangular) al punto $[15, 0, 0]$}}}
-\label{fig:traslacion}
-\end{figure}
-
-\begin{description}
-\item  \textbf{Escala - Parámetros:}
-\item  \textbf{punto}: Vector con los factores de escalamiento en cada eje $[s_x,\ s_y, \ s_z]$.
-\end{description}
-
-\begin{minted}[baselinestretch=1]{python}
-    a = cubo(10, centro=V)
-    
-    b = esfera(10, res=100).trasladar([0, 0, 30])
-    b.escalar([0.5, 0.5, 2]) 
-   
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=8cm]{Img/Modelos/modelado12.jpg}
-\centering
-\caption{\textbf{ \footnotesize{Escala del objeto $b$ (esfera) por los factores de escalamiento $[0.5,\ 0.5,\ 2]$, el objeto es previamente trasladado al punto $[0,\ 0,\ 30]$ }}}
-\end{figure}
-
-\vskip
-\begin{description}
-\item  \textbf{Rotacion - Parámetros:}
-\item  \textbf{punto}: Vector con los ángulos de rotación del objeto sobre los ejes coordenados $[x,\ y, \ z]$ especificados en grados $^\circ$.
-\end{description}
-
-
-\begin{minted}[baselinestretch=1]{python}
-    a = cubo([5, 10, 20]).trasladar([20,0,0])
-    a.rotar([45,0,0]) # Rotar 45 º sobre el eje X
-
-    b = cubo([5, 10, 20]).trasladar([20,0,0])
-    b.rotar([0,-45,0]) # Rotar -45 º sobre el eje Y
-
-    c = cubo([5, 10, 20]).trasladar([-20,0,0])
-    b.rotar([0,0,45]) # Rotar 45 º sobre el eje Z
-
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=8cm]{Img/Modelos/modelado13.jpg}
-\centering
-\caption{\textbf{ \footnotesize{Rotación de 3 objetos sobre los tres ejes coordenados. }}}
-\end{figure}
-
-\clearpage
-\subsubsection{Operaciones booleanas especificadas en algoritmos}
-Las operaciones booleanas se realizan mediante operadores indicando el objeto a aplicar seguido de un “.” y la acción a realizar (intercectar, unir, substraer), como parámetro se indica el otro objeto. ej. \textbf{objeto1.unir(objeto2)}
-\vspace{5mm}
-
-\textbf{a)} Operaciones booleanas de los objetos \textbf{a} (cubo) y \textbf{b} (esfera). Ver Figura \ref{aCSG} \vskip
-
-Los objetos solidos $a$ y $b$ son generados con el siguiente código  
-
-\begin{minted}[baselinestretch=1]{python}
-    a = cubo(100)
-    b = esfera(65).trasladar([65, 65, 65])
-\end{minted}
-
-Operaciones booleanas simples:
-
-\begin{minted}[baselinestretch=1, bgcolor=LightGray]{python}
-    a.unir(b)
-    # Sentencias equivalentes
-    cubo(100).unir( esfera(65).trasladar([65, 65, 65]) )
-\end{minted}
-
-\begin{minted}[baselinestretch=1, bgcolor=LightGray]{python}
-    a.substraer(b)
-    # Sentencias equivalentes
-    cubo(100).substraer( esfera(65).trasladar([65, 65, 65]) )
-\end{minted}
-
-\begin{minted}[baselinestretch=1, bgcolor=LightGray]{python}
-    a.intersectar(b)
-    # Sentencias equivalentes
-    cubo(100).intersectar( esfera(65).trasladar([65, 65, 65]) )
-\end{minted}
-
-\textbf{b)} En este ejemplo se construye un sólido mediante operaciones booleanas combinadas como se analiza en la sección \ref{sectionCSG}. Ver Figura \ref{bCSG} \vskip
-
-Los objetos solidos \textbf{a}, \textbf{b}, \textbf{c}, \textbf{d} y \textbf{e} son generados con el siguiente código  
-
-
-\begin{minted}[baselinestretch=1, bgcolor=LightGray]{python}
-    a = cubo(100, centro=V)
-    b = esfera(65)
-    c = cilindro(longitud=130, r=32.5, centro=V).rotar([90, 0, 0])
-    d = cilindro(longitud=130, r=32.5, centro=V)
-    e = cilindro(longitud=130, r=32.5, centro=V).rotar([0, 90, 0])
-\end{minted}
-
-Operaciones booleanas combinadas:
-
-\begin{minted}[baselinestretch=1, bgcolor=LightGray]{python}
-    a.intersectar(b).substraer(c.unir(d).unir(e))
-\end{minted}
-
-\begin{figure}[h]
-\includegraphics[width=14cm]{Img/Modelos/modelado15.jpg}
-\centering
-\caption{\textbf{ \footnotesize{a) Operaciones booleanas simples }}}
-\label{aCSG}
-\end{figure}
-
-
-\begin{figure}[h]
-\includegraphics[width=16cm]{Img/Modelos/modelado16a.jpg}
-\centering
-\caption{\textbf{ \footnotesize{b) Operaciones booleanas combinadas }}}
-\label{bCSG}
-\end{figure}
-\clearpage
-
-\subsubsection{Polígonos (2D) especificados en algoritmos}
-Los polígonos no son sólidos geométricos, sin embargo pueden ser utilizados como base para la construcción de modelos 3D sólidos. Los polígonos también pueden manipularse utilizando transformaciones.
-
-\begin{description}
-\item  \textbf{Cuadrado - Parámetros:}
-\item   \textbf{longitud}:
-\begin{description}
-\item \textbf{1 valor} único que especifica la longitud de todos los lados del cuadrado.
-\item \textbf{2 valores} especificando dimensiones $x$, $y$.
-\end{description}
-\item   \textbf{centro}:
-\begin{description}
-\item \textbf{F} Falso (por defecto), 1er cuadrante positivo, esquina en $(0, 0)$
-\item \textbf{V} Verdadero, el centro del cuadrado está en $(0, 0)$
-\end{description}
-\end{description}
-
-\textbf{a) Cuadrado y rectángulo} 
-
-\begin{listing}[ht]
-\begin{minted}[baselinestretch=1]{python}
-    a = cuadrado(20, 20, centro = V)
-    
-    b = cuadrado(40, 20, centro = V).trasladar( [50, 0, 0] ) 
-    # Rectángulo
-\end{minted}
-\end{listing}
-
-\begin{figure}[h]
-\includegraphics[width=8cm]{Img/Modelos/modelado17.jpg}
-\centering
-\caption{\textbf{ \footnotesize{a) a=cuadrado y b=rectángulo}}}
-\end{figure}
-
-\clearpage
-\begin{description}
-\item \textbf{Círculo - Parámetros:}
-\item  \textbf{r}: Radio del círculo.
-\item  \textbf{d}: Diámetro del círculo.
-\item  \textbf{res}: Resolución del círculo.
-\end{description}
-
-\textbf{a)} 
-\begin{listing}[ht]
-\begin{minted}[baselinestretch=1]{python}
-    a = circulo(r=20, res=3).trasladar( [-50, 0, 0] )
-    b = circulo(r=20, res=4).trasladar( [ 0, 0, 0] )
-    c = circulo(r=20, res=5).trasladar( [50, 0, 0] )
-    d = circulo(r=20, res=6).trasladar( [-50, -50, 0] )
-    e = circulo(r=20, res=8).trasladar( [ 0, -50, 0] )
-    f = circulo(r=20, res=50).trasladar( [ 50, -50, 0] )
-\end{minted}
-\end{listing}
-
-\begin{figure}[h]
-\includegraphics[width=8cm]{Img/Modelos/modelado18.jpg}
-\centering
-\caption{\textbf{\footnotesize{a) círculos con diferentes resoluciones que producen diferentes polígonos a=triangulo, b=cuadrado, c=pentágono, d=hexágono, e=heptágono y f=círculo  }}}
-\end{figure}
-
-
-\clearpage
-\subsubsection{Operaciones de barrido especificadas en algoritmos}
-
-El barrido translacional o \textbf{extrusión} es una operación de modelado que parte de un polígono (cuadrado, rectángulo, circulo) y lo extiende a la tercera dimensión (sólido 3D). Para simplificar el funcionamiento se considera que el modelo parte del plano \textit{xy} hasta una longitud indicada en el plano \textit{z}. Es posible aplicar otras transformaciones combinadas con la extrusión.
-
-\begin{description}
-\item  \textbf{Extrusión - Parámetros:}
-\item  \textbf{longitud}: Longitud de la extrusión (debe ser positivo).
-\item  \textbf{torsion}: Rotación en  ángulos $^\circ$ sobre el eje \textbf{z}.
-\end{description}
-
-\textbf{a) Extrusión de polígonos} 
-
-
-\begin{listing}[ht]
-\begin{minted}[baselinestretch=1]{python}
-    a = circulo(r=5).trasladar( [10, 0, 0] )
-    a.extruir(100, torsion = -500)
-    
-    b = circulo(r=10, res=5).trasladar( [50, 0, 0] )
-    b.extruir(100, torsion = 0)
-    
-    c = cuadrado(20).trasladar( [100, 0, 0] ).escalar( [1, 0.1, 1] )
-    c.extruir(longitud = 100,  torsion = 0)
-\end{minted}
-\end{listing}
-
-\begin{figure}[h]
-\includegraphics[width=8cm]{Img/Modelos/modelado19.jpg}
-\centering
-\caption{\textbf{\footnotesize{a) a=círculo convertido en un cilindro con torsion de $-500^\circ$, b=pentágono convertido en un prisma, c=cuadrado convertido en un poliedro de base rectangular.}}}
-\end{figure}
-
-
-\clearpage
-
-
-\subsection{Modelos 3D en la web.}
-
-Las aplicaciones web están ingresando rápidamente en dominios donde las aplicaciones de escritorio fueron la única alternativa viable. Desde la perspectiva de los desarrolladores, es muy interesante por qué ha aumentado el interés en estas aplicaciones basadas en el navegador web. Las aplicaciones resultantes se pueden ejecutar con cualquier combinación de hardware y sistema operativo que permita el uso de un navegador web moderno, incluidos dispositivos como teléfonos móviles y tabletas. Además, el usuario final no tiene que instalar el software en su dispositivo para usarlo, esto se realiza automáticamente mediante el navegador web y cualquier complemento asociado. En general, las aplicaciones web ofrecen a los desarrolladores la oportunidad de llegar a una gran audiencia sin muchas dificultades para dar soporte a múltiples plataformas, como sucedía anteriormente con las aplicaciones de escritorio. \vskip
-
-Incluir gráficos 3D en aplicaciones web no es una nueva tendencia. En 1994, se estandarizó una forma de presentar escenas 3D en el navegador web a través de un lenguaje de marcado llamado VRML. VRML permite que las escenas 3D se especifiquen en un lenguaje similar al HTML. Si bien hay (o ha habido) aplicaciones de nicho que usan VRML, hoy en día existen pocos sitios populares que incluyen documentos VRML. Parece haberse convertido en un estándar que nunca creció lo suficientemente ni se utilizo demasiado como para ver un uso significativo a gran escala. Es probable que el motivo fué la potencia de procesamiento disponible, sobre todo en computadoras de precios razonables, que en esa época no fueron lo suficientemente potentes para proporcionar gráficos 3D convincentes. Esto ha cambiado recientemente con procesadores gráficos dedicados que se abren paso en más y más tipos de dispositivos. Gracias a esto, ha habido un renovado interés en las tecnologías que proporcionan gráficos 3D en páginas web y en aplicaciones web.\vskip
-
-Los gráficos 3D interactivos son una de las áreas más grandes e importantes donde las aplicaciones web no tuvieron mucho éxito hasta hace poco. Parte de esto se debe a que este tipo de interactividad exige comprometer en gran parte del dispositivo y el software relacionado, como las máquinas virtuales para lenguajes de scripting tan a menudo involucradas en este tipo de aplicaciones. Otra razón fué la falta de una Interfaz de Programación de Aplicaciones en inglés  \textit{Application Programming Interface} (API) para gráficas 3D en la mayoría de las tecnologías de aplicaciones web. Ambas áreas han visto mejoras, la primera con técnicas tales como compilación just-in-time (JIT)\footnote{Un compilador JIT (Just-In-Time) es un componente de software que mejora el rendimiento de las aplicaciones compilando códigos de bytes en código de máquina nativa, en tiempo de ejecución. } y la segunda con la introducción de tecnologías como Stage 3D para Flash\footnote{\url{https://www.adobe.com/devnet/flashplayer/stage3d.html}} y WebGL. \citep{Waerner2012}  
+Los gráficos 3D interactivos son una de las áreas más grandes e importantes donde las aplicaciones web no tuvieron mucho éxito hasta hace poco. Parte de esto se debe a que este tipo de interactividad exige comprometer en gran parte del dispositivo y el software relacionado, como las máquinas virtuales para lenguajes de scripting tan a menudo involucradas en este tipo de aplicaciones. Otra razón fué la falta de una Interfaz de Programación de Aplicaciones en inglés  \textit{Application Programming Interface} (API) para gráficos 3D en la mayoría de las tecnologías de aplicaciones web. Ambas áreas han visto mejoras, la primera con técnicas tales como compilación \textbf{just-in-time} (JIT)\footnote{Un compilador JIT (Just-In-Time) es un componente de software que mejora el rendimiento de las aplicaciones compilando códigos de bytes en código de máquina nativa, en tiempo de ejecución. } y la segunda con la introducción de tecnologías como Stage 3D para Flash\footnote{\url{https://www.adobe.com/devnet/flashplayer/stage3d.html}} y WebGL. 
 \vskip
 
 La realidad de las aplicaciones actuales implica que las soluciones sean capaces de ejecutarse en más plataformas, admitir más navegadores y dispositivos, por lo tanto, se vuelve fundamental elegir una tecnología desde una perspectiva de compatibilidad, como WebGL. La Figura \ref{fig:compa} muestra la compatibilidad de WebGL con los navegadores más utilizados y sus respectivas versiones.
@@ -910,33 +357,34 @@ La realidad de las aplicaciones actuales implica que las soluciones sean capaces
 \begin{figure}[h]
 \includegraphics[width=16cm]{Img/WEB/web-compa.jpg}
 \centering
-\caption{\textbf{\footnotesize{Compatibilidad de WebGL con navegadores web. Verde (Soportado) y Rojo (No soportado). Fuente \url{https://caniuse.com/#feat=webgl} }}}
+\caption{\textbf{\footnotesize{Compatibilidad de WebGL con navegadores web. Verde (Soportado) y Rojo (No soportado). Fuente \url{https://caniuse.com/} }}}
 \label{fig:compa}
 \end{figure}
 
 
 \subsubsection{WebGL}
+\textquote{\textit{\textbf{WebGL}\footnote{\url{https://www.khronos.org/webgl/}} es una API multiplataforma y libre de regalías utilizada para crear gráficos 3D en un navegador web}} \citep{KronosGroup}. 
+WebGL en inglés \textit{Web Graphic Library}  es una API de JavaScript de ``bajo nivel'' desarrollada por la fundación Mozilla en 2006, con la intención de proporcionar una API de gráficos 3D para el elemento canvas\footnote{\url{https://developer.mozilla.org/es/docs/Web/HTML/Canvas}} de HTML. La especificación WebGL es mantenida desde el 2009 por Khronos Group. A pesar de no ser parte de la especificación oficial de HTML5, en la actualidad es compatible con todos los principales navegadores y se ha convertido en la API estándar para gráficos 3D en navegadores. \vskip 
 
-WebGL\footnote{\url{https://www.khronos.org/webgl/}} en inglés \textit{Web Graphic Library} es una API de JavaScript que permite implementar gráficos 3D interactivos directamente en el navegador. Fué desarrollado por la fundación Mozilla en 2006, con la intención de proporcionar una API de gráficos 3D para el elemento canvas\footnote{\url{https://developer.mozilla.org/es/docs/Web/HTML/Canvas}} de HTML. El diseño se basó en OpenGL ES 2.0, que es un subconjunto de OpenGL destinado a sistemas embebidos. La especificación WebGL es mantenida desde el 2009 por Khronos Group. No es parte de la especificación HTML5 oficial, pero en la actualidad es compatible con todos los principales navegadores y se ha convertido en la API estándar para gráficos 3D en navegadores. \vskip 
+\textquote{\textit{``Bajo nivel'' significa que los comandos WebGL se expresan en términos que se relacionan de manera relativamente directa a cómo funciona realmente una GPU (unidad de procesamiento de gráficos, es decir, hardware). Eso significa que WebGL permite aprovechar realmente el conjunto de características y la potencia de las tarjetas gráficas. Lo que los juegos nativos hacen mediante OpenGL o Direct3D, probablemente también lo hagan con WebGL.
+WebGL es de tan bajo nivel que ni siquiera es una API de gráficos ``3D'', hablando correctamente. Al igual que a al hardware gráfico no le importa si está haciendo gráficos 2D o 3D, tampoco WebGL: \textbf{2D y 3D son solo dos posibles patrones de uso}}} \citep{Nyman2013}.
 
-
-``Bajo nivel" significa que los comandos WebGL se expresan en términos que se relacionan de manera relativamente directa a cómo funciona realmente una GPU (unidad de procesamiento de gráficos, es decir, hardware). Eso significa que WebGL permite aprovechar realmente el conjunto de características y la potencia del hardware de gráficos. De la misma manera que los juegos nativos hacen con OpenGL o Direct3D, probablemente también lo pueden hacer con WebGL. \citep{Nyman2013}
-
-WebGL es de tan bajo nivel que ni siquiera es una API de gráficos ``3D", definiéndola correctamente. Al igual que para el hardware de gráficos es indistinto si está procesando gráficos 2D o 3D. En WebGL, 2D y 3D son solo dos posibles patrones de uso.\vskip Cuando OpenGL 1.0 salió en 1992, era específicamente una API 3D, con el objetivo de exponer las características del hardware de gráficos 3D de esa época, a medida que éste fué evolucionando para ser más genérico y programable, también lo hizo OpenGL. Eventualmente, OpenGL se volvió tan genérico que el 2D y 3D son solo dos casos de uso posibles, a la vez que ofrecen un gran rendimiento. Ese fué el caso de OpenGL 2.0, y WebGL siguió ese concepto en su desarrollo.
+\vskip Cuando OpenGL 1.0 salió en 1992, era específicamente una API 3D, con el objetivo de exponer las características del hardware de gráficos 3D de esa época, a medida que éste fué evolucionando para ser más genérico y programable, también lo hizo OpenGL. Eventualmente, OpenGL se volvió tan genérico que el 2D y 3D son solo dos casos de uso posibles, a la vez que ofrecen un gran rendimiento. Ese fué el caso de OpenGL 2.0, y WebGL siguió ese concepto en su desarrollo.
 
 A eso se refiere la definición de WebGL como una API de gráficos de bajo nivel en lugar de una API 3D específica. 
 
-Sin embargo, la naturaleza genérica de WebGL hace que desarrollar en contextos de gráfica sea una tarea engorrosa como se puede apreciar en la documentación de la API y tutoriales de la comunidad \citep{MozillaFoundation}. Para solventar este hecho, se construyeron frameworks y librerías con WebGL como base para proporcionar una interfaz de más alto nivel para la API. Las opciones de software para desarrollar gráficas en la web son muy variadas, desde representación de gráficos vectoriales escalables en inglés Scalable Vector Graphics (SVG)\footnote{\url{https://www.w3.org/Graphics/SVG/}} hasta realidad virtual con WebVR\footnote{\url{https://webvr.info/}}. A continuación se analizan y evalúan dos de estas tecnologías, que se consideran técnicamente aptas para cumplir con los objetivos de este trabajo.
+Sin embargo, la naturaleza genérica de WebGL hace que desarrollar en contextos de gráfica sea una tarea engorrosa, como se puede apreciar en la documentación oficial de la API y tutoriales de la comunidad \citep{MozillaFoundation}. Para solventar este hecho, se construyeron frameworks y librerías con WebGL como base para proporcionar una interfaz de más alto nivel para la API. Las opciones de software para desarrollar gráficas en la web son muy variadas, desde representación de gráficos vectoriales escalables en inglés \textit{Scalable Vector Graphics} (SVG)\footnote{\url{https://www.w3.org/Graphics/SVG/}} hasta realidad virtual con WebVR\footnote{\url{https://webvr.info/}}. A continuación se analizan y evalúan dos de estas tecnologías, que se consideran técnicamente aptas para cumplir con los objetivos de desarrollo de este trabajo: \textbf{OpenJSCAD} y \textbf{Three.js}.
 
 \subsubsection{OpenJSCAD}
-
-OpenJSCad\footnote{\url{https://openjscad.org/}}
-es un conjunto de herramientas modulares para diseño paramétrico 2D y 3D, que pueden ejecutarse en el navegador web y a través de interfaces de linea de comandos mediante código JavaScript. A continuación algunas características:
+OpenJSCAD\footnote{\url{https://openjscad.org/}}
+\textquote{\textit{es un conjunto de herramientas modulares para diseños paramétricos 2D y 3D, que pueden ejecutarse en el navegador web y a través de interfaces de linea de comandos mediante código JavaScript}} \citep{ReneK.MuellerJeffGay}. 
+OpenJSCAD es un proyecto que tiene como objetivo implementar funcionalidades de OpenSCAD utilizando tecnologías web. En lugar de utilizar el lenguaje de OpenSCAD, se utiliza JavaScript. 
+A continuación algunas características:
 
 \begin{itemize}
     \item Se puede ejecutar en el navegador web sin necesidad instalar ningún software extra.
     \item Se puede instalar todas las capacidades de la web oficial del proyecto en un servidor propio.
-    \item Posee una Interfaz de linea de comandos en ingles \textit{Command Line Interface} (CLI) para computar los modelos en el servidor con Node.js.
+    \item Posee una Interfaz de linea de comandos en inglés \textit{Command Line Interface} (CLI) para computar los modelos en el servidor con Node.js.
     \item Se visualiza en el navegador mediante webGL, haciendo uso de canvas de HTML5.
     \item Soporta modelos paramétricos con parámetros editables por el usuario sin la necesidad de editar el script de origen.
     \item Soporta modelado booleano CSG y transformaciones geométricas.
@@ -945,9 +393,18 @@ es un conjunto de herramientas modulares para diseño paramétrico 2D y 3D, que 
     \item Los sólidos 3D se puede exportar a archivos STL, las áreas 2D se pueden exportar con archivos DXF. También permite la importación en ambos casos.
 \end{itemize}
 
-\subsubsection{Creación de un cubo con OpenJSCAD}
+Para trabajar con modelado booleano OpenJSCAD utiliza una librería llamada \textbf{CSG.js} \footnote{\url{https://github.com/jscad/csg.js}}, \textquote{\textit{esta librería implementa operaciones CSG en las mallas de forma elegante y concisa usando \textbf{BSP trees} y su objetivo es funcionar como una implementación fácilmente comprensible de ese algoritmo}} \citep{Nieuwenhuijse}.
+La Partición Binaria del Espacio en ingles \textit{Binary Space Partitioning} (BSP) es un método para subdividir recursivamente un espacio en elementos convexos empleando hiperplanos. Esta subdivisión da lugar a una representación de la escena por medio de una estructura de datos de árbol conocida como árbol de BSP en inglés \textit{BSP trees}. 
 
-Un script OpenJSCAD debe tener al menos una función definida, la funcion $main()$, que retorna un objeto CSG o un vector (array) de dos o más objetos CSG. En el siguiente ejemplo se crea un cubo azul con código OpenJSCAD, se puede ver el resultado en la Figura \ref{fig:jopen}. 
+OpenJSCAD hace que su funcionalidad esté disponible como funciones y métodos a través de sus objetos, y por ende que los programas escritos sean más flexibles. Esto permite al programador utilizar el paradigma de programación funcional\footnote{La programación funcional es un paradigma de programación declarativa basado en el uso de funciones, en contraste con la programación imperativa, que enfatiza los cambios de estado mediante la mutación de variables} y facilita la comprensión de los programas escritos. El paradigma que utiliza la librería se explica con mas detalle en la sección XXX de desarrollo de este trabajo.
+
+OpenJSCAD para la visualización utiliza como base \textbf{}lightgl.js \footnote{\url{https://github.com/evanw/lightgl.js/}}, \textquote{\textit{esta librería facilita el prototipado rápido de aplicaciones WebGL. Lo hace en un nivel más bajo que muchas otras bibliotecas WebGL y aunque no proporciona un \textbf{scene graph}, re-implementa la matriz modelo-vista/proyección\footnote{\url{http://www.opengl-tutorial.org/es/beginners-tutorials/tutorial-3-matrices/}} de OpenGL para proporcionar una funcionalidad similar}} \citep{Wallace}.\vskip
+Un gráfico de escena en inglés \textit{Scene Graph}\footnote{\url{https://en.wikipedia.org/wiki/Scene_graph}} es una estructura de datos general comúnmente utilizada por aplicaciones de edición de gráficos basadas en vectores y juegos de computadora modernos, que organiza la representación lógica y a menudo espacial de una escena gráfica.
+
+\vspace{5mm}
+\textbf{Creación de un cubo con OpenJSCAD}
+
+Un script OpenJSCAD debe tener al menos una función definida, la funcion \textit{main()}, que retorna un objeto CSG o un vector (array) de dos o más objetos CSG. En el siguiente ejemplo se crea un cubo de color azul con código OpenJSCAD, se puede ver el resultado en la Figura \ref{fig:jopen}. 
 
 \begin{minted}[baselinestretch=1, bgcolor=LightGray, linenos]{js}
  function main() {
@@ -964,11 +421,8 @@ Un script OpenJSCAD debe tener al menos una función definida, la funcion $main(
 \end{figure}
 
 
-Para trabajar con modelado booleano OpenJSCAD utiliza una librería llamada CSG.js \footnote{\url{https://github.com/jscad/csg.js}}, esta librería implementa operaiones CSG mediante BSP trees. Para la visualiación utiliza lightgl.js \footnote{\url{https://github.com/evanw/lightgl.js/}} que facilita el prototipado rápido de aplicaciones WebGL implementando funciones de Ray Tracing, funciona a un nivel más bajo que muchas otras bibliotecas WebGL y aunque no proporciona un esquema de escena, implementa un mecanismo modelo-vista/proyección\footnote{\url{http://www.opengl-tutorial.org/es/beginners-tutorials/tutorial-3-matrices/}} similar a OpenGL.
-
-\subsubsection{Three.js
-}
-
+\clearpage
+\subsubsection{Three.js}
 Three.js\footnote{\url{https://threejs.org/}} es una librería/API desarrollada en JavaScript y soportada en la mayoría de los navegadores web. Es utilizada sobre todo para crear y visualizar gráficos 3D animados en los navegadores web. Los scripts de Three.js se pueden utilizar mediante canvas de HTML5, SVG o WebGL. Contiene abstracciones de alto nivel para tareas comunes de WebGL y proporciona, entre otras capacidades, las siguientes:
 
 \begin{itemize}
@@ -1032,9 +486,9 @@ Una escena es un soporte para todos los objetos que componen un mundo en 3D, inc
 \end{figure}
 
 \clearpage
-\subsubsection{Evaluación}
+\subsubsection{Evaluación} \textcolor{red}{Ver si poner en desarrollo}
 
-A continuación en la tabla se analizan las OpenJSCAD y Three.js respecto a los requerimientos del prototipo COCADA.
+A continuación en la tabla se analizan las librerías OpenJSCAD y Three.js respecto a los requerimientos del prototipo CoCADA.
 
 \begin{center}
  \begin{tabular}{ c |c c } 
@@ -1065,174 +519,42 @@ Si bien las funcionalidades de ambas tecnologías pueden ser similares, es impor
 
 \begin{itemize}
     \item OpenJSCAD es un conjunto de herramientas que permiten resolver el modelado mediante scripting en la web, con una calidad de visualización suficiente para poder comprender la geometría de un modelo sólido.
-    \item Three.js es una librería que puede realizar modelado booleano mediante complementos o plugins\footnote{Los complementos o plugins son herramientas que extienden la funcionalidad de un software}, sin embargo se utiliza normalmente para crear complejas visualizaciones y animaciones en 3D. Es una herramienta conocida videojuegos, aplicaciones interactivas, obras de arte digital, instalaciones para productos, etc. Explotando las posibilidades como la iluminación, las simulaciones físicas, el uso de cámaras, las partículas, la interacción con dispositivos y el trabajo con audio.
+    \item Three.js es una librería que puede realizar modelado booleano mediante plugins\footnote{Los plugins son herramientas que extienden la funcionalidad de un software}, sin embargo se utiliza normalmente para crear complejas visualizaciones y animaciones en 3D. Es una herramienta conocida videojuegos, aplicaciones interactivas, obras de arte digital, instalaciones para productos, etc. Explotando las posibilidades como la iluminación, las simulaciones físicas, el uso de cámaras, las partículas, la interacción con dispositivos y el trabajo con audio.
 \end{itemize}
 
  En definitivas, los ámbitos de aplicación de estas dos tecnologías son diferentes. Con OpenJSCAD se obtienen herramientas de forma casi directa para resolver los requerimientos del prototipo, mientras que con Three.js se debe adaptar su lógica de funcionamiento a un ámbito mucho más acotado en términos de funcionalidad y visualización. Por todo lo mencionado se considera que OpenJSCAD es la opción indicada para ser utilizada en el desarrollo del prototipo COCADA.
  
- 
- \subsection{Intercambio de datos entre sistemas CAD}
-En los ámbitos donde se trabaja con CAD/CAM, se utilizan muchos sistemas distintos para administrar los datos técnicos de los productos. Cada sistema tiene sus propios formatos de datos, por lo que la misma información debe ingresarse varias veces en múltiples sistemas, y esto deriva en redundancia y errores. El problema no es exclusivo de la fabricación digital, sino que es más delicado porque los datos de diseño pueden ser complejos y el uso del 3D conduce a un posible aumento de errores, falta de información o falta de entendimiento entre los operadores de los sistemas. \citep{Randjelovic2007} \vskip
-El Instituto Nacional de Estándares de EE.UU \footnote{\url{https://www.nist.gov/}} estima que la incompatibilidad de datos se traduce en costos que alcanzan los 90 millones de dólares por año, ese es un problema muy significativo, sobre todo para la industria de la manufactura. \citep{Tassey1999} \vskip
 
-El intercambio de datos entre sistemas CAD, en inglés \textit{CAD Data Exchange} es un problema central en el contexto actual del modelado geométrico. Es fundamental su utilización debido a que es la principal manera de lograr interoperabilidad entre plataformas. El CAD Data Exchange es de suma importancia porque describe cómo las representaciones pueden ser bien definidas y pone de manifiesto porqué la conversión de la representaciones pueden convertirse en un problema.\vskip
-El enfoque establecido para el intercambio de datos, tanto en la teoría como en la práctica se denomina \textit{Data Exchange de la geometría} o \textit{DE geométrico}, en este enfoque la representación del objeto se transfiere de un sistema fuente a un sistema de destino. \citep{SpitzRappoportA.b2004}
-La forma tradicional de hacer esto es a través de los denominados \textit{formatos neutrales de intercambio} como STEP\footnote{\url{https://www.steptools.com/stds/step/}}o IGES\footnote{\url{https://wiki.eclipse.org/IGES_file_Specification}}.
-\vskip 
-\subsubsection{CAD Data Exchange basado en características}
-El DE geométrico es bastante confiable, aunque en muchos casos se pueden obtener resultados de modelos sólidos con problemas de inconsistencia produciendo objetos no-sólidos como se analiza en la sección \ref{sectionproblema}. Sin embargo, su principal inconveniente es el hecho de que no es compatible con el paradigma de diseño más común de la actualidad, el \textit{diseño basado en características}, y por lo tanto es deficiente para el soporte de los procesos colaborativos. La incompatibilidad se debe en gran medida a la imposibilidad de realizar modificaciones de los modelos geométricos en el lado del sistema destino. Esta situación se puede ver en el ejemplo de la Figura \ref{fig:de0} \vskip
+\textcolor{red}{Inspirado en Using 3D functionality available in current web-browsers to create and visualize geological}
 
-\begin{figure}[h]
-\includegraphics[width=14cm]{Img/WEB/de0.png}
-\centering
-\caption{\textbf{\footnotesize{Esquema de Data Exchange Geométrico con un archivo STEP a modo de ejemplo.}}}
-\label{fig:de0}
-\end{figure}
-
-La mayoría de los sistemas CAD actuales soportan el paradigma de diseño basado en características, en inglés \textit{Feature Based} (FB), también llamado \textit{diseño paramétrico} y diseño basado en la historia como se explica en la sección \ref{cadparam}. Por lo tanto, es fundamental la incorporación del concepto de intercambio de datos basado en características, en inglés \textit{Feature Based Data Exchange} (FBDE) con el fin de dar soporte a los procesos de diseño colaborativos.\vskip
-\textit{En el FBDE, dado un gráfico, basado en el historial paramétrico de un modelo (características) en un sistema origen, el objetivo es construir un gráfico en un sistema destino con una geometría similar, conservando al mismo tiempo la mayor información paramétrica posible}  \citep{SpitzRappoportA.b2004}. El FBDE conserva la inteligencia del diseño, permite que se realicen modificaciones en el lado del sistema destino como se puede observar en la Figura \ref{fig:de1} y ayuda a evitar el problema de las inconsistencias geométricas.\vskip
-
-\begin{figure}[h]
-\includegraphics[width=16cm]{Img/WEB/de1.png}
-\centering
-\caption{\textbf{\footnotesize{Esquema de Data Exchange basado en características (FBDE).}}}
-\label{fig:de1}
-\end{figure}
-
-En el paradigma de diseño basado en características, el modelo se representa como un árbol o lista de operaciones llamadas entidades, este árbol también se suele denominar ``árbol de historia". Las operaciones crean una nueva geometría o modifican la geometría existente. El punto principal de este paradigma es que las operaciones son de naturaleza paramétrica. En las Figuras \ref{fig:de2} y \ref{fig:de3} se puede ver un ejemplo práctico que ilustra el arbol de historia con las diferentes versiones de los modelos, desde el modelo original hasta el modelo objetivo. \vskip
-
-\begin{figure}[h]
-\includegraphics[width=14cm]{Img/WEB/de2.png}
-\centering
-\caption{\textbf{\footnotesize{Ejemplo de modificación de geometría}}}
-\label{fig:de2}
-\end{figure}
-
-\begin{figure}[h]
-\includegraphics[width=14cm]{Img/WEB/de3.png}
-\centering
-\caption{\textbf{\footnotesize{Ejemplo de arbol de historia con las versiones de modelos y sus respectivos valores de los parámetros}}}
-\label{fig:de3}
-\end{figure}
-
-El objetivo de FBDE es crear un modelo objetivo, empleando características en lo posible lo más similares al modelo original, es decir manteniendo la geometría. Es importante aclarar esto, porque en muchos casos, la geometría no puede ser idéntica debido a diferentes políticas de tolerancia entre los sistemas. Siempre que la aproximación esté controlada, este hecho es totalmente aceptable en la práctica.
-
-\clearpage
-\subsubsection{PDM Schema}
-La Gestión de Datos del Producto , en inglés \textit{Product Data Management} (PDM) es una herramienta de productividad capaz de ayudar a un grupo de trabajo, departamento, división, o empresa en la gestión de datos del producto y del proceso de desarrollo a lo largo del ciclo de vida del producto, con el objetivo de mejorar considerablemente el flujo, calidad y uso de la información, facilitando así el control de datos, actividades, cambios y configuración del producto de ingeniería. \citep{Ruiz}\vskip
-Por definición, un sistema PDM es ``algo" que maneja datos sobre productos. En el núcleo central de la información del PDM está la identificación del producto. Un producto es representado conceptualmente como un elemento o ítem dentro de la generalidad de un sistema PDM. \citep{Ungerer2002} \vskip
-
-Un Esquema de PDM, en inglés \textit{PDM Schema} es una estructura o modelo de información de referencia para el intercambio o \textit{Data Exchange} de un subconjunto común de datos que se gestionan dentro de un sistema PDM. En el PDM Schema, el concepto general del producto se puede interpretar como uno o varios documentos. De esta forma, los documentos se pueden gestionar de forma coherente.\vskip
-
-Los requisitos de gestión de datos del producto abordados por el PDM Schema se organizan en agrupaciones de conceptos relacionados. Estos grupos proporcionan una agrupación lógica de entidades o elementos con el propósito de una estructura clara.\vskip
-La forma de agrupar elementos no es la misma en todos los sistemas. La agrupación depende de la dirección que tome el sistema general PDM, sus protocolos de aplicación, su alcance, etc. Por ejemplo: Para el PDM Schema establecido para promover la interoperabilidad entre sistemas que utilizan STEP, se recomienda una estructura modular, en sintonía con la dirección actual hacia la modularización de los contenidos técnicos de los recursos integrados STEP y sus protocolos de aplicación.
-
-Las unidades modulares de funcionalidad para el PDM Schema del ejemplo se enumeran a continuación:
-
+EJ..
 \begin{itemize}
-    \item Identificación de la pieza
-    \item Clasificación de la pieza
-    \item Propiedades de la pieza
-    \item Estructura de la pieza y relaciones
-    \item Identificación del documento
-    \item Clasificación del documento
-    \item Archivos externos
-    \item Relaciones entre documentos y archivos constitutivos
-    \item Propiedades del documento y archivos
-    \item Asociación de documentos y archivos a los datos del producto
-    \item Relaciones entre documentos y archivos
-    \item Identificación de alias
-    \item Autorización
-    \item Información de configuración y efectividad
-    \item Datos de gestión del trabajo
+    \item 2.1 WebGL
+    \item 2.2 Choosing a graphics framework/library 2.2.1 Three.js
+    \item 2.2.2 X3DOM and X3D
+    \item 2.3 Web application frameworks \item 2.3.1 Angular \item 2.3.2 Reac
 \end{itemize}
 
-A continuación se especifica un fragmento de un archivo de intercambio de datos en formato STEP para una pieza mecánica, con su contexto y tipo de clasificación. En el código se puede apreciar la estructura y modularización del PDM Schema.
-\begin{minted}[baselinestretch=1, bgcolor=LightGray]{HTML}
-
-ISO-10303-21; 
-HEADER; 
-FILE_DESCRIPTION(('test', 'file'), '2;1');
-FILE_NAME('pid2_p21a.stp', '1999-05-03T21:03:29+00:00', ('N.N.'),
-(''), '', '', ''); 
-FILE_SCHEMA(('PDM_SCHEMA {1.2})); 
-ENDSEC; 
-DATA;
-/* Pieza #1 */ 
-#10 = PRODUCT('K01-42051', 'Bicicleta Bell RX 3', $, (#20));
-
-/* Contexto de la Pieza */ 
-#20 = PRODUCT_CONTEXT('', #30, ''); 
-#30 = APPLICATION_CONTEXT(''); 
-#40 = APPLICATION_PROTOCOL_DEFINITION('version 1.2', 'pdm_schema',
-2000, #30);
-
-/* Versiones para la Pieza #1 */ 
-#50 = PRODUCT_DEFINITION_FORMATION('02', 'Palanca modificada',
-#10); #60 = PRODUCT_DEFINITION_FORMATION('03', '
-Carcasa superior modificada', #10); 
-#70 = PRODUCT_DEFINITION_FORMATION_RELATIONSHIP('', 'sequence', $,
-#50, #60);
-
-/* Definicion de la vista versión 03 de la Pieza #1 */ 
-/* primary life_cycle_stage = diseño, 
-primary application_domain = diseño mecánico */ 
-
-#80 = PRODUCT_DEFINITION('/NULL', $, #60, #90); #90 =
-PRODUCT_DEFINITION_CONTEXT('part definition', #100, 'design');
-#100 = APPLICATION_CONTEXT('diseño mecánico');
-
-/* Asociación del usuario id a la Pieza #1 */ #130 =
-APPLIED_ORGANIZATION_ASSIGNMENT(#140, #150, (#10, #160, #170));
-#150 = ORGANIZATION_ROLE('id owner');
-
-/* Informacion de la persona y la organizacion */ 
-#140 = ORGANIZATION('ABC27166', 'Misiones Argentina', 'location');
-#540 = PERSON('nombre@email.com', 'Pedro', 'Perez', $, $, $);
-#550 = PERSON_AND_ORGANIZATION(#540, #140);
-
-/* Pieza #2 y Pieza #3 */ 
-#160 = PRODUCT('H24-1123.1', 'Fixture RX25B', '', (#20)); 
-#170 = PRODUCT('DIN 932', 'Screw M3x15', '', (#20));
-
-/* Versiones para Pieza #2 y Pieza #3 */ 
-#180 = PRODUCT_DEFINITION_FORMATION('B', 'agujeros para tornillos
-más grandes', #160); 
-#190 = PRODUCT_DEFINITION_FORMATION('15', '', #170);
-
-/* Definición de las vistas para versión de Pieza #2 */ 
-#200 = PRODUCT_DEFINITION('/NULL', $, #180, #210); 
-#210 = PRODUCT_DEFINITION_CONTEXT('part definition',
-#215, 'diseño'); #215 = APPLICATION_CONTEXT('diseño mecánico');
-
-/* Definición de las vistas para versión de Pieza #3 */ 
-#220 = PRODUCT_DEFINITION('/NULL', $, #190, #230); 
-#230 = PRODUCT_DEFINITION_CONTEXT('part definition', #240, 'diseño'); 
-#240 = APPLICATION_CONTEXT('diseño mecánico');
-...
-ENDSEC; END-ISO-10303-21;
-\end{minted}
 
 
-
-\subsubsection{Data Exchange en entornos web}
+\clearpage
+\subsection{Intercambio de datos en la web}
 
 En la actualidad los sistemas PDM están aprovechando las posibilidades que ofrece internet. Este nuevo enfoque permite el trabajo entre personas establecidas en distintos puntos geográficos, gracias a la posibilidad de acceso remoto a las bases de datos. 
-Con estos nuevos sistemas es posible la utilización del PDM por parte de múltiples especialistas implicados en el desarrollo de un producto, permitiendo que esta tecnología sea una plataforma de integración entre los interesados y una excelente ayuda para la puesta en marcha y tareas de soporte.
+Con estos nuevos sistemas es posible la utilización del PDM por parte de múltiples especialistas implicados en el desarrollo de un producto, permitiendo que esta tecnología sea una plataforma de integración entre los interesados y una excelente ayuda para el workflow\footnote{El flujo de trabajo en inglés \textit{workflow} es el estudio de los aspectos operacionales de una actividad de trabajo} en el diseño de productos.
 
-XML fué por mucho tiempo el formato estándar de facto para el intercambio de datos en el contexto de las aplicaciones de servicios web, en inglés \textit{web services}. Sin embargo, en comparación con XML, JSON es un formato de intercambio de datos mucho más ligero. Esta distinción es importante, ya que la eficiencia en la asignación de datos entre diferentes modelos de datos es el punto clave para mejorar el rendimiento de las aplicaciones basadas en web services. \citep{Zunke2014}
 
-A continuación se explica brevemente los dos formatos más utilizados para Data Exchange en contextos web, el tradicionalmente utilizado (XML) y (JSON) comparativamente nuevo, sus objetivos de diseño y sus características fundamentales.
+A continuación se explican brevemente los dos formatos más utilizados para Data Exchange en contextos web, el tradicionalmente utilizado (XML) y (JSON) comparativamente nuevo, sus objetivos de diseño y sus características fundamentales.
 
 \subsubsection{XML}
 
-XML\footnote{\url{https://www.w3.org/XML/}} o Extensible Markup Language es un conjunto de estándares publicados por XML Working Group en el Consorcio World Wide Web  (W3C), el grupo que regula los estándares de Internet (www). Básicamente, un documento XML se compone de algunas etiquetas, en inglés \textit{tags} bien definidas y los datos incluidos en ellas. Las etiquetas son contenedores que describen los datos adjuntos y también los organizan. Los objetivos de diseño para XML v1.1 publicados en la recomendación W3C son los siguientes:
+\textquote{\textit{XML\footnote{\url{https://www.w3.org/XML/}} o Extensible Markup Language es un conjunto de estándares publicados por XML Working Group en el Consorcio World Wide Web  (W3C), el grupo que regula los estándares de Internet (www)}} \citep{Zunke2014}. Básicamente, un documento XML se compone de algunas etiquetas, en inglés \textit{tags} bien definidas y los datos incluidos en ellas. Las etiquetas son contenedores que describen los datos adjuntos y también los organizan. Los objetivos de diseño para XML v1.1 publicados en la recomendación W3C son los siguientes:
 
 \begin{itemize}
     \item XML se podrá usar directamente en Internet.
     \item XML debe admitir una amplia variedad de aplicaciones.
     \item XML debe ser compatible con SGML.
-    \item Será fácil escribir programas que procesen documentos XML.
+    \item Será fácil escribir programas para procesar documentos XML.
     \item El número de características opcionales en XML debe mantenerse en el mínimo absoluto, idealmente cero.
     \item Los documentos XML deben ser legibles por los humanos y razonablemente claros.
     \item El diseño de XML debe prepararse rápidamente.
@@ -1241,7 +563,7 @@ XML\footnote{\url{https://www.w3.org/XML/}} o Extensible Markup Language es un c
     \item La rigidez en el marcado XML es de mínima importancia.
 \end{itemize}
 
-La especificación de sintaxis y las regulaciones con respecto a la correcta forma de un documento XML se pueden consultar en la especificación W3C para XML v1.1
+La especificación de la sintáxis y las regulaciones con respecto a la correcta forma de un documento XML se pueden consultar en la especificación W3C para XML v1.1\footnote{\url{https://www.w3.org/TR/2006/REC-xml11-20060816/}}
 
 \begin{minted}[baselinestretch=1, bgcolor=LightGray]{HTML}
 <?xml version="1.1"?> 
@@ -1255,7 +577,7 @@ La especificación de sintaxis y las regulaciones con respecto a la correcta for
 
 
 \subsubsection{JSON}
-JSON o Javascript Object Notation es un formato de datos basado en texto ligero y diseñado para que los datos sean legibles por humanos, el formato ha sido popularizado por Douglas Crockford.  Aunque es muy parecido a la sintaxis de objeto literal de JavaScript, puede ser utilizado independientemente de JavaScript.
+\textquote{\textit{JSON o Javascript Object Notation es un formato de datos abierto basado en texto ligero y diseñado para que los datos sean legibles por humanos}} \citep{Zunke2014}, el formato ha sido especificado y popularizado por el programador Douglas Crockford\footnote{\url{https://crockford.com/}}.
 
 JSON está constituído por dos estructuras:
 
@@ -1274,7 +596,7 @@ Estas son estructuras universales; virtualmente todos los lenguajes de programac
 \end{center}
 
 \subsubsection{Comparación de características}
-En esta sección se analizan las características más destacadas de ambos formatos.
+En esta sección se analizan y comparan las características más destacadas de ambos formatos.
 
 \begin{enumerate}
     \item \textbf{Adopción en la Industria}
@@ -1289,7 +611,7 @@ En esta sección se analizan las características más destacadas de ambos forma
         \item JSON tiene metadatos mínimos que lo hacen muy compacto.
     \end{itemize}
     
-    \item \textbf{Soporte de framework}
+    \item \textbf{Soporte de frameworks}
     \begin{itemize}
         \item XML es compatible con la mayoría de las implementaciones de framework (API) en toda la industria.
         \item Al principio JSON no tenía mucho soporte, sin embargo pero se ha posicionado muy rápido en términos de adopción.
@@ -1317,7 +639,7 @@ En esta sección se analizan las características más destacadas de ambos forma
 
 
 \subsubsection{Análisis de rendimiento (Benchmark)}
-Para el análisis y la comparación del rendimiento, ambos formatos de datos (XML y JSON) se comparan respecto al uso de memoria y los tiempos de ejecución en los siguientes experimentos realizados por el \textit{Vishwakarma Institute of Information Technology} de la universidad de Pune en la India.
+Para el análisis y la comparación del rendimiento, ambos formatos de datos (XML y JSON) se comparan respecto al uso de memoria y los tiempos de ejecución en los siguientes 3 experimentos:
 \begin{enumerate}
     \item Serialización o marshaling desde un objeto Java a una secuencia de memoria almacenada (buffer) sin compresión.
     \item Serialización o marshaling desde un objeto Java a una secuencia de memoria almacenada (buffer) con compresión.
@@ -1355,10 +677,7 @@ Las pruebas de rendimiento se realizaron ejecutando 100 muestras para cada exper
 \end{center}
 
 
-
-En lo que respecta al rendimiento, el formato de intercambio de datos JSON es el claro ganador entre los dos. Tanto en términos de uso de memoria como de tiempo de ejecución, JSON ofrece un mejor rendimiento. Incluso con la compresión habilitada, XML produjo mucho más sobrecarga en la secuencia de datos que JSON.
-
-La siguiente tabla resume las medidas concluyentes de los experimentos:
+La siguiente tabla resume las medidas concluyentes de los experimentos. La medida del tiempo se establece en nanosegundos (ns) y la medida de memoria se establece en Bytes (B).
 
 \begin{center}
  \begin{tabular}{ | c | c | c | c |} 
@@ -1383,10 +702,14 @@ La siguiente tabla resume las medidas concluyentes de los experimentos:
 \end{tabular}
 \end{center}
 \begin{center}
-\caption{Medidas concluyentes de los experimentos}
+\caption{\textbf{\footnotesize{Medidas concluyentes de los experimentos}}}
 \end{center}
 
-XML se puede usar como data exchange si:
+\textbf{Conclusiones}\vskip
+En lo que respecta al rendimiento, el formato de intercambio de datos JSON es el claro ganador entre los dos. Tanto en términos de uso de memoria como de tiempo de ejecución, JSON ofrece un mejor rendimiento. Incluso con la compresión habilitada, XML produjo mucho más sobrecarga en la secuencia de datos que JSON.
+
+\vspace{5mm}
+XML se puede utilizar como data exchange si:
 \begin{itemize}
     \item El rendimiento de la aplicación no es la principal prioridad.
     \item Se puede permitir que el consumo de memoria de una aplicación sea grande.
@@ -1402,7 +725,14 @@ Por el contrario, JSON se puede utilizar como data exchange si:
     \item Los datos enviados a través de la red deben optimizarse.
 \end{itemize}
 
+
+En este punto es importante destacar que la popularidad de JSON se debe en gran parte a la compatibilidad nativa que tiene este formato con muchos sistemas de gestión de bases de datos (DBMS). Es el formato recomendado para enviar datos entre servidores y navegadores  web. Su diseño simple y su flexibilidad hacen que sea fácil de leer y comprender, y en la mayoría de los casos, fácil de manipular para los lenguajes de programación.\vskip
+
+Sin embargo, para dar soporte a los procesos colaborativos en un contexto, es necesario que los archivos de intercambio, en este caso (JSON) puedan incluir especificaciones de diseños basadas en características. Es decir, los archivos JSON deben soportar el FBDE. 
+En la sección XXX, correspondiente al desarrollo XXX del prototipo COCADA, se puede ver la utilización de JSON como FBDE y las características del PDM Schema correspondiente al ámbito de aplicación.
+
 \subsubsection{JSON como FBDE}
+\textcolor{red}{Ver si poner en desarrollo}
 Anteriormente se realiza un análisis de JSON comparado con XML, es importante destacar que la popularidad de JSON se debe en gran parte a la compatibilidad nativa que tiene este formato con muchos sistemas de gestión de bases de datos (DBMS). Las bases de datos relacionales como PostgreSQL\footnote{\url{https://www.postgresql.org/}} y MySQL\footnote{\url{https://www.mysql.com/}} actualmente incluyen soporte nativo para almacenar y consultar datos JSON. Las bases de datos NoSQL\footnote{\url{https://aws.amazon.com/es/nosql/}} como MongoDB\footnote{\url{https://www.mongodb.com/}} también son compatibles con JSON, aunque MongoDB utiliza una versión ligeramente modificada de JSON. MongoDB representa documentos JSON en un formato codificado en binario llamado BSON\footnote{\url{https://www.mongodb.com/json-and-bson}}. BSON amplía el modelo de JSON para proporcionar algunos tipos de datos adicionales, el uso de campos ordenados y eficiencia para la codificación y decodificación en diferentes lenguajes.\vskip
 Si se desarrolla un software que se comunica con un navegador web o una aplicación móvil, la recomendación es usar JSON como formato de datos de intercambio. Usar un formato como XML se considera una opción desactualizada.\vskip
 JSON en la actualidad es el formato mas recomendado para enviar datos entre servidores web y navegadores. Su diseño simple y su flexibilidad hacen que sea fácil de leer y comprender, y en la mayoría de los casos, fácil de manipular para los lenguajes de programación. La falta de un esquema estricto permite la flexibilidad del formato, aunque esa flexibilidad a veces hace que sea difícil garantizar que esté leyendo y escribiendo JSON correctamente. \citep{EddieSmith2018} \vskip
@@ -1430,7 +760,7 @@ A continuación se detallan algunas herramientas existentes que poseen caracter�
 En la explicación de estas tecnologías se pueden apreciar algunas diferencias respecto al prototipo planteado en este trabajo, tanto en la representación de los modelos como en la gestión de la información. De todas maneras, estas herramientas son antecedentes de gran valor porque aportan ideas de gran utilidad para posibles soluciones, sobre todo en las áreas de experiencia de usuario UX y diseño UI\footnote{UI o interfaz de usuario es el espacio donde se producen las interacciones entre seres humanos y máquinas.}.
 
 \subsection{Customizer}
-Customizer\citep{MakerBot2018} es una aplicación web desarrollada por la empresa Makerbot\footnote{\url{https://www.makerbot.com/}} y disponible en Thingiverse\footnote{\url{https://www.thingiverse.com/}}, una plataforma para publicación de diseños  especializada en impresión 3D.
+Customizer \citep{MakerBot2018} es una aplicación web desarrollada por la empresa Makerbot\footnote{\url{https://www.makerbot.com/}} y disponible en Thingiverse\footnote{\url{https://www.thingiverse.com/}}, una plataforma para publicación de diseños  especializada en impresión 3D.
 
 Customizer permite adjuntar o subir a la aplicación archivos de código OpenSCAD. En éstos se especifican modelos 3D paramétricos con la definición de sus variables.
 
@@ -1449,10 +779,10 @@ Customizer es una manera sencilla de generar diseños colaborativos mediante la 
 
 \subsection{Beta.Spekle}
 
-Spekle\citep{UCL2018} es un proyecto desarrollado por \textit{The Bartlett School of Architecture UCL}\footnote{\url{https://www.ucl.ac.uk/bartlett/architecture/}} pensado para que los usuarios de Grasshopper puedan compartir diseños paramétricos en la web. 
+Spekle \citep{UCL2018} es un proyecto desarrollado por \textit{The Bartlett School of Architecture UCL}\footnote{\url{https://www.ucl.ac.uk/bartlett/architecture/}} pensado para que los usuarios de Grasshopper puedan compartir diseños paramétricos en la web. 
 El proyecto consta de:
 \begin{itemize}
-    \item Un plugin Spekle, que en combinación con Grasshopper permite establecer los parametros de los modelos y exportarlos a archivos SPK para luego visualizarlos en la web. En la Figura \ref{fig:plugin} se puede ver un ejemplo de uso.
+    \item Un plugin Spekle, que en combinación con Grasshopper permite establecer los parametros de los modelos y exportarlos a archivos en formato SPK para luego visualizarlos en la web. En la Figura \ref{fig:plugin} se puede ver un ejemplo de uso.
     \item Una aplicación web que permite subir archivos SPK para visualizar los modelos paramétricos con sus respectivas variables, crear versiones modificadas y registrar un historial de los cambios en los modelos. Ver \ref{fig:spekle}
 \end{itemize}
 
@@ -1477,7 +807,7 @@ El proyecto consta de:
 
 Modelo.io\citep{Modelo.io2018} es una plataforma web creada por Qi Su y Tian Deng, orientada a profesionales que trabajan con software CAD como Rhino\footnote{\url{https://www.rhino3d.com/es}} y SketchUp\footnote{\url{https://www.sketchup.com/es}}. Permite una colaboración intuitiva entre los miembros de un equipo para perfeccionar los diseños y presentarlos de forma interactiva.
 
-Mediante modelo, los usuarios visualizan y exploran diseños en 3D, proporcionan comentarios, almacenan archivos de proyectos, se comunican entre los miembros del equipo y puedan crear presentaciones 3D interactivas para los clientes. En la Figura \ref{fig:modelo.io} se puede ver la interacción de usuarios.
+Mediante modelo, los usuarios visualizan y exploran diseños en 3D, proporcionan comentarios, almacenan archivos de proyectos, se comunican entre los miembros del equipo y puedan crear presentaciones 3D interactivas para los clientes. En la figura \ref{fig:modelo.io} se puede apreciar la vista del modelo y la interacción de los usuarios.
 
 La características más llamativas que incluyen son los recorridos virtuales para arquitectura y la visualización de escenas en realidad virtual.
 

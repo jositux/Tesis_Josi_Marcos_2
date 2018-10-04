@@ -1264,6 +1264,550 @@ Los Linux Containers \footnote{https://linuxcontainers.org} (LXC) es un método 
 En el desarrollo de CoCADa usaremos docker para encapsular tanto el front-end como el back-end en contenedores. Además utilizaremos docker-composer  \footnote{https://docs.docker.com/compose/} para unificar estos multiples contenedores en una única aplicación.
 
 
+\subsection{Modelado especificado en algoritmos CoCADa}
+
+El lenguaje de descripción debe proveer los mecanismos para crear y manipular sólidos en 3D, así también formas en 2D para poder producir modelos de barrido (extrusión) o bien nuevas primitivas a través de la intersección. El  modelado  booleano  es  un proceso  descriptivo,  es  decir,  sólo  se limita  a  especificar que primitivas se utilizan y cómo se combinan, para una mejor comprensión se utiliza un pseudocódigo\footnote{Un pseudocódigo (o falso lenguaje) es una descripción de alto nivel compacta e informal del principio operativo de un algoritmo} similar al lenguaje descriptivo de OpenSCAD.
+
+\textbf{Objetos}. Los Objetos representan la construcción de los modelos, creados a partir  de las primitivas. Los objetos pueden utilizar uno o más parámetros por lo tanto se pueden especificar utilizando paréntesis \textbf{( )}
+
+\begin{minted}[baselinestretch=1]{python}
+   objeto()
+\end{minted}
+
+
+\textbf{Operadores}. Los Operadores o Transformaciones sirven para modificar la escala, rotación y aplicar otras operaciones sobre los objetos. Los Operadores pueden recibir uno o más parámetros utilizando paréntesis \textbf{()}
+
+\begin{minted}[baselinestretch=1]{python}
+   operador()
+\end{minted}
+
+
+\textbf{Parámetros}. Los parámetros o acciones sirven para construir objetos y definir operadores. Pueden ser asignados de forma directa utilizando variables.
+
+\begin{minted}[baselinestretch=1]{python}
+   parametro
+   var a = parametro
+\end{minted}
+
+\textbf{Comentarios}. Sirve para agregar texto informativo sin que el mismo afecte al funcionamiento del código del programa. Se especifica con numeral \# seguido del texto.
+\begin{minted}[baselinestretch=1, 
+framesep=0]{python}
+    # esto es un comentario
+\end{minted}
+
+\vspace{5mm}
+Un ejemplo de utilización del pseudocódigo, ver resultado en la Figura \ref{fig:traslacion}
+
+\begin{minted}[baselinestretch=1, framesep=0]{python}
+    # objeto(parametro1, ...).operador(parametro2, parametro3, ...)
+    b = cubo(10, 10, 20).trasladar(15, 0, 2) 
+\end{minted}
+
+
+\clearpage
+\subsubsection{Cubo especificado en algoritmos}
+\begin{description}
+\item  \textbf{Parámetros:}
+\item   \textbf{longitud}:
+\begin{description}
+\item \textbf{1 valor} único que especifica la longitud de todos los lados del cubo.
+\item \textbf{3 valores} en un vector $[x,y,z]$, especificando dimensiones $x$, $y$ y $z$.
+\end{description}
+\item   \textbf{centro}:
+\begin{description}
+\item \textbf{F} falso (por defecto), 1er octante positivo, esquina en $(0, 0, 0)$
+\item \textbf{V} Verdadero, el centro del cubo está en $(0, 0, 0)$
+\end{description}
+\end{description}
+
+Ver aplicación en los ejemplos a y b:
+
+\textbf{a)} Todos los scripts (lineas de código) son equivalentes en este ejemplo: \begin{listing}[ht]
+\begin{minted}[baselinestretch=1]{python}
+        cubo(longitud=8)
+        cubo(8)
+        cubo([8, 8, 8])
+         
+        cubo(8, F)
+        cubo([8, 8, 8], F)
+        cubo([8, 8, 8], centro=F)
+        cubo(longitud=[8, 8, 8], centro=F)
+        cubo(centro=F, longitud=[8, 8, 8])
+\end{minted}
+\end{listing}
+
+\begin{figure}[h]
+\includegraphics[width=7cm]{Img/Modelos/modelado1.jpg}
+\centering
+\caption{\textbf{\footnotesize{Cubo de $longitud = 8$ y ubicado en la esquina $(0,\ 0, \ 0)$. }}}
+\end{figure}
+
+
+\clearpage
+\textbf{b)} Todos los scripts (lineas de código) son equivalentes en este ejemplo: \begin{listing}[ht]
+\begin{minted}[baselinestretch=1]{python}
+    cubo([18, 28, 8], centro=V)
+    caja=[18, 28, 8] cubo(caja, V)
+\end{minted}
+\end{listing}
+
+\begin{figure}[h]
+\includegraphics[width=7cm]{Img/Modelos/modelado2.jpg}
+\centering
+\caption{\textbf{\footnotesize{prisma rectangular construido a partir de un cubo. }}}
+\end{figure}
+
+\clearpage
+\subsubsection{Esfera especificada en algoritmos}
+
+\begin{description}
+\item \textbf{Parámetros:}
+\item  \textbf{r}: Radio de la esfera.
+\item  \textbf{d}: Diámetro de la esfera.
+\item  \textbf{res}: Resolución de la esfera.
+\end{description}
+
+\textbf{a)} 
+
+\begin{minted}{python}
+    esfera(r=6, res=12); 
+\end{minted}
+
+
+\begin{figure}[h]
+\includegraphics[width=7cm]{Img/Modelos/modelado3.jpg}
+\centering
+\caption{\textbf{\footnotesize{Esfera de $radio=6$ con baja resolución (12 polígonos en $360^\circ)$. }}}
+\end{figure}
+
+\textbf{b)} 
+
+\begin{minted}{python}
+    esfera(r=8, res=100); 
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=7cm]{Img/Modelos/modelado4.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Esfera de $radio=8$ con alta resolución (100 polígonos en $360^\circ$).}}}
+\end{figure}
+
+\clearpage
+\subsubsection{Cilindro especificado en algoritmos}
+\begin{description}
+\item  \textbf{Parámetros:}
+\item  \textbf{alto}: Alto del cilindro o cono.
+\item  \textbf{r}: Radio del cilindro cuando r1 = r2.
+\item  \textbf{r1}: Radio inferior.
+\item  \textbf{r2}: Radio superior.
+\item  \textbf{d1}: Diámetro inferior.
+\item  \textbf{d2}: Diámetro superior.
+\item   \textbf{centro}:
+\begin{description}
+\item \textbf{F} falso (por defecto), Inicia en el $z$ desde $0$ hasta $alto$
+\item \textbf{V} Verdadero, sobre el eje Z en el rango $-alto/2$ hasta $alto/2$
+
+\end{description}
+\item \textbf{res}: Resolución de la esfera.
+\end{description}
+
+Ver aplicación en los ejemplos a y b:
+
+\textbf{a)} Todos los scripts son equivalentes para este ejemplo:
+
+
+\begin{minted}[baselinestretch=1]{python}
+    cilindro(alto=15, r1=9.5, r2=19.5, centro=F)
+    cilindro(15, 9.5, 19.5, F)
+    cilindro(15, 9.5, 19.5)
+    cilindro(15, 9.5, d2=39)
+    cilindro(15, d1=19, d2=39)
+    cilindro(15, d1=19, r2=19.5)
+\end{minted}
+
+
+\begin{figure}[h]
+\includegraphics[width=7cm]{Img/Modelos/modelado5.jpg}
+\centering
+\caption{\textbf{a) \footnotesize{Un cilindro con radios diferentes. }}}
+\end{figure}
+
+\textbf{b)} Todos los scripts son equivalentes para este ejemplo:
+
+\begin{minted}[baselinestretch=1]{python}
+    cilindro(altura=15, r1=10, r2=0, centro=V)
+    cilindro(15, 10, 0, V)
+    cilindro(altura=15, d1=20, d2=0, centro=V)
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=7cm]{Img/Modelos/modelado6.jpg}
+\centering
+\caption{\textbf{b) \footnotesize{Un cono generado a partir de un cilindro.}}}
+\end{figure}
+
+Al aumentar los valores del parámetro \textbf{res} (resolución) se genera una superficie cada vez mas suave o lisa. A su vez, el uso de valores bajos de \textbf{res} produce algunos objetos no circulares que pueden ser útiles o interesantes. Algunos ejemplos a continuación:
+
+\begin{minted}[baselinestretch=1]{python}
+    cilindro(20, 20, 20, res=3)
+    cilindro(20, 20,  0, res=4)
+    cilindro(20, 20, 10, res=4)
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=12cm]{Img/Modelos/modelado7.jpg}
+\centering
+\caption{\textbf{b). \footnotesize{Figuras generadas a partir de un cilindro con baja resolución.}}}
+\end{figure}
+
+\clearpage
+\subsubsection{Poliedro especificado en algoritmos}
+El poliedro es una primitiva 3D genérica puede representar cualquier objeto sólido debido a que se define como un cuerpo geométrico cuyas caras son obligatoriamente planas y encierran un volumen como se vió en la sección \ref{sectionpoliedro}. A continuación vemos cómo especificar poliedros usando algoritmos.\vskip
+
+
+
+\begin{description}
+\item  \textbf{Parámetros:}
+\item  \textbf{puntos}: Vector con puntos o vértices. Cada punto se define mediante un vector con sus coordenadas $[x,\ y,\ z]$.
+Los puntos se pueden definir en cualquier orden. $N$ puntos son referenciados en un orden definido de $0$ a $N-1$.
+\item  \textbf{caras}: Vector con caras que cierran la superficie del sólido. Cada cara es un vector que contiene los índices de 3 o más puntos pertenecientes al vector de puntos. 
+Las caras se pueden definir en cualquier orden. Se debe definir suficientes caras para encerrar por completo el sólido, sin superposición entre ellas.
+\end{description}
+
+En el ejemplo \textbf{a)} se utiliza un poliedro para generar el mismo resultado que el siguiente cubo:
+
+\begin{minted}{python}
+    cubo([10, 7, 5])
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{Img/Modelos/modelado9.jpg}
+\centering
+\caption{\textbf{\footnotesize{Resultado del algoritmo del poliedro para un cubo.}}}
+\end{figure}
+
+Para comprender como funciona el algoritmo \textbf{a)} del poliedro, observar la Figura \ref{fig:poliedrodes} que ilustra el despliegue del poliedro con sus vértices y caras.
+
+\clearpage
+\textbf{a)}
+\begin{minted}[baselinestretch=1]{python}
+    puntos = [ [ 0, 0, 0],  # 0
+               [10, 0, 0],  # 1
+               [10, 7, 0],  # 2
+               [ 0, 7, 0],  # 3
+               [ 0, 0, 5],  # 4
+               [10, 0, 5],  # 5
+               [10, 7, 5],  # 6
+               [ 0, 7, 5] ] # 7
+  
+    caras = [ [0, 1, 2, 3],  # abajo
+              [4, 5, 1, 0],  # frente
+              [7, 6, 5, 4],  # arriba
+              [5, 6, 2, 1],  # derecha
+              [6, 7, 3, 2],  # atras
+              [7, 4, 0, 3] ] # izquierda
+  
+    poliedro(puntos, caras)
+
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=10cm]{Img/Modelos/modelado8.png}
+\centering
+\caption{\textbf{ \footnotesize{Despliegue de poliedro con vértices y caras.}}}
+\label{fig:poliedrodes}
+\end{figure}
+
+\clearpage
+\textbf{b)} Una pirámide con base cuadrada
+
+\begin{minted}[baselinestretch=1]{python}
+    poliedro(
+    puntos=[ [10, 10, 0], [10, -10, 0], [-10, -10, 0], [-10, 10, 0], 
+          # los cuatro puntos de la base
+           [0, 0, 10] ],  
+          # la punta de la pirámide                                
+    caras=[ [0, 1, 4], [1, 2, 4], [2, 3, 4], [3, 0 , 4],               
+          # los triángulos de los lados
+          [1, 0, 3], [2, 1, 3 ] ]                         
+          # dos triángulos para la base cuadrada
+    )
+
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{Img/Modelos/modelado10.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Pirámide con base cuadrada.}}}
+\end{figure}
+
+\clearpage
+Definir objetos mediante poliedros puede ser una herramienta muy potente, sin embargo su complejidad aumenta cuando se definen objetos con mucha resolución o con formas elaboradas. En el ejemplo \textbf{c)} se muestra un modelo de zapato generado a partir de \textbf{49818} triángulos. 
+
+\textbf{c)} 
+
+\begin{minted}[baselinestretch=1]{python}
+    poliedro(
+    puntos = [
+        	[33.329444, 29.010915, 35.886886],
+        	[30.592163, 29.074943, 29.971662],
+        	[33.969806, 29.182254, 35.545883],
+        	[30.592163, 29.074943, 29.971662],
+        	... # A partir de esta linea 49814 vectores
+        	]
+    caras =  [
+        	[0, 1, 2],
+        	[3, 4, 5],
+        	[6, 7, 8],
+        	[9,10,11],
+        	... # A partir de esta linea 49814 vectores
+        	]
+    )
+
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{Img/Modelos/modelado14.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Modelo de zapato formado por 49818 triángulos }}}
+\end{figure}
+
+\clearpage
+\subsubsection{Transformaciones especificadas en algoritmos}
+
+Las transformaciones se realizan mediante operadores indicando el objeto a transformar seguido de un $``."$ e indicando la acción a realizar (trasladar, escalar, rotar, etc). Las transformaciones compuestas se realizan utilizando el mismo mecanismo.
+
+\begin{description}
+\item  \textbf{Traslación - Parámetros:}
+\item  \textbf{punto}: Vector con las coordenadas $[x,\ y, \ z]$ del punto al que se traslada el objeto.
+\end{description}
+
+\begin{minted}[baselinestretch=1]{python}
+    a = cubo(10, centro=V)
+    
+    b = cubo(10, 10, 20)
+    b.trasladar([15, 0, 0]) 
+   
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{Img/Modelos/modelado11.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Traslación del objeto $b$ (prisma rectangular) al punto $[15, 0, 0]$}}}
+\label{fig:traslacion}
+\end{figure}
+
+\begin{description}
+\item  \textbf{Escala - Parámetros:}
+\item  \textbf{punto}: Vector con los factores de escalamiento en cada eje $[s_x,\ s_y, \ s_z]$.
+\end{description}
+
+\begin{minted}[baselinestretch=1]{python}
+    a = cubo(10, centro=V)
+    
+    b = esfera(10, res=100).trasladar([0, 0, 30])
+    b.escalar([0.5, 0.5, 2]) 
+   
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{Img/Modelos/modelado12.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Escala del objeto $b$ (esfera) por los factores de escalamiento $[0.5,\ 0.5,\ 2]$, el objeto es previamente trasladado al punto $[0,\ 0,\ 30]$ }}}
+\end{figure}
+
+\vskip
+\begin{description}
+\item  \textbf{Rotacion - Parámetros:}
+\item  \textbf{punto}: Vector con los ángulos de rotación del objeto sobre los ejes coordenados $[x,\ y, \ z]$ especificados en grados $^\circ$.
+\end{description}
+
+
+\begin{minted}[baselinestretch=1]{python}
+    a = cubo([5, 10, 20]).trasladar([20,0,0])
+    a.rotar([45,0,0]) # Rotar 45 º sobre el eje X
+
+    b = cubo([5, 10, 20]).trasladar([20,0,0])
+    b.rotar([0,-45,0]) # Rotar -45 º sobre el eje Y
+
+    c = cubo([5, 10, 20]).trasladar([-20,0,0])
+    b.rotar([0,0,45]) # Rotar 45 º sobre el eje Z
+
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{Img/Modelos/modelado13.jpg}
+\centering
+\caption{\textbf{ \footnotesize{Rotación de 3 objetos sobre los tres ejes coordenados. }}}
+\end{figure}
+
+\clearpage
+\subsubsection{Operaciones booleanas especificadas en algoritmos}
+Las operaciones booleanas se realizan mediante operadores indicando el objeto a aplicar seguido de un “.” y la acción a realizar (intercectar, unir, substraer), como parámetro se indica el otro objeto. ej. \textbf{objeto1.unir(objeto2)}
+\vspace{5mm}
+
+\textbf{a)} Operaciones booleanas de los objetos \textbf{a} (cubo) y \textbf{b} (esfera). Ver Figura \ref{aCSG} \vskip
+
+Los objetos solidos $a$ y $b$ son generados con el siguiente código  
+
+\begin{minted}[baselinestretch=1]{python}
+    a = cubo(100)
+    b = esfera(65).trasladar([65, 65, 65])
+\end{minted}
+
+Operaciones booleanas simples:
+
+\begin{minted}[baselinestretch=1, bgcolor=LightGray]{python}
+    a.unir(b)
+    # Sentencias equivalentes
+    cubo(100).unir( esfera(65).trasladar([65, 65, 65]) )
+\end{minted}
+
+\begin{minted}[baselinestretch=1, bgcolor=LightGray]{python}
+    a.substraer(b)
+    # Sentencias equivalentes
+    cubo(100).substraer( esfera(65).trasladar([65, 65, 65]) )
+\end{minted}
+
+\begin{minted}[baselinestretch=1, bgcolor=LightGray]{python}
+    a.intersectar(b)
+    # Sentencias equivalentes
+    cubo(100).intersectar( esfera(65).trasladar([65, 65, 65]) )
+\end{minted}
+
+\textbf{b)} En este ejemplo se construye un sólido mediante operaciones booleanas combinadas como se analiza en la sección \ref{sectionCSG}. Ver Figura \ref{bCSG} \vskip
+
+Los objetos solidos \textbf{a}, \textbf{b}, \textbf{c}, \textbf{d} y \textbf{e} son generados con el siguiente código  
+
+
+\begin{minted}[baselinestretch=1, bgcolor=LightGray]{python}
+    a = cubo(100, centro=V)
+    b = esfera(65)
+    c = cilindro(longitud=130, r=32.5, centro=V).rotar([90, 0, 0])
+    d = cilindro(longitud=130, r=32.5, centro=V)
+    e = cilindro(longitud=130, r=32.5, centro=V).rotar([0, 90, 0])
+\end{minted}
+
+Operaciones booleanas combinadas:
+
+\begin{minted}[baselinestretch=1, bgcolor=LightGray]{python}
+    a.intersectar(b).substraer(c.unir(d).unir(e))
+\end{minted}
+
+\begin{figure}[h]
+\includegraphics[width=14cm]{Img/Modelos/modelado15.jpg}
+\centering
+\caption{\textbf{ \footnotesize{a) Operaciones booleanas simples }}}
+\label{aCSG}
+\end{figure}
+
+
+\begin{figure}[h]
+\includegraphics[width=16cm]{Img/Modelos/modelado16a.jpg}
+\centering
+\caption{\textbf{ \footnotesize{b) Operaciones booleanas combinadas }}}
+\label{bCSG}
+\end{figure}
+\clearpage
+
+\subsubsection{Polígonos (2D) especificados en algoritmos}
+Los polígonos no son sólidos geométricos, sin embargo pueden ser utilizados como base para la construcción de modelos 3D sólidos. Los polígonos también pueden manipularse utilizando transformaciones.
+
+\begin{description}
+\item  \textbf{Cuadrado - Parámetros:}
+\item   \textbf{longitud}:
+\begin{description}
+\item \textbf{1 valor} único que especifica la longitud de todos los lados del cuadrado.
+\item \textbf{2 valores} especificando dimensiones $x$, $y$.
+\end{description}
+\item   \textbf{centro}:
+\begin{description}
+\item \textbf{F} Falso (por defecto), 1er cuadrante positivo, esquina en $(0, 0)$
+\item \textbf{V} Verdadero, el centro del cuadrado está en $(0, 0)$
+\end{description}
+\end{description}
+
+\textbf{a) Cuadrado y rectángulo} 
+
+\begin{listing}[ht]
+\begin{minted}[baselinestretch=1]{python}
+    a = cuadrado(20, 20, centro = V)
+    
+    b = cuadrado(40, 20, centro = V).trasladar( [50, 0, 0] ) 
+    # Rectángulo
+\end{minted}
+\end{listing}
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{Img/Modelos/modelado17.jpg}
+\centering
+\caption{\textbf{ \footnotesize{a) a=cuadrado y b=rectángulo}}}
+\end{figure}
+
+\clearpage
+\begin{description}
+\item \textbf{Círculo - Parámetros:}
+\item  \textbf{r}: Radio del círculo.
+\item  \textbf{d}: Diámetro del círculo.
+\item  \textbf{res}: Resolución del círculo.
+\end{description}
+
+\textbf{a)} 
+\begin{listing}[ht]
+\begin{minted}[baselinestretch=1]{python}
+    a = circulo(r=20, res=3).trasladar( [-50, 0, 0] )
+    b = circulo(r=20, res=4).trasladar( [ 0, 0, 0] )
+    c = circulo(r=20, res=5).trasladar( [50, 0, 0] )
+    d = circulo(r=20, res=6).trasladar( [-50, -50, 0] )
+    e = circulo(r=20, res=8).trasladar( [ 0, -50, 0] )
+    f = circulo(r=20, res=50).trasladar( [ 50, -50, 0] )
+\end{minted}
+\end{listing}
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{Img/Modelos/modelado18.jpg}
+\centering
+\caption{\textbf{\footnotesize{a) círculos con diferentes resoluciones que producen diferentes polígonos a=triangulo, b=cuadrado, c=pentágono, d=hexágono, e=heptágono y f=círculo  }}}
+\end{figure}
+
+
+\clearpage
+\subsubsection{Operaciones de barrido especificadas en algoritmos}
+
+El barrido translacional o \textbf{extrusión} es una operación de modelado que parte de un polígono (cuadrado, rectángulo, circulo) y lo extiende a la tercera dimensión (sólido 3D). Para simplificar el funcionamiento se considera que el modelo parte del plano \textit{xy} hasta una longitud indicada en el plano \textit{z}. Es posible aplicar otras transformaciones combinadas con la extrusión.
+
+\begin{description}
+\item  \textbf{Extrusión - Parámetros:}
+\item  \textbf{longitud}: Longitud de la extrusión (debe ser positivo).
+\item  \textbf{torsion}: Rotación en  ángulos $^\circ$ sobre el eje \textbf{z}.
+\end{description}
+
+\textbf{a) Extrusión de polígonos} 
+
+
+\begin{listing}[ht]
+\begin{minted}[baselinestretch=1]{python}
+    a = circulo(r=5).trasladar( [10, 0, 0] )
+    a.extruir(100, torsion = -500)
+    
+    b = circulo(r=10, res=5).trasladar( [50, 0, 0] )
+    b.extruir(100, torsion = 0)
+    
+    c = cuadrado(20).trasladar( [100, 0, 0] ).escalar( [1, 0.1, 1] )
+    c.extruir(longitud = 100,  torsion = 0)
+\end{minted}
+\end{listing}
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{Img/Modelos/modelado19.jpg}
+\centering
+\caption{\textbf{\footnotesize{a) a=círculo convertido en un cilindro con torsion de $-500^\circ$, b=pentágono convertido en un prisma, c=cuadrado convertido en un poliedro de base rectangular.}}}
+\end{figure}
+
+
+\clearpage
+
+
 
 \subsection{Pruebas}
 
